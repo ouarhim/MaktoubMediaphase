@@ -121,6 +121,8 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
+            width: 100%;
+            max-width: 100%;
         }
 
         @media (min-width: 768px) {
@@ -922,6 +924,8 @@
             padding: 5px;
             display: flex;
             gap: 5px;
+            max-width: calc(100vw - 40px);
+            overflow: hidden;
         }
 
         .lang-btn {
@@ -959,7 +963,7 @@
         }
 
         [dir="rtl"] .story-content {
-            order: 2    ;
+            order: 2;
         }
 
         /* Remove white space on the right for Arabic personal story */
@@ -983,6 +987,87 @@
 
         [dir="rtl"] .cta-buttons {
             direction: rtl;
+        }
+
+        /* LTR Support - Ensure French and English don't have RTL spacing issues */
+        [dir="ltr"] {
+            text-align: left;
+        }
+
+        [dir="ltr"] .hero h1 {
+            text-align: center;
+        }
+
+        [dir="ltr"] .founder-info {
+            order: 0;
+        }
+
+        [dir="ltr"] .story-content {
+            order: 0;
+        }
+
+        [dir="ltr"] .personal-story {
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        [dir="ltr"] .story-content {
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        [dir="ltr"] .before-after {
+            direction: ltr;
+        }
+
+        [dir="ltr"] .process-steps {
+            direction: ltr;
+        }
+
+        [dir="ltr"] .cta-buttons {
+            direction: ltr;
+        }
+
+        /* Fix any potential white space issues */
+        body {
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Ensure no horizontal scroll */
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Additional fixes for white space issues */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Ensure all sections take full width without overflow */
+        section {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Fix any potential margin/padding issues */
+        .hero, .problem-solution, .ceo-section, .packages, .portfolio, .trust-section, .testimonials, .process-section, .final-cta-section {
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        /* Ensure text doesn't overflow */
+        h1, h2, h3, h4, p, span {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         /* Enhanced Mobile Responsive Design */
