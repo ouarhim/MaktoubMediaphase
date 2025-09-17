@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maktoub Media - Professional Design & Web Services in Casablanca | Starting 1,900 MAD</title>
+    <meta name="description" content="Get professional logo design, promotional videos, and websites for your Moroccan business. Quality work at affordable prices. WhatsApp for instant quote.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maktoubmedia.com/">
+    <meta property="og:title" content="Maktoub Media - Professional Design & Web Services in Casablanca">
+    <meta property="og:description" content="Transform your business with professional branding. Logo design, videos, websites starting from 1,900 MAD. Trusted by 200+ Moroccan businesses.">
+    <meta property="og:image" content="https://maktoubmedia.com/img/logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://maktoubmedia.com/">
+    <meta property="twitter:title" content="Maktoub Media - Professional Design & Web Services">
+    <meta property="twitter:description" content="Transform your business with professional branding. Logo design, videos, websites starting from 1,900 MAD.">
+    <meta property="twitter:image" content="https://maktoubmedia.com/img/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="apple-touch-icon" href="img/logo.png">
+    
+    <!-- Preload key resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&family=Amiri:wght@400;700&display=swap" as="style">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --secondary: #F97316;
+            --success: #10B981;
+            --warning: #F59E0B;
+            --background: #FFFFFF;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --border: #E5E7EB;
+            --logo-blue: #4F46E5;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background);
+            font-size: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Mobile-first responsive typography */
+        h1 { font-size: 1.875rem; font-weight: 700; line-height: 1.2; }
+        h2 { font-size: 1.5rem; font-weight: 600; line-height: 1.3; }
+        h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.4; }
+        h4 { font-size: 1.125rem; font-weight: 500; line-height: 1.4; }
+        p { font-size: 1rem; line-height: 1.6; }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow);
+        }
+
+        .logo {
+            height: 2.5rem;
+            width: auto;
+        }
+
+        .mobile-menu-toggle {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: white;
+            z-index: 1001;
+            transition: left 0.3s ease;
+            padding: 2rem 1rem;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-bottom: 2rem;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .mobile-nav-links li {
+            margin-bottom: 1rem;
+        }
+
+        .mobile-nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 1.125rem;
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary);
+            background: white;
+            color: var(--primary);
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .whatsapp-cta-mobile {
+            background: var(--success);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.9) 0%, rgba(106, 98, 255, 0.9) 100%),
+                        url('img/Casablanca.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-logo {
+            height: 4rem;
+            width: auto;
+            filter: brightness(0) invert(1);
+            margin-bottom: 1rem;
+        }
+
+        .hero-tagline {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .hero-headline {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subheadline {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-price {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .special-offer {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-primary {
+            background: linear-gradient(180deg, #F97316, #F26B0D);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.3s ease;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .trust-strip {
+            font-size: 0.875rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Problem/Solution Section */
+        .problem-solution {
+            padding: 4rem 0;
+            background: #f8fafc;
+        }
+
+        .problem-solution h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #dc2626;
+        }
+
+        .problem-solution .content {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .problem-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .problem-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .problem-list li::before {
+            content: "❌";
+            position: absolute;
+            left: 0;
+            top: 0.75rem;
+        }
+
+        .solution h3 {
+            color: var(--success);
+            margin-bottom: 1rem;
+        }
+
+        .solution-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .solution-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .solution-list li::before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            top: 0.75rem;
+        }
+
+        /* CEO Section */
+        .ceo-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+        }
+
+        .ceo-content {
+            display: grid;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .ceo-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto;
+            border: 4px solid var(--primary);
+        }
+
+        .ceo-info h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .ceo-info h4 {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .ceo-bio {
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+
+        .ceo-social {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .ceo-social a {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+
+        .ceo-social a:hover {
+            transform: translateY(-2px);
+        }
+
+        .ceo-linkedin {
+            background: #0077b5;
+            color: white;
+        }
+
+        .ceo-whatsapp {
+            background: var(--success);
+            color: white;
+        }
+
+        /* Packages Section */
+        .packages {
+            padding: 4rem 0;
+        }
+
+        .packages h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .packages-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 0.75rem;
+            border: 2px solid var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .step-number {
+            width: 3rem;
+            height: 3rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .packages-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid #e5e7eb;
+            position: relative;
+        }
+
+        .package-card.popular {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .package-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+
+        .package-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .package-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .package-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .cta-package {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+
+        .cta-package:hover {
+            background: #3730a3;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 4rem 0;
+            background: #f8fafc;
+        }
+
+        .portfolio h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .portfolio-item img,
+        .portfolio-item video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .portfolio-item p {
+            padding: 1.5rem;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            padding: 1.5rem;
+        }
+
+        .before-after img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+
+        /* Trust Section */
+        .trust-section {
+            padding: 4rem 0;
+        }
+
+        .trust-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 2px solid #e5e7eb;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 4rem 0;
+            background: #f8fafc;
+        }
+
+        .testimonials h3 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .testimonial cite {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .promise-box {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-top: 2rem;
+        }
+
+        .promise-box h4 {
+            margin-bottom: 1rem;
+        }
+
+        .promise-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 4rem 0;
+        }
+
+        .process-section h3 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .process-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        .process-step-number {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* Final CTA Section */
+        .final-cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--primary), #6366f1);
+            color: white;
+        }
+
+        .urgency-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .final-cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .whatsapp-cta-main {
+            background: var(--success);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .secondary-cta {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .payment-structure {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .payment-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .payment-step {
+            text-align: center;
+        }
+
+        .payment-percentage {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .guarantee {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Sticky WhatsApp Button */
+        .sticky-whatsapp {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--success);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 4rem;
+            height: 4rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .sticky-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--logo-blue);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            height: 3rem;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-tagline {
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .footer-copyright {
+            opacity: 0.8;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 2rem;
+            }
+
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            h3 { font-size: 1.5rem; }
+
+            .mobile-nav {
+                display: none;
+            }
+
+            .hero {
+                padding: 8rem 0 6rem;
+            }
+
+            .hero-headline {
+                font-size: 3rem;
+            }
+
+            .cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .ceo-content {
+                grid-template-columns: auto 1fr;
+                gap: 3rem;
+            }
+
+            .ceo-image {
+                margin: 0;
+            }
+
+            .packages-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+
+            .before-after {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .final-cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-headline {
+                font-size: 3.5rem;
+            }
+
+            .packages-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* RTL Support */
+        [dir="rtl"] {
+            text-align: right;
+        }
+
+        [dir="rtl"] .hero {
+            text-align: center;
+        }
+
+        [dir="rtl"] .ceo-content {
+            direction: rtl;
+        }
+
+        [dir="rtl"] .problem-list li,
+        [dir="rtl"] .solution-list li {
+            padding-right: 2rem;
+            padding-left: 0;
+        }
+
+        [dir="rtl"] .problem-list li::before,
+        [dir="rtl"] .solution-list li::before {
+            right: 0;
+            left: auto;
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Focus styles */
+        button:focus,
+        a:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <img src="img/logo.png" alt="Maktoub Media Logo" class="logo">
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+            ☰
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close mobile menu">
+            ✕
+        </button>
+        
+        <ul class="mobile-nav-links">
+            <li><a href="#hero" onclick="scrollToSection('hero')">Home</a></li>
+            <li><a href="#packages" onclick="scrollToSection('packages')">Packages</a></li>
+            <li><a href="#portfolio" onclick="scrollToSection('portfolio')">Portfolio</a></li>
+            <li><a href="#process" onclick="scrollToSection('process')">Process</a></li>
+            <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+        </ul>
+
+        <div class="language-switcher">
+            <button class="lang-btn" onclick="switchLanguage('ar')" id="mobile-lang-ar">العربية</button>
+            <button class="lang-btn" onclick="switchLanguage('fr')" id="mobile-lang-fr">Fr</button>
+            <button class="lang-btn active" onclick="switchLanguage('en')" id="mobile-lang-en">En</button>
+        </div>
+
+        <a href="#" class="whatsapp-cta-mobile" onclick="openWhatsApp('general')">
+            📱 Contact on WhatsApp
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="img/logo.png" alt="Maktoub Media Logo" class="hero-logo">
+                <p class="hero-tagline" id="hero-tagline">Because Your Success Is Maktoub</p>
+                
+                <h1 class="hero-headline" id="hero-headline">Your Business Deserves Better Than Amateur Posts</h1>
+                <p class="hero-subheadline" id="hero-subheadline">You already post on Instagram and Facebook. But are you getting the customers you deserve?</p>
+                
+                <p class="hero-price" id="hero-price">Starting from 1,900 MAD | Delivered in 5-7 Days | 100% Satisfaction Guarantee</p>
+                
+                <div class="special-offer">
+                    <p id="hero-special-offer">Special offer: First 10 clients get free Google Business optimization (worth 500 MAD) + free mini-audit (worth 700 MAD)</p>
+                </div>
+                
+                <div class="cta-buttons">
+                    <button class="cta-primary" onclick="openWhatsApp('general')" id="hero-whatsapp-cta">
+                        📱 Contact Maktoub Media on WhatsApp
+                    </button>
+                    <button class="cta-secondary" onclick="scrollToSection('portfolio')" id="hero-portfolio-cta">
+                        🎯 See What Professional Branding Looks Like
+                    </button>
+                </div>
+                
+                <p class="trust-strip" id="hero-trust-strip">
+                    <strong>Trusted by 200+ Moroccan businesses</strong> — Avg. delivery 5–7 days — 95% satisfaction — 100% money-back guarantee
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="problem-solution">
+        <div class="container">
+            <h2 id="problem-title">❌ The Real Problem</h2>
+            <div class="content">
+                <div class="problem">
+                    <ul class="problem-list" id="problem-list">
+                        <li>Your current posts look homemade</li>
+                        <li>Your logo was made in 5 minutes on a phone app</li>
+                        <li>Your videos are blurry and hard to understand</li>
+                        <li>Your Instagram bio is empty or confusing</li>
+                        <li>Your Google Business profile is incomplete</li>
+                    </ul>
+                    <p id="problem-result" style="font-weight: 600; color: #dc2626;">
+                        Result: People scroll past your business. They don't trust you. They choose your competitor instead. Every day, you lose customers to businesses that simply look more professional.
+                    </p>
+                </div>
+                
+                <div class="solution">
+                    <h3 id="solution-title">✅ The Solution That Changes Everything</h3>
+                    <p id="solution-subtitle" style="margin-bottom: 1rem; font-weight: 600;">
+                        Professional branding isn't about being fancy. It's about being trusted.
+                    </p>
+                    <p id="solution-when-customers-see" style="margin-bottom: 1rem;">When customers see:</p>
+                    <ul class="solution-list" id="solution-list">
+                        <li>A clean, memorable logo</li>
+                        <li>High-quality photos and videos</li>
+                        <li>Consistent, branded posts</li>
+                        <li>A complete Google Business profile</li>
+                        <li>A simple, fast website</li>
+                    </ul>
+                    <p id="solution-result" style="margin-top: 1rem; font-weight: 600; color: var(--success);">
+                        They think: "This business is serious. I can trust them with my money."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CEO Section -->
+    <section class="ceo-section">
+        <div class="container">
+            <h2 id="ceo-title" style="text-align: center; margin-bottom: 3rem; color: var(--primary);">Meet the Founder</h2>
+            <div class="ceo-content">
+                <img src="img/photo ilyas owner .png" alt="Ilyas - Founder of Maktoub Media" class="ceo-image">
+                <div class="ceo-info">
+                    <h3 id="ceo-name">Ilyas</h3>
+                    <h4 id="ceo-position">Founder & Creative Director</h4>
+                    <p class="ceo-bio" id="ceo-bio">
+                        With 5+ years of experience in graphic design and web development, I specialize in helping Moroccan businesses build professional brands that attract customers and drive growth. Your success is my mission.
+                    </p>
+                    <div class="ceo-social">
+                        <a href="https://linkedin.com/in/ilyas-ouarhim" class="ceo-linkedin" id="ceo-linkedin">
+                            💼 Connect on LinkedIn
+                        </a>
+                        <a href="#" class="ceo-whatsapp" onclick="openWhatsApp('ceo')" id="ceo-whatsapp">
+                            📱 Message on WhatsApp
+                        </a>
+                    </div>
+                    <button class="cta-primary" onclick="openWhatsApp('consultation')" id="ceo-consultation-cta">
+                        🎯 Book a Free Consultation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Continue with remaining sections... -->
+    <!-- This is part 1 of the HTML file. The remaining sections will be added in the next part. -->

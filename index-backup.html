@@ -6,20 +6,6 @@
     <title>Maktoub Media - Professional Design & Web Services in Casablanca | Starting 1,500 MAD</title>
     <meta name="description" content="Get professional logo design, promotional videos, and websites for your Moroccan business. Quality work at affordable prices. WhatsApp for instant quote.">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://maktoubmedia.com/">
-    <meta property="og:title" content="Maktoub Media - Professional Design & Web Services in Casablanca">
-    <meta property="og:description" content="Transform your business with professional branding. Logo design, videos, websites starting from 1,900 MAD. Trusted by 200+ Moroccan businesses.">
-    <meta property="og:image" content="https://maktoubmedia.com/img/logo.png">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://maktoubmedia.com/">
-    <meta property="twitter:title" content="Maktoub Media - Professional Design & Web Services">
-    <meta property="twitter:description" content="Transform your business with professional branding. Logo design, videos, websites starting from 1,900 MAD.">
-    <meta property="twitter:image" content="https://maktoubmedia.com/img/logo.png">
-    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/Asset 3.png">
     <link rel="apple-touch-icon" href="img/Asset 3.png">
@@ -73,61 +59,28 @@
             line-height: 1.6;
             color: var(--text-dark);
             background-color: var(--background);
-            font-size: 1rem;
         }
 
-        /* Mobile-first responsive typography */
-        html { font-size: 16px; }
-        h1 { font-size: 1.875rem; font-weight: 700; line-height: 1.2; }
-        h2 { font-size: 1.5rem; font-weight: 600; line-height: 1.3; }
-        h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.4; }
-        h4 { font-size: 1.125rem; font-weight: 500; line-height: 1.4; }
-        p { font-size: 1rem; line-height: 1.6; }
-
-        /* Mobile-first responsive design */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 0 20px;
         }
 
-        @media (min-width: 768px) {
-            .container { padding: 0 2rem; }
-            html { font-size: 18px; }
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
-            h3 { font-size: 1.5rem; }
-        }
-
-        @media (min-width: 1024px) {
-            html { font-size: 20px; }
-            h1 { font-size: 3rem; }
-        }
-
-        /* Remove duplicate container definition - already defined above */
-
-        /* Hero Section - Mobile First */
+        /* Hero Section */
         .hero {
             position: relative;
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.9) 0%, rgba(106, 98, 255, 0.9) 100%),
+            background: radial-gradient(120% 120% at 50% 0%, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0) 40%),
+                        linear-gradient(135deg, rgba(79, 70, 229, 0.85) 0%, rgba(106, 98, 255, 0.85) 100%),
                         url('img/Casablanca.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed;
             color: white;
-            padding: 4rem 0;
+            padding: 80px 0;
             text-align: center;
             overflow: hidden;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-
-        @media (min-width: 768px) {
-            .hero {
-                padding: 6rem 0;
-                background-attachment: fixed;
-            }
         }
 
         /* Soft vignette edges */
@@ -988,93 +941,6 @@
         /* Enhanced Mobile Responsive Design */
         
         /* Small Mobile (320px - 480px) */
-        /* Mobile Navigation */
-        .mobile-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        .mobile-nav .logo {
-            height: 2.5rem;
-            width: auto;
-        }
-
-        .mobile-menu-toggle {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        .mobile-menu {
-            position: fixed;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100vh;
-            background: white;
-            z-index: 1001;
-            transition: left 0.3s ease;
-            padding: 2rem 1rem;
-            overflow-y: auto;
-        }
-
-        .mobile-menu.active {
-            left: 0;
-        }
-
-        .mobile-menu-close {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            margin-bottom: 2rem;
-        }
-
-        .mobile-nav-links {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .mobile-nav-links li {
-            margin-bottom: 1rem;
-        }
-
-        .mobile-nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            font-size: 1.125rem;
-        }
-
-        .whatsapp-cta-mobile {
-            background: var(--success);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-            width: 100%;
-        }
-
-        @media (min-width: 768px) {
-            .mobile-nav { display: none; }
-        }
-
         @media (max-width: 480px) {
             .container {
                 padding: 0 15px;
@@ -1730,39 +1596,6 @@
         </div>
     </div>
 
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav">
-        <img src="img/logo.png" alt="Maktoub Media Logo" class="logo">
-        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
-            ☰
-        </button>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close mobile menu">
-            ✕
-        </button>
-        
-        <ul class="mobile-nav-links">
-            <li><a href="#hero" onclick="scrollToSection('hero')">Home</a></li>
-            <li><a href="#packages" onclick="scrollToSection('packages')">Packages</a></li>
-            <li><a href="#portfolio" onclick="scrollToSection('portfolio')">Portfolio</a></li>
-            <li><a href="#process" onclick="scrollToSection('process')">Process</a></li>
-            <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
-        </ul>
-
-        <div class="language-switcher">
-            <button class="lang-btn" onclick="switchLanguage('ar')" id="mobile-lang-ar">العربية</button>
-            <button class="lang-btn" onclick="switchLanguage('fr')" id="mobile-lang-fr">Fr</button>
-            <button class="lang-btn active" onclick="switchLanguage('en')" id="mobile-lang-en">En</button>
-        </div>
-
-        <a href="#" class="whatsapp-cta-mobile" onclick="openWhatsApp('general')">
-            📱 Contact on WhatsApp
-        </a>
-    </div>
-
     <!-- Language Switcher -->
     <div class="language-switcher">
         <button class="lang-btn" onclick="switchLanguage('ar')" id="lang-ar">العربية</button>
@@ -2065,54 +1898,6 @@
                     <span data-lang="fr">La vérité est dure mais simple : Vos produits peuvent être incroyables. Votre service peut être excellent. Mais si votre branding a l'air amateur, les clients ne vous donneront jamais la chance de le prouver. Chaque semaine que vous attendez, vos concurrents obtiennent les clients qui devraient être vôtres.</span>
                     <span data-lang="en">The truth is harsh but simple: Your products might be amazing. Your service might be excellent. But if your branding looks amateur, customers will never give you the chance to prove it. Every week you wait, your competitors are getting the customers that should be yours.</span>
                 </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CEO Section -->
-    <section class="ceo-section" style="padding: 4rem 0; background: linear-gradient(135deg, #f0f9ff, #e0f2fe);">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 3rem; color: var(--primary); font-family: 'Poppins', sans-serif;">
-                <span data-lang="ar">تعرف على المؤسس</span>
-                <span data-lang="fr">Rencontrez le Fondateur</span>
-                <span data-lang="en">Meet the Founder</span>
-            </h2>
-            <div style="display: grid; gap: 2rem; align-items: center; max-width: 800px; margin: 0 auto;">
-                <img src="img/photo ilyas owner .png" alt="Ilyas - Founder of Maktoub Media" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin: 0 auto; border: 4px solid var(--primary);">
-                <div style="text-align: center;">
-                    <h3 style="color: var(--primary); margin-bottom: 0.5rem; font-family: 'Poppins', sans-serif;">
-                        <span data-lang="ar">إلياس</span>
-                        <span data-lang="fr">Ilyas</span>
-                        <span data-lang="en">Ilyas</span>
-                    </h3>
-                    <h4 style="color: var(--text-light); margin-bottom: 1rem; font-size: 1.125rem;">
-                        <span data-lang="ar">مؤسس ومدير إبداعي</span>
-                        <span data-lang="fr">Fondateur & Directeur Créatif</span>
-                        <span data-lang="en">Founder & Creative Director</span>
-                    </h4>
-                    <p style="margin-bottom: 1.5rem; font-size: 1.125rem; line-height: 1.7; max-width: 600px; margin-left: auto; margin-right: auto;">
-                        <span data-lang="ar">مع أكثر من 5 سنوات من الخبرة في التصميم الجرافيكي وتطوير المواقع، أتخصص في مساعدة الشركات المغربية على بناء علامات تجارية احترافية تجذب العملاء وتحفز النمو. نجاحك هو مهمتي.</span>
-                        <span data-lang="fr">Avec plus de 5 ans d'expérience en design graphique et développement web, je me spécialise dans l'aide aux entreprises marocaines pour construire des marques professionnelles qui attirent les clients et stimulent la croissance. Votre succès est ma mission.</span>
-                        <span data-lang="en">With 5+ years of experience in graphic design and web development, I specialize in helping Moroccan businesses build professional brands that attract customers and drive growth. Your success is my mission.</span>
-                    </p>
-                    <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                        <a href="https://linkedin.com/in/ilyas-ouarhim" style="padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; background: #0077b5; color: white; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                            <span data-lang="ar">💼 تواصل على لينكد إن</span>
-                            <span data-lang="fr">💼 Connectez-vous sur LinkedIn</span>
-                            <span data-lang="en">💼 Connect on LinkedIn</span>
-                        </a>
-                        <a href="#" onclick="openWhatsApp('ceo')" style="padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; background: var(--success); color: white; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                            <span data-lang="ar">📱 راسل على الواتساب</span>
-                            <span data-lang="fr">📱 Message sur WhatsApp</span>
-                            <span data-lang="en">📱 Message on WhatsApp</span>
-                        </a>
-                    </div>
-                    <button class="cta-primary" onclick="openWhatsApp('consultation')" style="background: linear-gradient(180deg, #F97316, #F26B0D); color: white; padding: 1rem 2rem; border: none; border-radius: 0.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; text-align: center; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <span data-lang="ar">🎯 احجز استشارة مجانية</span>
-                        <span data-lang="fr">🎯 Réservez une Consultation Gratuite</span>
-                        <span data-lang="en">🎯 Book a Free Consultation</span>
-                    </button>
-                </div>
             </div>
         </div>
     </section>
@@ -2933,7 +2718,6 @@
     </script>
 
     <!-- JavaScript -->
-    <script src="translations.js"></script>
     <script>
         // Mobile Menu Functions
         function toggleMobileMenu() {
@@ -3168,63 +2952,6 @@ Location: [City]
 Biggest need: [Logo/Website/Business cards/All]
 
 What information do you need from me?`;
-                    }
-                    break;
-                case 'ceo':
-                    if (currentLang === 'ar') {
-                        message = `مرحباً! أود أن أتحدث مع إلياس حول خدمات التصميم.
-
-اسم عملي: [اسم العمل]
-النوع: [مطعم/متجر إلكتروني/أعمال خدمات]
-الموقع: [المدينة]
-
-هل يمكنني الحصول على استشارة مجانية؟`;
-                    } else if (currentLang === 'fr') {
-                        message = `Bonjour ! Je voudrais parler avec Ilyas à propos de vos services de design.
-
-Mon entreprise : [Nom de l'entreprise]
-Type : [Restaurant/Boutique en ligne/Entreprise de services]
-Localisation : [Ville]
-
-Puis-je avoir une consultation gratuite ?`;
-                    } else {
-                        message = `Hi! I'd like to speak with Ilyas about your design services.
-
-My business: [Business name]
-Type: [Restaurant/Online Store/Service Business]
-Location: [City]
-
-Can I get a free consultation?`;
-                    }
-                    break;
-                case 'consultation':
-                    if (currentLang === 'ar') {
-                        message = `مرحباً! أود حجز استشارة مجانية مع إلياس.
-
-اسم عملي: [اسم العمل]
-النوع: [مطعم/متجر إلكتروني/أعمال خدمات]
-الموقع: [المدينة]
-أكبر تحدياتي: [وصف التحديات]
-
-متى يمكننا التحدث؟`;
-                    } else if (currentLang === 'fr') {
-                        message = `Bonjour ! Je voudrais réserver une consultation gratuite avec Ilyas.
-
-Mon entreprise : [Nom de l'entreprise]
-Type : [Restaurant/Boutique en ligne/Entreprise de services]
-Localisation : [Ville]
-Mes plus grands défis : [Décrivez vos défis]
-
-Quand pouvons-nous parler ?`;
-                    } else {
-                        message = `Hi! I'd like to book a free consultation with Ilyas.
-
-My business: [Business name]
-Type: [Restaurant/Online Store/Service Business]
-Location: [City]
-My biggest challenges: [Describe your challenges]
-
-When can we talk?`;
                     }
                     break;
                 default:
