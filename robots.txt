@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://maktoubmedia.com/sitemap.xml
+
+# Optimisation pour Agadir et Essaouira
+Allow: /agence-communication-agadir
+Allow: /agence-communication-essaouira
+Allow: /marketing-digital-agadir
+Allow: /marketing-digital-essaouira
+Allow: /creation-site-web-agadir
+Allow: /creation-site-web-essaouira
+
+# Ressources importantes
+Allow: /img/
+Allow: /css/
+Allow: /js/
+
+# Pages importantes pour le SEO local
+Allow: /contact
+Allow: /services
+Allow: /portfolio
+Allow: /blog
+
+# Crawl-delay pour éviter la surcharge
+Crawl-delay: 1

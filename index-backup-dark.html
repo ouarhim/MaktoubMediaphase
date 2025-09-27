@@ -138,26 +138,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Critical CSS inline -->
-     <style>
-        @import url('dark-mode.css');
-     </style>
     <style>
         :root {
-        --primary: #2563EB;          /* Maktoub Blue */
-        --secondary: #F97316;        /* Atlas Orange */
-        --success: #10B981;          /* Mint Green */
-        --warning: #F59E0B;          /* Existing token retained for notices */
-        --background: #374151;       /* Charcoal */
-        --text-dark: #F5F5DC;        /* Desert Sand as light text on dark */
-        --text-light: rgba(245,245,220,0.72); /* Soft Sand text */
-        --border: rgba(245,245,220,0.18);     /* Sand border on dark */
-
-        /* Extra surfaces derived from brand */
-        --surface-1: rgba(55,65,81,0.92);     /* Deep Charcoal card surface */
-        --surface-2: rgba(124,58,237,0.08);   /* Deep Purple veil */
-        --surface-3: rgba(255,255,255,0.06);  /* Subtle glass for dark */
-        --link: #2563EB;                      /* Primary links */
-        --link-hover: #1E40AF;
+            --primary: #4F46E5;      /* Maktoub Blue from logo */
+            --secondary: #F97316;    /* CTA Orange */
+            --success: #10B981;      /* Trust Green */
+            --warning: #F59E0B;      /* Urgency Yellow */
+            --background: #FFFFFF;   
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --border: #E5E7EB;
+            --logo-blue: #4F46E5;    /* Exact logo blue */
         }
 
         * {
@@ -481,7 +472,7 @@
         /* Problem/Solution Section */
         .problem-solution {
             padding: 80px 0;
-            background-color: #374151;
+            background-color: #f8fafc;
         }
 
         .problem-solution h2 {
@@ -545,7 +536,7 @@
         }
 
         .founder-logo {
-            background: rgba(245,245,220,0.18);
+            background: white;
             padding: 10px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -576,7 +567,7 @@
         }
 
         .package-card {
-            background: #374151;
+            background: white;
             border: 2px solid var(--border);
             border-radius: 12px;
             padding: 30px;
@@ -590,20 +581,23 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
-
+        .package-card.popular {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
         [dir="rtl"] .package-badge {
             top: -20px;
         }
         .package-badge {
             position: absolute;
-            top: -20px;
+            top: -40px;
             left: 50%;
             transform: translateX(-50%);
             background-color: var(--primary);
             color: white;
             padding: 8px 20px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 600;
         }
 
@@ -638,8 +632,8 @@
         }
 
         .timeline {
-            background-color: rgba(255,255,255,0.06);
-            color: rgba(245,245,220,0.72);
+            background-color: #f0f9ff;
+            color: var(--primary);
             padding: 10px;
             border-radius: 6px;
             margin-bottom: 20px;
@@ -647,7 +641,7 @@
         }
 
         .add-ons {
-            background-color: rgba(255,255,255,0.06);
+            background-color: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
             padding: 12px;
@@ -681,7 +675,7 @@
         /* Portfolio Section */
         .portfolio {
             padding: 80px 0;
-            background-color: #374151;
+            background-color: #f8fafc;
         }
 
         .portfolio h2 {
@@ -698,7 +692,7 @@
         }
 
         .portfolio-item {
-            background: rgba(245,245,220,0.18);
+            background: white;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -722,7 +716,7 @@
             height: 150px;
             object-fit: contain;
             border-radius: 8px;
-            background-color: rgba(245,245,220,0.18);
+            background-color: #f8f9fa;
             padding: 10px;
             border: 1px solid #e9ecef;
         }
@@ -735,7 +729,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
-            background-color: rgba(245,245,220,0.18);
+            background-color: #f8f9fa;
             /* Fallback for browsers that don't support aspect-ratio */
             max-height: 400px;
         }
@@ -780,7 +774,7 @@
         }
 
         .skill {
-            background-color: rgba(245,245,220,0.18);
+            background-color: #f0f9ff;
             padding: 15px;
             border-radius: 8px;
             text-align: center;
@@ -790,7 +784,7 @@
         /* Social Proof Section */
         .social-proof {
             padding: 80px 0;
-            background-color: #374151;
+            background-color: #f8fafc;
         }
 
         .social-proof h3 {
@@ -801,7 +795,7 @@
         }
 
         .testimonial {
-            background: rgba(245,245,220,0.18);
+            background: white;
             padding: 30px;
             border-radius: 12px;
             margin-bottom: 20px;
@@ -1014,7 +1008,7 @@
             top: 20px;
             right: 20px;
             z-index: 1001;
-            background: rgba(245,245,220,0.18);
+            background: white;
             border-radius: 25px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             padding: 5px;
@@ -1226,7 +1220,7 @@
             left: -100%;
             width: 100%;
             height: 100vh;
-            background: rgba(245,245,220,0.18);
+            background: white;
             z-index: 1001;
             transition: left 0.3s ease;
             padding: 2rem 1rem;
@@ -1759,7 +1753,7 @@
         }
 
         .mobile-menu-content {
-            background: rgba(245,245,220,0.18);
+            background: white;
             border-radius: 12px;
             padding: 30px;
             max-width: 400px;
@@ -2036,7 +2030,7 @@
     </section>
 
     <!-- LOCAL EXPERTISE SECTION -->
-    <section style="padding: 40px 0; background: #374151">
+    <section style="padding: 40px 0; background: linear-gradient(135deg, #f0f9ff, #e0f2fe);">
         <div class="container">
             <h2 style="text-align: center; font-family: 'Poppins', sans-serif; font-size: 2rem; margin-bottom: 30px; color: var(--primary);">
                 <span data-lang="ar">🎯 متخصصون في أكادير والصويرة</span>
@@ -2045,7 +2039,7 @@
             </h2>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
-                <div style="text-align: center; padding: 20px; background: rgba(245,245,220,0.18); border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <div style="text-align: center; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                     <h3 style="color: var(--primary); margin-bottom: 15px; font-family: 'Poppins', sans-serif;">
                         <span data-lang="ar">🏖️ أكادير</span>
                         <span data-lang="fr">🏖️ Agadir</span>
@@ -2058,7 +2052,7 @@
                     </p>
                 </div>
                 
-                <div style="text-align: center; padding: 20px; background: rgba(245,245,220,0.18); border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <div style="text-align: center; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                     <h3 style="color: var(--primary); margin-bottom: 15px; font-family: 'Poppins', sans-serif;">
                         <span data-lang="ar">🏛️ الصويرة</span>
                         <span data-lang="fr">🏛️ Essaouira</span>
@@ -2178,7 +2172,7 @@
             </div>
             
             <!-- Benefits Section -->
-            <div style="margin-top: 60px; padding: 40px; background: #374151; border-radius: 12px;">
+            <div style="margin-top: 60px; padding: 40px; background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border-radius: 12px;">
                 <h3 style="text-align: center; font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-bottom: 30px; color: var(--primary);">
                     <span data-lang="ar">🚀 ما تفعله العلامة التجارية الاحترافية لعملك</span>
                     <span data-lang="fr">🚀 Ce que le branding professionnel fait pour votre entreprise</span>
@@ -2215,7 +2209,7 @@
                     </div>
                 </div>
                 
-                <div style="text-align: center; background: rgba(245,245,220,0.18); padding: 20px; border-radius: 8px; border-left: 4px solid var(--success);">
+                <div style="text-align: center; background: white; padding: 20px; border-radius: 8px; border-left: 4px solid var(--success);">
                     <p style="font-weight: 600; color: var(--text-dark); margin: 0;">
                         <span data-lang="ar">📊 البحث يظهر: المستهلكون المغاربة أكثر احتمالاً بنسبة 73% للشراء من الشركات ذات العلامة التجارية الاحترافية.</span>
                         <span data-lang="fr">📊 La recherche montre : Les consommateurs marocains sont 73% plus susceptibles d'acheter auprès d'entreprises avec un branding professionnel.</span>
@@ -2228,6 +2222,9 @@
                 
                 <div class="founder-info">
                     <img src="img/photo ilyas owner .png" alt="Ilyas - Maktoub Media founder" class="founder-photo">
+                    <div class="founder-logo">
+                        <img src="img/logo.png" alt="Maktoub Media Logo" class="small-logo">
+                    </div>
                 </div>
                 
                 <div class="story-content">
@@ -2262,7 +2259,7 @@
     </section>
 
     <!-- Future Comparison Section -->
-    <section style="padding: 80px 0; background: #374151;">
+    <section style="padding: 80px 0; background: linear-gradient(135deg, #fef3c7, #fde68a);">
         <div class="container">
             <h2 style="text-align: center; font-family: 'Poppins', sans-serif; font-size: 2.2rem; margin-bottom: 50px;">
                 <span data-lang="ar">📊 مستقبلك: مع العلامة التجارية الاحترافية مقابل بدونها</span>
@@ -2271,7 +2268,7 @@
             </h2>
             
             <div class="future-comparison-grid">
-                <div style="background: rgba(245,245,220,0.18); padding: 30px; border-radius: 12px; border-left: 5px solid var(--success);">
+                <div style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid var(--success);">
                     <h3 style="color: var(--success); margin-bottom: 20px;">
                         <span data-lang="ar">6 أشهر من الآن - مع العلامة التجارية الاحترافية:</span>
                         <span data-lang="fr">Dans 6 mois - AVEC branding professionnel :</span>
@@ -2286,8 +2283,8 @@
                     </ul>
                 </div>
                 
-                <div style="background: rgba(245,245,220,0.18); padding: 30px; border-radius: 12px; border-left: 5px solid #dc2626;">
-                    <h3 style="color: #e76c6c; margin-bottom: 20px;">
+                <div style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid #dc2626;">
+                    <h3 style="color: #dc2626; margin-bottom: 20px;">
                         <span data-lang="ar">6 أشهر من الآن - بدون العلامة التجارية الاحترافية:</span>
                         <span data-lang="fr">Dans 6 mois - SANS branding professionnel :</span>
                         <span data-lang="en">6 Months From Now - WITHOUT Professional Branding:</span>
@@ -2317,6 +2314,53 @@
         </div>
     </section>
 
+    <!-- CEO Section -->
+    <section class="ceo-section" style="padding: 4rem 0; background: linear-gradient(135deg, #f0f9ff, #e0f2fe);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem; color: var(--primary); font-family: 'Poppins', sans-serif;">
+                <span data-lang="ar">تعرف على المؤسس</span>
+                <span data-lang="fr">Rencontrez le Fondateur</span>
+                <span data-lang="en">Meet the Founder</span>
+            </h2>
+            <div style="display: grid; gap: 2rem; align-items: center; max-width: 800px; margin: 0 auto;">
+                <img src="img/photo ilyas owner .png" alt="Ilyas - Founder of Maktoub Media" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin: 0 auto; border: 4px solid var(--primary);">
+                <div style="text-align: center;">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem; font-family: 'Poppins', sans-serif;">
+                        <span data-lang="ar">إلياس</span>
+                        <span data-lang="fr">Ilyas</span>
+                        <span data-lang="en">Ilyas</span>
+                    </h3>
+                    <h4 style="color: var(--text-light); margin-bottom: 1rem; font-size: 1.125rem;">
+                        <span data-lang="ar">مؤسس ومدير إبداعي</span>
+                        <span data-lang="fr">Fondateur & Directeur Créatif</span>
+                        <span data-lang="en">Founder & Creative Director</span>
+                    </h4>
+                    <p style="margin-bottom: 1.5rem; font-size: 1.125rem; line-height: 1.7; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        <span data-lang="ar">مع أكثر من 5 سنوات من الخبرة في التصميم الجرافيكي وتطوير المواقع، أتخصص في مساعدة الشركات المغربية على بناء علامات تجارية احترافية تجذب العملاء وتحفز النمو. نجاحك هو مهمتي.</span>
+                        <span data-lang="fr">Avec plus de 5 ans d'expérience en design graphique et développement web, je me spécialise dans l'aide aux entreprises marocaines pour construire des marques professionnelles qui attirent les clients et stimulent la croissance. Votre succès est ma mission.</span>
+                        <span data-lang="en">With 5+ years of experience in graphic design and web development, I specialize in helping Moroccan businesses build professional brands that attract customers and drive growth. Your success is my mission.</span>
+                    </p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <a href="https://portfolio-ouarhims-projects.vercel.app/" style="padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; background: #0077b5; color: white; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                            <span data-lang="ar">💼 شاهد أعمالي</span>
+                            <span data-lang="fr">💼 Voir mon portfolio</span>
+                            <span data-lang="en">💼 View my portfolio</span>
+                        </a>
+                        <a href="#" onclick="openWhatsApp('ceo')" style="padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; background: var(--success); color: white; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                            <span data-lang="ar">📱 راسل على الواتساب</span>
+                            <span data-lang="fr">📱 Message sur WhatsApp</span>
+                            <span data-lang="en">📱 Message on WhatsApp</span>
+                        </a>
+                    </div>
+                    <button class="cta-primary" onclick="openWhatsApp('consultation')" style="background: linear-gradient(180deg, #F97316, #F26B0D); color: white; padding: 1rem 2rem; border: none; border-radius: 0.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; text-align: center; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <span data-lang="ar">🎯 احجز استشارة مجانية</span>
+                        <span data-lang="fr">🎯 Réservez une Consultation Gratuite</span>
+                        <span data-lang="en">🎯 Book a Free Consultation</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Packages Section -->
     <section class="packages" id="packages">
@@ -2333,9 +2377,9 @@
             </p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px;">
-                <div style="text-align: center; padding: 20px; background: rgba(224, 220, 245, 0.18); border-radius: 8px; border: 2px solid var(--primary);">
+                <div style="text-align: center; padding: 20px; background: white; border-radius: 8px; border: 2px solid var(--primary);">
                     <div style="width: 50px; height: 50px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold; font-size: 1.2rem;">1</div>
-                    <h4 style="margin-bottom: 10px; color: #5980ff;">
+                    <h4 style="margin-bottom: 10px; color: var(--primary);">
                         <span data-lang="ar">تواصل معنا على الواتساب</span>
                         <span data-lang="fr">Contactez-nous sur WhatsApp</span>
                         <span data-lang="en">Contact us on WhatsApp</span>
@@ -2347,7 +2391,7 @@
                     </p>
                 </div>
                 
-                <div style="text-align: center; padding: 20px; background: rgba(245,245,220,0.18); border-radius: 8px; border: 2px solid var(--success);">
+                <div style="text-align: center; padding: 20px; background: white; border-radius: 8px; border: 2px solid var(--success);">
                     <div style="width: 50px; height: 50px; background: var(--success); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold; font-size: 1.2rem;">2</div>
                     <h4 style="margin-bottom: 10px; color: var(--success);">
                         <span data-lang="ar">احصل على تدقيق مصغر مجاني</span>
@@ -2361,7 +2405,7 @@
                     </p>
                 </div>
                 
-                <div style="text-align: center; padding: 20px; background: rgba(245,245,220,0.18); border-radius: 8px; border: 2px solid var(--warning);">
+                <div style="text-align: center; padding: 20px; background: white; border-radius: 8px; border: 2px solid var(--warning);">
                     <div style="width: 50px; height: 50px; background: var(--warning); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold; font-size: 1.2rem;">3</div>
                     <h4 style="margin-bottom: 10px; color: var(--warning);">
                         <span data-lang="ar">شاهد كيف سيساعدك التصميم الاحترافي</span>
@@ -2375,7 +2419,7 @@
                     </p>
                 </div>
                 
-                <div style="text-align: center; padding: 20px; background: rgba(245,245,220,0.18); border-radius: 8px; border: 2px solid var(--secondary);">
+                <div style="text-align: center; padding: 20px; background: white; border-radius: 8px; border: 2px solid var(--secondary);">
                     <div style="width: 50px; height: 50px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold; font-size: 1.2rem;">4</div>
                     <h4 style="margin-bottom: 10px; color: var(--secondary);">
                         <span data-lang="ar">اختر الباقة التي تناسب ميزانيتك</span>
@@ -2409,7 +2453,92 @@
             </div>
             
             <div class="packages-grid">
-                
+                <!-- Package 1: Restaurant/Food Business -->
+                <div class="package-card popular">
+                    <div class="package-badge">
+                        <span data-lang="ar">الأكثر شعبية للمطاعم</span>
+                        <span data-lang="fr">Le plus populaire pour les restaurants</span>
+                        <span data-lang="en">Most Popular for Restaurants</span>
+                    </div>
+                    <h3>
+                        <span data-lang="ar">🍽️ من مطعم خفي إلى وجهة شهيرة</span>
+                        <span data-lang="fr">🍽️ D'un restaurant caché à une destination populaire</span>
+                        <span data-lang="en">🍽️ From Hidden Restaurant to Popular Destination</span>
+                    </h3>
+                    <p style="font-size: 1rem; color: var(--text-light); margin-bottom: 20px; font-style: italic;">
+                        <span data-lang="ar">"كان مطعمي فارغاً معظم الوقت. الآن الناس ينتظرون في الطابور."</span>
+                        <span data-lang="fr">"Mon restaurant était vide la plupart du temps. Maintenant les gens font la queue."</span>
+                        <span data-lang="en">"My restaurant was empty most of the time. Now people wait in line."</span>
+                    </p>
+                    <div class="price">1,900 MAD <span class="normal-price">
+                        <span data-lang="ar">عادة 2,500</span>
+                        <span data-lang="fr">Habituellement 2,500</span>
+                        <span data-lang="en">Usually 2,500</span>
+                    </span></div>
+                    
+                    <h4 style="color: var(--primary); margin: 20px 0 15px 0; font-size: 1.1rem;">
+                        <span data-lang="ar">🎯 المشكلة التي نحلها:</span>
+                        <span data-lang="fr">🎯 Le problème que nous résolvons :</span>
+                        <span data-lang="en">🎯 The Problem We Solve:</span>
+                    </h4>
+                    <p style="font-size: 0.95rem; color: #dc2626; margin-bottom: 15px;">
+                        <span data-lang="ar">عملاءك لا يعرفون أنك موجود. قائمتك تبدو رخيصة. منشوراتك لا تجذب انتباه أحد.</span>
+                        <span data-lang="fr">Vos clients ne savent pas que vous existez. Votre menu a l'air bon marché. Vos posts n'attirent personne.</span>
+                        <span data-lang="en">Your customers don't know you exist. Your menu looks cheap. Your posts don't grab anyone's attention.</span>
+                    </p>
+                    
+                    <h4 style="color: var(--success); margin: 20px 0 15px 0; font-size: 1.1rem;">
+                        <span data-lang="ar">✅ التحول الذي ستحصل عليه:</span>
+                        <span data-lang="fr">✅ La transformation que vous obtiendrez :</span>
+                        <span data-lang="en">✅ The Transformation You'll Get:</span>
+                    </h4>
+                    <ul class="features">
+                        <li>
+                            <span data-lang="ar">✓ شعار احترافي يجعل الناس يتذكرون اسم مطعمك</span>
+                            <span data-lang="fr">✓ Logo professionnel qui fait que les gens se souviennent de votre restaurant</span>
+                            <span data-lang="en">✓ Professional logo that makes people remember your restaurant name</span>
+                        </li>
+                        <li>
+                            <span data-lang="ar">✓ قائمة جميلة تجعل الطعام يبدو شهياً ومكلفاً</span>
+                            <span data-lang="fr">✓ Menu magnifique qui rend la nourriture appétissante et chère</span>
+                            <span data-lang="en">✓ Beautiful menu that makes food look delicious and expensive</span>
+                        </li>
+                        <li>
+                            <span data-lang="ar">✓ منشورات إنستغرام تجعل الناس يريدون الحجز</span>
+                            <span data-lang="fr">✓ Posts Instagram qui donnent envie aux gens de réserver</span>
+                            <span data-lang="en">✓ Instagram posts that make people want to book a table</span>
+                        </li>
+                        <li>
+                            <span data-lang="ar">✓ فيديو يروي قصة مطعمك ويجذب العملاء الجدد</span>
+                            <span data-lang="fr">✓ Vidéo qui raconte l'histoire de votre restaurant et attire de nouveaux clients</span>
+                            <span data-lang="en">✓ Video that tells your restaurant's story and attracts new customers</span>
+                        </li>
+                        <li>
+                            <span data-lang="ar">✓ Google Business محسن يجعل الناس يجدونك بسهولة</span>
+                            <span data-lang="fr">✓ Google Business optimisé qui aide les gens à vous trouver facilement</span>
+                            <span data-lang="en">✓ Optimized Google Business that helps people find you easily</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="timeline">
+                        <span data-lang="ar">⏰ جاهز خلال 7-12 أيام عمل</span>
+                        <span data-lang="fr">⏰ Prêt en 7-12 jours ouvrables</span>
+                        <span data-lang="en">⏰ Ready in 7-12 business days</span>
+                    </div>
+                    <div class="add-ons">
+                        <small>
+                            <span data-lang="ar">إضافات: فيديوهات إضافية +500 درهم | صفحة قائمة إضافية +200 درهم</span>
+                            <span data-lang="fr">Add-ons : vidéos supplémentaires +500 MAD | page menu +200 MAD</span>
+                            <span data-lang="en">Add-ons: Extra video cuts +500 MAD | Additional menu page +200 MAD</span>
+                        </small>
+                    </div>
+                    <button class="cta-package" onclick="openWhatsApp('restaurant')">
+                        <span data-lang="ar">📱 احجز مكانك عبر الواتساب</span>
+                        <span data-lang="fr">📱 Réservez votre place via WhatsApp</span>
+                        <span data-lang="en">📱 Reserve Your Spot on WhatsApp</span>
+                    </button>
+                </div>
+
                 <!-- Package 2: Online Store -->
                 <div class="package-card">
                     <h3>
@@ -2485,87 +2614,6 @@
                         </small>
                     </div>
                     <button class="cta-package" onclick="openWhatsApp('store')">
-                        <span data-lang="ar">📱 احجز مكانك عبر الواتساب</span>
-                        <span data-lang="fr">📱 Réservez votre place via WhatsApp</span>
-                        <span data-lang="en">📱 Reserve Your Spot on WhatsApp</span>
-                    </button>
-                </div>
-                <!-- Package 1: Restaurant/Food Business -->
-                <div class="package-card popular">
-                    
-                    <h3>
-                        <span data-lang="ar">🍽️ من مطعم خفي إلى وجهة شهيرة</span>
-                        <span data-lang="fr">🍽️ D'un restaurant caché à une destination populaire</span>
-                        <span data-lang="en">🍽️ From Hidden Restaurant to Popular Destination</span>
-                    </h3>
-                    <p style="font-size: 1rem; color: var(--text-light); margin-bottom: 20px; font-style: italic;">
-                        <span data-lang="ar">"كان مطعمي فارغاً معظم الوقت. الآن الناس ينتظرون في الطابور."</span>
-                        <span data-lang="fr">"Mon restaurant était vide la plupart du temps. Maintenant les gens font la queue."</span>
-                        <span data-lang="en">"My restaurant was empty most of the time. Now people wait in line."</span>
-                    </p>
-                    <div class="price">1,900 MAD <span class="normal-price">
-                        <span data-lang="ar">عادة 2,500</span>
-                        <span data-lang="fr">Habituellement 2,500</span>
-                        <span data-lang="en">Usually 2,500</span>
-                    </span></div>
-                    
-                    <h4 style="color: var(--primary); margin: 20px 0 15px 0; font-size: 1.1rem;">
-                        <span data-lang="ar">🎯 المشكلة التي نحلها:</span>
-                        <span data-lang="fr">🎯 Le problème que nous résolvons :</span>
-                        <span data-lang="en">🎯 The Problem We Solve:</span>
-                    </h4>
-                    <p style="font-size: 0.95rem; color: #dc2626; margin-bottom: 15px;">
-                        <span data-lang="ar">عملاءك لا يعرفون أنك موجود. قائمتك تبدو رخيصة. منشوراتك لا تجذب انتباه أحد.</span>
-                        <span data-lang="fr">Vos clients ne savent pas que vous existez. Votre menu a l'air bon marché. Vos posts n'attirent personne.</span>
-                        <span data-lang="en">Your customers don't know you exist. Your menu looks cheap. Your posts don't grab anyone's attention.</span>
-                    </p>
-                    
-                    <h4 style="color: var(--success); margin: 20px 0 15px 0; font-size: 1.1rem;">
-                        <span data-lang="ar">✅ التحول الذي ستحصل عليه:</span>
-                        <span data-lang="fr">✅ La transformation que vous obtiendrez :</span>
-                        <span data-lang="en">✅ The Transformation You'll Get:</span>
-                    </h4>
-                    <ul class="features">
-                        <li>
-                            <span data-lang="ar">✓ شعار احترافي يجعل الناس يتذكرون اسم مطعمك</span>
-                            <span data-lang="fr">✓ Logo professionnel qui fait que les gens se souviennent de votre restaurant</span>
-                            <span data-lang="en">✓ Professional logo that makes people remember your restaurant name</span>
-                        </li>
-                        <li>
-                            <span data-lang="ar">✓ قائمة جميلة تجعل الطعام يبدو شهياً ومكلفاً</span>
-                            <span data-lang="fr">✓ Menu magnifique qui rend la nourriture appétissante et chère</span>
-                            <span data-lang="en">✓ Beautiful menu that makes food look delicious and expensive</span>
-                        </li>
-                        <li>
-                            <span data-lang="ar">✓ منشورات إنستغرام تجعل الناس يريدون الحجز</span>
-                            <span data-lang="fr">✓ Posts Instagram qui donnent envie aux gens de réserver</span>
-                            <span data-lang="en">✓ Instagram posts that make people want to book a table</span>
-                        </li>
-                        <li>
-                            <span data-lang="ar">✓ فيديو يروي قصة مطعمك ويجذب العملاء الجدد</span>
-                            <span data-lang="fr">✓ Vidéo qui raconte l'histoire de votre restaurant et attire de nouveaux clients</span>
-                            <span data-lang="en">✓ Video that tells your restaurant's story and attracts new customers</span>
-                        </li>
-                        <li>
-                            <span data-lang="ar">✓ Google Business محسن يجعل الناس يجدونك بسهولة</span>
-                            <span data-lang="fr">✓ Google Business optimisé qui aide les gens à vous trouver facilement</span>
-                            <span data-lang="en">✓ Optimized Google Business that helps people find you easily</span>
-                        </li>
-                    </ul>
-                    
-                    <div class="timeline">
-                        <span data-lang="ar">⏰ جاهز خلال 7-12 أيام عمل</span>
-                        <span data-lang="fr">⏰ Prêt en 7-12 jours ouvrables</span>
-                        <span data-lang="en">⏰ Ready in 7-12 business days</span>
-                    </div>
-                    <div class="add-ons">
-                        <small>
-                            <span data-lang="ar">إضافات: فيديوهات إضافية +500 درهم | صفحة قائمة إضافية +200 درهم</span>
-                            <span data-lang="fr">Add-ons : vidéos supplémentaires +500 MAD | page menu +200 MAD</span>
-                            <span data-lang="en">Add-ons: Extra video cuts +500 MAD | Additional menu page +200 MAD</span>
-                        </small>
-                    </div>
-                    <button class="cta-package" onclick="openWhatsApp('restaurant')">
                         <span data-lang="ar">📱 احجز مكانك عبر الواتساب</span>
                         <span data-lang="fr">📱 Réservez votre place via WhatsApp</span>
                         <span data-lang="en">📱 Reserve Your Spot on WhatsApp</span>
@@ -2845,9 +2893,9 @@
                     <span data-lang="en">✓ Professional quality that builds trust</span>
                 </p>
                 <p>
-                    <span data-lang="ar">✓ تسليم سريع</span>
-                    <span data-lang="fr">✓ Livraison rapide </span>
-                    <span data-lang="en">✓ Fast delivery</span>
+                    <span data-lang="ar">✓ تسليم سريع (5-10 أيام كحد أقصى)</span>
+                    <span data-lang="fr">✓ Livraison rapide (5-10 jours maximum)</span>
+                    <span data-lang="en">✓ Fast delivery (5-10 days maximum)</span>
                 </p>
                 <p>
                     <span data-lang="ar">✓ مراجعات غير محدودة حتى تكون راضياً</span>
