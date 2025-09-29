@@ -573,14 +573,14 @@
             color: #f5f5dc;
             margin: 0;
         }
-        
+
         .hero-tagline {
             font-size: 1.1rem;
             color: #d1d5db;
             margin: 5px 0 0 0;
             font-style: italic;
         }
-        
+
         .hero-content-card {
             background: rgba(55, 65, 81, 0.92);
             border: 1px solid rgba(245, 245, 220, 0.18);
@@ -626,13 +626,13 @@
             margin-bottom: 30px;
             text-align: center;
         }
-        
+
         .hero-price-highlight span {
             font-size: 1.1rem;
             font-weight: 600;
             color: #6ee7b7;
         }
-        
+
         .hero-cta-buttons {
             display: flex;
             gap: 20px;
@@ -892,6 +892,7 @@
             .packages-enhanced {
                 grid-template-columns: 1fr;
                 gap: 20px;
+            
             }
         }
         
@@ -906,7 +907,7 @@
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .pkg-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
@@ -1058,7 +1059,7 @@
             padding: 0;
             margin: 0;
         }
-        
+
         .pkg-features li {
             padding: 8px 0;
             color: #d1d5db;
@@ -1080,7 +1081,7 @@
             font-weight: 600;
             margin-bottom: 12px;
         }
-        
+
         .pkg-addons {
             color: #9ca3af;
             font-size: 0.85rem;
@@ -1161,7 +1162,7 @@
         
         @media (max-width: 768px) {
             .spe-testimonials-grid {
-                grid-template-columns: 1fr;
+                
                 gap: 20px;
             }
         }
@@ -1286,7 +1287,7 @@
         
         @media (max-width: 768px) {
             .spe-promise-items {
-                grid-template-columns: 1fr;
+                
             }
         }
         
@@ -1352,7 +1353,7 @@
             font-weight: 600;
             margin-bottom: 20px;
         }
-        
+
         .pe-title {
             font-size: 2.5rem;
             font-weight: 700;
@@ -1370,7 +1371,7 @@
         
         @media (max-width: 768px) {
             .pe-steps-grid {
-                grid-template-columns: 1fr;
+                
                 gap: 20px;
             }
         }
@@ -1805,7 +1806,7 @@
             gap: 40px;
             margin-bottom: 60px;
         }
-        
+
         @media (max-width: 768px) {
             .pe-portfolio-grid {
                 grid-template-columns: 1fr;
@@ -2098,7 +2099,7 @@
         .fce-comparison-card {
             background: rgba(55, 65, 81, 0.92);
             border: 1px solid rgba(245, 245, 220, 0.18);
-            border-radius: 20px;
+                border-radius: 20px;
             padding: 32px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
             backdrop-filter: blur(10px);
@@ -2172,7 +2173,7 @@
         
         .fce-benefits-list, .fce-problems-list {
             display: flex;
-            flex-direction: column;
+                flex-direction: column;
             gap: 20px;
         }
         
@@ -2201,7 +2202,7 @@
         
         .fce-benefit-desc, .fce-problem-desc {
             color: #d1d5db;
-            font-size: 0.95rem;
+                font-size: 0.95rem;
             line-height: 1.5;
             margin: 0;
         }
@@ -2211,7 +2212,7 @@
             border: 2px solid rgba(37, 99, 235, 0.3);
             border-radius: 20px;
             padding: 40px;
-            text-align: center;
+                text-align: center;
             box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
             position: relative;
             overflow: hidden;
@@ -2277,7 +2278,6 @@
         /* Enhanced Packages Section Styles */
         .packages-enhanced {
             padding: 80px 0;
-            background: linear-gradient(135deg, rgba(31, 41, 55, 0.95), rgba(17, 24, 39, 0.98));
             position: relative;
             overflow: hidden;
         }
@@ -2306,7 +2306,7 @@
             color: #93c5fd;
             border: 1px solid rgba(37, 99, 235, 0.3);
             border-radius: 20px;
-            font-size: 0.9rem;
+                font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 20px;
         }
@@ -2414,9 +2414,9 @@
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 1.1rem;
-        }
-        
+                font-size: 1.1rem;
+            }
+
         .pkg-step-icon {
             font-size: 2rem;
         }
@@ -2503,7 +2503,7 @@
         }
         
         .pkg-benefit-title {
-            font-size: 1.1rem;
+                font-size: 1.1rem;
             font-weight: 700;
             color: #f5f5dc;
             margin: 0 0 4px 0;
@@ -2511,23 +2511,100 @@
         
         .pkg-benefit-value {
             color: #10b981;
-            font-size: 0.9rem;
+                font-size: 0.9rem;
             font-weight: 600;
             margin: 0;
-        }
-        
+            }
+
         .pkg-offer-price {
             background: rgba(37, 99, 235, 0.1);
             border: 1px solid rgba(37, 99, 235, 0.3);
             border-radius: 12px;
-            padding: 20px;
-        }
-        
+                padding: 20px;
+            }
+
         .pkg-price-text {
             font-size: 1.2rem;
             font-weight: 700;
             color: #f5f5dc;
             margin: 0;
+        }
+        
+        /* Mobile CSS for Special Offer */
+        @media (max-width: 768px) {
+            .pkg-special-offer {
+                padding: 25px 20px;
+                margin-bottom: 40px;
+                border-radius: 15px;
+            }
+            
+            .pkg-offer-title {
+                font-size: 1.4rem;
+                margin-bottom: 20px;
+            }
+            
+            .pkg-offer-badge {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+                margin-bottom: 15px;
+            }
+            
+            .pkg-benefit-item {
+                padding: 12px 15px;
+                margin-bottom: 10px;
+                border-radius: 10px;
+            }
+            
+            .pkg-benefit-title {
+                font-size: 0.9rem;
+            }
+            
+            .pkg-benefit-value {
+                font-size: 0.8rem;
+            }
+            
+            .pkg-offer-price {
+                padding: 20px;
+                border-radius: 15px;
+            }
+            
+            .pkg-price-text {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .pkg-special-offer {
+                padding: 20px 15px;
+                margin-bottom: 30px;
+            }
+            
+            .pkg-offer-title {
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+            }
+            
+            .pkg-offer-badge {
+                font-size: 0.75rem;
+                padding: 5px 10px;
+                margin-bottom: 12px;
+            }
+            
+            .pkg-benefit-item {
+                padding: 10px 12px;
+                margin-bottom: 8px;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .pkg-benefit-icon {
+                margin-right: 0;
+                margin-bottom: 8px;
+            }
+            
+            .pkg-offer-price {
+                padding: 15px;
+            }
         }
 
         /* Enhanced Final CTA Section Styles */
@@ -2551,7 +2628,7 @@
         }
         
         .fcta-header {
-            text-align: center;
+                text-align: center;
             margin-bottom: 60px;
         }
         
@@ -2564,9 +2641,9 @@
             border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 600;
-            margin-bottom: 20px;
-        }
-        
+                margin-bottom: 20px;
+            }
+
         .fcta-title {
             font-size: 2.5rem;
             font-weight: 700;
@@ -3042,8 +3119,8 @@
                     <span data-lang="fr">Problème, Solution et Résultats</span>
                     <span data-lang="en">Problem, Solution and Results</span>
             </h2>
-            </div>
-            
+                </div>
+                
             <!-- Two-Column Grid -->
             <div class="ps-grid">
                 <!-- Problem Card (Right Column) -->
@@ -3328,9 +3405,9 @@
                 
                 <h2 class="fce-title">
                     <span data-lang="ar">مستقبلك: مع البراندينغ vs بلا بيه</span>
-                    <span data-lang="fr">📊 Votre avenir : Avec branding professionnel vs Sans</span>
-                    <span data-lang="en">📊 Your Future: With Professional Branding vs Without</span>
-                </h2>
+                <span data-lang="fr">📊 Votre avenir : Avec branding professionnel vs Sans</span>
+                <span data-lang="en">📊 Your Future: With Professional Branding vs Without</span>
+            </h2>
             </div>
             
             <!-- Comparison Cards -->
@@ -3349,9 +3426,9 @@
                     <div class="fce-card-content">
                         <h3 class="fce-card-title">
                             <span data-lang="ar">من هنا 6 شهور — مع براند برو:</span>
-                            <span data-lang="fr">Dans 6 mois - AVEC branding professionnel :</span>
-                            <span data-lang="en">6 Months From Now - WITH Professional Branding:</span>
-                        </h3>
+                        <span data-lang="fr">Dans 6 mois - AVEC branding professionnel :</span>
+                        <span data-lang="en">6 Months From Now - WITH Professional Branding:</span>
+                    </h3>
                         
                         <div class="fce-benefits-list">
                             <div class="fce-benefit-item">
@@ -3368,8 +3445,8 @@
                                         <span data-lang="en">Customers tag and recommend you</span>
                                     </p>
                                 </div>
-                            </div>
-                            
+                </div>
+                
                             <div class="fce-benefit-item">
                                 <div class="fce-benefit-icon">✅</div>
                                 <div class="fce-benefit-content">
@@ -3435,9 +3512,9 @@
                     <div class="fce-card-content">
                         <h3 class="fce-card-title">
                             <span data-lang="ar">من هنا 6 شهور — بلا براند برو:</span>
-                            <span data-lang="fr">Dans 6 mois - SANS branding professionnel :</span>
-                            <span data-lang="en">6 Months From Now - WITHOUT Professional Branding:</span>
-                        </h3>
+                        <span data-lang="fr">Dans 6 mois - SANS branding professionnel :</span>
+                        <span data-lang="en">6 Months From Now - WITHOUT Professional Branding:</span>
+                    </h3>
                         
                         <div class="fce-problems-list">
                             <div class="fce-problem-item">
@@ -3453,9 +3530,9 @@
                                         <span data-lang="fr">Vous luttez encore pour être remarqué en ligne</span>
                                         <span data-lang="en">Still struggling to get noticed online</span>
                                     </p>
-                                </div>
-                            </div>
-                            
+                </div>
+            </div>
+            
                             <div class="fce-problem-item">
                                 <div class="fce-problem-icon">❌</div>
                                 <div class="fce-problem-content">
@@ -3532,12 +3609,12 @@
                         <span data-lang="ar">توقف عن فقدان العملاء لصالح المنافسين الأفضل مظهراً</span>
                         <span data-lang="fr">Arrêtez de perdre des clients au profit de concurrents mieux présentés</span>
                         <span data-lang="en">Stop Losing Customers to Better-Looking Competitors</span>
-                    </h3>
+                </h3>
                     <p class="fce-cta-desc">
-                        <span data-lang="ar">الحقيقة قاسية لكنها بسيطة: منتجاتك قد تكون مذهلة. خدمتك قد تكون ممتازة. لكن إذا بدت علامتك التجارية هاوية، لن يعطيك العملاء الفرصة لإثبات ذلك. كل أسبوع تنتظره، منافسوك يحصلون على العملاء الذين يجب أن يكونوا لك.</span>
-                        <span data-lang="fr">La vérité est dure mais simple : Vos produits peuvent être incroyables. Votre service peut être excellent. Mais si votre branding a l'air amateur, les clients ne vous donneront jamais la chance de le prouver. Chaque semaine que vous attendez, vos concurrents obtiennent les clients qui devraient être vôtres.</span>
-                        <span data-lang="en">The truth is harsh but simple: Your products might be amazing. Your service might be excellent. But if your branding looks amateur, customers will never give you the chance to prove it. Every week you wait, your competitors are getting the customers that should be yours.</span>
-                    </p>
+                    <span data-lang="ar">الحقيقة قاسية لكنها بسيطة: منتجاتك قد تكون مذهلة. خدمتك قد تكون ممتازة. لكن إذا بدت علامتك التجارية هاوية، لن يعطيك العملاء الفرصة لإثبات ذلك. كل أسبوع تنتظره، منافسوك يحصلون على العملاء الذين يجب أن يكونوا لك.</span>
+                    <span data-lang="fr">La vérité est dure mais simple : Vos produits peuvent être incroyables. Votre service peut être excellent. Mais si votre branding a l'air amateur, les clients ne vous donneront jamais la chance de le prouver. Chaque semaine que vous attendez, vos concurrents obtiennent les clients qui devraient être vôtres.</span>
+                    <span data-lang="en">The truth is harsh but simple: Your products might be amazing. Your service might be excellent. But if your branding looks amateur, customers will never give you the chance to prove it. Every week you wait, your competitors are getting the customers that should be yours.</span>
+                </p>
                     <button class="fce-cta-button" onclick="openWhatsApp('future')">
                         <span data-lang="ar">احجز استشارة مجانية الآن</span>
                         <span data-lang="fr">Réservez une consultation gratuite maintenant</span>
@@ -3556,15 +3633,15 @@
             <div class="pkg-header reveal-up">
                 
                 <h2 class="pkg-title">
-                    <span data-lang="ar">📱 جاهز لتحويل عملك؟</span>
-                    <span data-lang="fr">📱 Prêt à transformer votre entreprise ?</span>
-                    <span data-lang="en">📱 Ready to Transform Your Business?</span>
-                </h2>
+                <span data-lang="ar">📱 جاهز لتحويل عملك؟</span>
+                <span data-lang="fr">📱 Prêt à transformer votre entreprise ?</span>
+                <span data-lang="en">📱 Ready to Transform Your Business?</span>
+            </h2>
                 <p class="pkg-subtitle">
-                    <span data-lang="ar">إليك ما يحدث بعد ذلك:</span>
-                    <span data-lang="fr">Voici ce qui se passe ensuite :</span>
-                    <span data-lang="en">Here's what happens next:</span>
-                </p>
+                <span data-lang="ar">إليك ما يحدث بعد ذلك:</span>
+                <span data-lang="fr">Voici ce qui se passe ensuite :</span>
+                <span data-lang="en">Here's what happens next:</span>
+            </p>
             </div>
             
             <!-- Process Steps -->
@@ -3576,15 +3653,15 @@
                     </div>
                     <div class="pkg-step-content">
                         <h4 class="pkg-step-title">
-                            <span data-lang="ar">تواصل معنا على الواتساب</span>
-                            <span data-lang="fr">Contactez-nous sur WhatsApp</span>
-                            <span data-lang="en">Contact us on WhatsApp</span>
-                        </h4>
+                        <span data-lang="ar">تواصل معنا على الواتساب</span>
+                        <span data-lang="fr">Contactez-nous sur WhatsApp</span>
+                        <span data-lang="en">Contact us on WhatsApp</span>
+                    </h4>
                         <p class="pkg-step-desc">
-                            <span data-lang="ar">(يستغرق دقيقتين)</span>
-                            <span data-lang="fr">(prend 2 minutes)</span>
-                            <span data-lang="en">(takes 2 minutes)</span>
-                        </p>
+                        <span data-lang="ar">(يستغرق دقيقتين)</span>
+                        <span data-lang="fr">(prend 2 minutes)</span>
+                        <span data-lang="en">(takes 2 minutes)</span>
+                    </p>
                     </div>
                 </div>
                 
@@ -3595,15 +3672,15 @@
                     </div>
                     <div class="pkg-step-content">
                         <h4 class="pkg-step-title">
-                            <span data-lang="ar">احصل على تدقيق مصغر مجاني</span>
-                            <span data-lang="fr">Obtenez un mini-audit gratuit</span>
-                            <span data-lang="en">Get a free mini-audit</span>
-                        </h4>
+                        <span data-lang="ar">احصل على تدقيق مصغر مجاني</span>
+                        <span data-lang="fr">Obtenez un mini-audit gratuit</span>
+                        <span data-lang="en">Get a free mini-audit</span>
+                    </h4>
                         <p class="pkg-step-desc">
-                            <span data-lang="ar">لعلامتك التجارية الحالية</span>
-                            <span data-lang="fr">de votre branding actuel</span>
-                            <span data-lang="en">of your current branding</span>
-                        </p>
+                        <span data-lang="ar">لعلامتك التجارية الحالية</span>
+                        <span data-lang="fr">de votre branding actuel</span>
+                        <span data-lang="en">of your current branding</span>
+                    </p>
                     </div>
                 </div>
                 
@@ -3614,15 +3691,15 @@
                     </div>
                     <div class="pkg-step-content">
                         <h4 class="pkg-step-title">
-                            <span data-lang="ar">شاهد كيف سيساعدك التصميم الاحترافي</span>
-                            <span data-lang="fr">Voyez comment le design professionnel vous aidera</span>
-                            <span data-lang="en">See exactly how professional design will help</span>
-                        </h4>
+                        <span data-lang="ar">شاهد كيف سيساعدك التصميم الاحترافي</span>
+                        <span data-lang="fr">Voyez comment le design professionnel vous aidera</span>
+                        <span data-lang="en">See exactly how professional design will help</span>
+                    </h4>
                         <p class="pkg-step-desc">
-                            <span data-lang="ar">عملك بالضبط</span>
-                            <span data-lang="fr">votre entreprise exactement</span>
-                            <span data-lang="en">your business exactly</span>
-                        </p>
+                        <span data-lang="ar">عملك بالضبط</span>
+                        <span data-lang="fr">votre entreprise exactement</span>
+                        <span data-lang="en">your business exactly</span>
+                    </p>
                     </div>
                 </div>
                 
@@ -3633,15 +3710,15 @@
                     </div>
                     <div class="pkg-step-content">
                         <h4 class="pkg-step-title">
-                            <span data-lang="ar">اختر الباقة التي تناسب ميزانيتك</span>
-                            <span data-lang="fr">Choisissez le forfait qui correspond à votre budget</span>
-                            <span data-lang="en">Choose a package that fits your budget</span>
-                        </h4>
+                        <span data-lang="ar">اختر الباقة التي تناسب ميزانيتك</span>
+                        <span data-lang="fr">Choisissez le forfait qui correspond à votre budget</span>
+                        <span data-lang="en">Choose a package that fits your budget</span>
+                    </h4>
                         <p class="pkg-step-desc">
-                            <span data-lang="ar">واحصل على علامتك التجارية في 7-12 أيام</span>
-                            <span data-lang="fr">et obtenez votre branding en 7-12 jours</span>
-                            <span data-lang="en">and get your professional brand delivered in 7-12 days</span>
-                        </p>
+                        <span data-lang="ar">واحصل على علامتك التجارية في 7-12 أيام</span>
+                        <span data-lang="fr">et obtenez votre branding en 7-12 jours</span>
+                        <span data-lang="en">and get your professional brand delivered in 7-12 days</span>
+                    </p>
                     </div>
                 </div>
             </div>
@@ -3650,10 +3727,10 @@
             <div class="pkg-special-offer reveal-up">
                 <div class="pkg-offer-content">
                     <h3 class="pkg-offer-title">
-                        <span data-lang="ar">عرض خاص لأصحاب الأعمال الجديين:</span>
-                        <span data-lang="fr">Offre spéciale pour les propriétaires d'entreprises sérieux :</span>
-                        <span data-lang="en">Special offer for serious business owners:</span>
-                    </h3>
+                    <span data-lang="ar">عرض خاص لأصحاب الأعمال الجديين:</span>
+                    <span data-lang="fr">Offre spéciale pour les propriétaires d'entreprises sérieux :</span>
+                    <span data-lang="en">Special offer for serious business owners:</span>
+                </h3>
                     <div class="pkg-offer-benefits">
                         <div class="pkg-benefit-item">
                             <div class="pkg-benefit-icon">🎁</div>
@@ -3688,10 +3765,10 @@
                     </div>
                     <div class="pkg-offer-price">
                         <p class="pkg-price-text">
-                            <span data-lang="ar">بدءاً من 1,900 درهم فقط. أقل مما تنفقه معظم الشركات على المخزون في أسبوع.</span>
-                            <span data-lang="fr">À partir de seulement 1,900 MAD. Moins que ce que la plupart des entreprises dépensent en stock en une semaine.</span>
-                            <span data-lang="en">Starting from only 1,900 MAD. Less than most businesses spend on inventory in a week.</span>
-                        </p>
+                    <span data-lang="ar">بدءاً من 1,900 درهم فقط. أقل مما تنفقه معظم الشركات على المخزون في أسبوع.</span>
+                    <span data-lang="fr">À partir de seulement 1,900 MAD. Moins que ce que la plupart des entreprises dépensent en stock en une semaine.</span>
+                    <span data-lang="en">Starting from only 1,900 MAD. Less than most businesses spend on inventory in a week.</span>
+                </p>
                     </div>
                 </div>
             </div>
@@ -3701,7 +3778,7 @@
                 <!-- Package 2: Online Store -->
                 <div class="package-card">
                     <h3>
-                        <span data-lang="ar">الباقات — تجارة إلكترونية</span>
+                        <span data-lang="ar">تجارة إلكترونية</span>
                         <span data-lang="fr">De boutique silencieuse à machine de vente</span>
                         <span data-lang="en">From silent store to sales machine</span>
                     </h3>
@@ -3782,7 +3859,7 @@
                 <div class="package-card popular">
                     
                     <h3>
-                        <span data-lang="ar">الباقات — مطاعم</span>
+                        <span data-lang="ar"> مطاعم</span>
                         <span data-lang="fr">De restaurant caché à destination prisée</span>
                         <span data-lang="en">From hidden restaurant to popular destination</span>
                     </h3>
@@ -3863,7 +3940,7 @@
                 <!-- Package 3: Service Business -->
                 <div class="package-card">
                     <h3>
-                        <span data-lang="ar">الباقات — خدمات</span>
+                        <span data-lang="ar"> خدمات</span>
                         <span data-lang="fr">De service invisible à marque de confiance</span>
                         <span data-lang="en">From invisible service to trusted brand</span>
                     </h3>
@@ -3956,14 +4033,14 @@
                 </div>
                 <h2 class="pe-title">
                     <span data-lang="ar">أمثلة من الخدمة</span>
-                    <span data-lang="fr">Exemples de Travaux Récents</span>
-                    <span data-lang="en">Recent Work Examples</span>
-                </h2>
+                <span data-lang="fr">Exemples de Travaux Récents</span>
+                <span data-lang="en">Recent Work Examples</span>
+            </h2>
                 <p class="pe-subtitle">
-                    <span data-lang="ar">(تم إنشاؤها لأعمال مثل عملك)</span>
-                    <span data-lang="fr">(Créés pour des entreprises comme la vôtre)</span>
-                    <span data-lang="en">(Created for businesses like yours)</span>
-                </p>
+                <span data-lang="ar">(تم إنشاؤها لأعمال مثل عملك)</span>
+                <span data-lang="fr">(Créés pour des entreprises comme la vôtre)</span>
+                <span data-lang="en">(Created for businesses like yours)</span>
+            </p>
             </div>
             
             <!-- Portfolio Grid -->
@@ -3987,8 +4064,8 @@
                                 <span data-lang="en">Before</span>
                             </div>
                             <div class="pe-image-container">
-                                <img src="img/befor.jpg" alt="Amateur business logo before redesign" loading="lazy">
-                            </div>
+                            <img src="img/befor.jpg" alt="Amateur business logo before redesign" loading="lazy">
+                        </div>
                         </div>
                         
                         <div class="pe-after">
@@ -3998,9 +4075,9 @@
                                 <span data-lang="en">After</span>
                             </div>
                             <div class="pe-image-container">
-                                <img src="img/after.jpeg" alt="Professional logo design after redesign" loading="lazy">
-                            </div>
+                            <img src="img/after.jpeg" alt="Professional logo design after redesign" loading="lazy">
                         </div>
+                    </div>
                     </div>
                     
                     <div class="pe-card-content">
@@ -4034,10 +4111,10 @@
                     </div>
                     
                     <div class="pe-video-container">
-                        <video poster="img/web-thumbnail.jpg" controls preload="metadata">
-                            <source src="img/web.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                    <video poster="img/web-thumbnail.jpg" controls preload="metadata">
+                        <source src="img/web.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                         <div class="pe-play-overlay">
                             <div class="pe-play-button">▶</div>
                         </div>
@@ -4050,10 +4127,10 @@
                             <span data-lang="en">Modern and Responsive Website</span>
                         </h4>
                         <p class="pe-project-description">
-                            <span data-lang="ar">عرض تفاعلي لموقع ويب حديث ومتجاوب</span>
-                            <span data-lang="fr">Présentation interactive d'un site web moderne et responsive</span>
-                            <span data-lang="en">Interactive showcase of modern, responsive website</span>
-                        </p>
+                        <span data-lang="ar">عرض تفاعلي لموقع ويب حديث ومتجاوب</span>
+                        <span data-lang="fr">Présentation interactive d'un site web moderne et responsive</span>
+                        <span data-lang="en">Interactive showcase of modern, responsive website</span>
+                    </p>
                         <div class="pe-project-tags">
                             <span class="pe-tag">Web Development</span>
                             <span class="pe-tag">Responsive Design</span>
@@ -4074,10 +4151,10 @@
                     </div>
                     
                     <div class="pe-video-container">
-                        <video poster="img/instagram-reel-thumbnail.jpg" controls preload="metadata">
-                            <source src="img/instagram%20%20reel%20%20for%20artist%20.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                    <video poster="img/instagram-reel-thumbnail.jpg" controls preload="metadata">
+                        <source src="img/instagram%20%20reel%20%20for%20artist%20.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                         <div class="pe-play-overlay">
                             <div class="pe-play-button">▶</div>
                         </div>
@@ -4090,10 +4167,10 @@
                             <span data-lang="en">9:16 Artistic Video</span>
                         </h4>
                         <p class="pe-project-description">
-                            <span data-lang="ar">فيديو عمودي 9:16 يبرز الأعمال بطريقة سريعة وجذابة</span>
-                            <span data-lang="fr">Vidéo verticale 9:16 mettant en valeur le travail de façon rapide et engageante</span>
-                            <span data-lang="en">9:16 vertical reel showcasing work quickly and engagingly</span>
-                        </p>
+                        <span data-lang="ar">فيديو عمودي 9:16 يبرز الأعمال بطريقة سريعة وجذابة</span>
+                        <span data-lang="fr">Vidéo verticale 9:16 mettant en valeur le travail de façon rapide et engageante</span>
+                        <span data-lang="en">9:16 vertical reel showcasing work quickly and engagingly</span>
+                    </p>
                         <div class="pe-project-tags">
                             <span class="pe-tag">Video Production</span>
                             <span class="pe-tag">Social Media</span>
@@ -4138,9 +4215,9 @@
                 </div>
                 <h2 class="wce-title">
                     <span data-lang="ar">علاش تختارونا</span>
-                    <span data-lang="fr">Pourquoi choisir Maktoub Media</span>
-                    <span data-lang="en">Why Choose Maktoub Media</span>
-                </h2>
+                <span data-lang="fr">Pourquoi choisir Maktoub Media</span>
+                <span data-lang="en">Why Choose Maktoub Media</span>
+            </h2>
             </div>
             
             <!-- Skills Grid -->
@@ -4152,7 +4229,7 @@
                             <span data-lang="ar">التصميم الجرافيكي</span>
                             <span data-lang="fr">Design graphique</span>
                             <span data-lang="en">Graphic Design</span>
-                        </h4>
+                </h4>
                     </div>
                     <div class="wce-skill-content">
                         <p class="wce-skill-description">
@@ -4171,9 +4248,9 @@
                                 <span data-lang="fr">✓ Identité visuelle complète</span>
                                 <span data-lang="en">✓ Complete visual identity</span>
                             </span>
-                        </div>
                     </div>
-                </div>
+                    </div>
+                    </div>
                 
                 <div class="wce-skill-card wce-skill--video reveal-up">
                     <div class="wce-skill-header">
@@ -4356,9 +4433,9 @@
             <div class="spe-header reveal-up">
                 <h3 class="spe-title">
                     <span data-lang="ar">شهادات:</span>
-                    <span data-lang="fr">Ce que disent les propriétaires d'entreprises :</span>
-                    <span data-lang="en">What Business Owners Are Saying:</span>
-                </h3>
+                <span data-lang="fr">Ce que disent les propriétaires d'entreprises :</span>
+                <span data-lang="en">What Business Owners Are Saying:</span>
+            </h3>
             </div>
             
             <!-- Testimonials Grid -->
@@ -4367,10 +4444,10 @@
                     <div class="spe-testimonial-content">
                         <div class="spe-quote-icon">💇‍♀️</div>
                         <p class="spe-testimonial-text">
-                            <span data-lang="ar">"لم أدرك كم كان شعاري الهاوي يؤذي عملي. بعد إعادة العلامة التجارية، بدأ العملاء يأخذونني على محمل الجد. زادت حجوزاتي إلى الضعف في شهرين."</span>
-                            <span data-lang="fr">"Je ne réalisais pas à quel point mon logo amateur nuisait à mon entreprise. Après le rebranding, les clients ont commencé à me prendre au sérieux. Mes réservations ont doublé en 2 mois."</span>
-                            <span data-lang="en">"I didn't realize how much my amateur logo was hurting my business. After the rebrand, customers started taking me seriously. My bookings doubled in 2 months."</span>
-                        </p>
+                    <span data-lang="ar">"لم أدرك كم كان شعاري الهاوي يؤذي عملي. بعد إعادة العلامة التجارية، بدأ العملاء يأخذونني على محمل الجد. زادت حجوزاتي إلى الضعف في شهرين."</span>
+                    <span data-lang="fr">"Je ne réalisais pas à quel point mon logo amateur nuisait à mon entreprise. Après le rebranding, les clients ont commencé à me prendre au sérieux. Mes réservations ont doublé en 2 mois."</span>
+                    <span data-lang="en">"I didn't realize how much my amateur logo was hurting my business. After the rebrand, customers started taking me seriously. My bookings doubled in 2 months."</span>
+                </p>
                         <div class="spe-testimonial-author">
                             <div class="spe-author-info">
                                 <h4 class="spe-author-name">
@@ -4386,16 +4463,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                
+            </div>
+            
                 <div class="spe-testimonial-card spe-testimonial--restaurant reveal-up">
                     <div class="spe-testimonial-content">
                         <div class="spe-quote-icon">🍽️</div>
                         <p class="spe-testimonial-text">
-                            <span data-lang="ar">"قبل ذلك، كان الناس يرون منشوراتي ويستمرون في التمرير. الآن يتوقفون ويقرؤون ويرسلون لي رسائل. واتسابي مشغول دائماً بعملاء جدد."</span>
-                            <span data-lang="fr">"Avant, les gens voyaient mes posts et continuaient à faire défiler. Maintenant ils s'arrêtent, lisent et m'envoient des messages. Mon WhatsApp est toujours occupé avec de nouveaux clients."</span>
-                            <span data-lang="en">"Before, people would see my posts and keep scrolling. Now they stop, read, and message me. My WhatsApp is always busy with new customers."</span>
-                        </p>
+                    <span data-lang="ar">"قبل ذلك، كان الناس يرون منشوراتي ويستمرون في التمرير. الآن يتوقفون ويقرؤون ويرسلون لي رسائل. واتسابي مشغول دائماً بعملاء جدد."</span>
+                    <span data-lang="fr">"Avant, les gens voyaient mes posts et continuaient à faire défiler. Maintenant ils s'arrêtent, lisent et m'envoient des messages. Mon WhatsApp est toujours occupé avec de nouveaux clients."</span>
+                    <span data-lang="en">"Before, people would see my posts and keep scrolling. Now they stop, read, and message me. My WhatsApp is always busy with new customers."</span>
+                </p>
                         <div class="spe-testimonial-author">
                             <div class="spe-author-info">
                                 <h4 class="spe-author-name">
@@ -4411,16 +4488,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                
+            </div>
+            
                 <div class="spe-testimonial-card spe-testimonial--ecommerce reveal-up">
                     <div class="spe-testimonial-content">
                         <div class="spe-quote-icon">🛒</div>
                         <p class="spe-testimonial-text">
-                            <span data-lang="ar">"ظننت أن التصميم الاحترافي مكلف جداً. لكنه دفع تكلفته في الشهر الأول. أتمنى لو كنت فعلت هذا منذ سنوات."</span>
-                            <span data-lang="fr">"Je pensais que le design professionnel était trop cher. Mais il s'est payé lui-même le premier mois. J'aurais aimé faire ça il y a des années."</span>
-                            <span data-lang="en">"I thought professional design was too expensive. But it paid for itself in the first month. I wish I had done this years ago."</span>
-                        </p>
+                    <span data-lang="ar">"ظننت أن التصميم الاحترافي مكلف جداً. لكنه دفع تكلفته في الشهر الأول. أتمنى لو كنت فعلت هذا منذ سنوات."</span>
+                    <span data-lang="fr">"Je pensais que le design professionnel était trop cher. Mais il s'est payé lui-même le premier mois. J'aurais aimé faire ça il y a des années."</span>
+                    <span data-lang="en">"I thought professional design was too expensive. But it paid for itself in the first month. I wish I had done this years ago."</span>
+                </p>
                         <div class="spe-testimonial-author">
                             <div class="spe-author-info">
                                 <h4 class="spe-author-name">
@@ -4447,7 +4524,7 @@
                         <span data-lang="ar">الوعد ديالنا</span>
                         <span data-lang="fr">Notre promesse</span>
                         <span data-lang="en">Our promise</span>
-                    </h4>
+                </h4>
                 </div>
                 <div class="spe-promise-content">
                     <div class="spe-promise-items">
@@ -4488,9 +4565,9 @@
             <div class="pe-header reveal-up">
                 <h3 class="pe-title">
                     <span data-lang="ar">خطوات العمل (4)</span>
-                    <span data-lang="fr">Comment ça marche (Processus simple en 4 étapes)</span>
-                    <span data-lang="en">How It Works (Simple 4-Step Process)</span>
-                </h3>
+                <span data-lang="fr">Comment ça marche (Processus simple en 4 étapes)</span>
+                <span data-lang="en">How It Works (Simple 4-Step Process)</span>
+            </h3>
             </div>
             
             <!-- Process Steps Grid -->
@@ -4503,14 +4580,14 @@
                     <div class="pe-step-content">
                         <h4 class="pe-step-title">
                             <span data-lang="ar">تواصل فـ واتساب</span>
-                            <span data-lang="fr">Contact via WhatsApp</span>
-                            <span data-lang="en">Contact via WhatsApp</span>
-                        </h4>
+                        <span data-lang="fr">Contact via WhatsApp</span>
+                        <span data-lang="en">Contact via WhatsApp</span>
+                    </h4>
                         <p class="pe-step-description">
-                            <span data-lang="ar">أخبرني عن عملك وأي باقة تهمك</span>
-                            <span data-lang="fr">Parlez-moi de votre entreprise et du forfait qui vous intéresse</span>
-                            <span data-lang="en">Tell me about your business and which package interests you</span>
-                        </p>
+                        <span data-lang="ar">أخبرني عن عملك وأي باقة تهمك</span>
+                        <span data-lang="fr">Parlez-moi de votre entreprise et du forfait qui vous intéresse</span>
+                        <span data-lang="en">Tell me about your business and which package interests you</span>
+                    </p>
                     </div>
                 </div>
                 
@@ -4522,14 +4599,14 @@
                     <div class="pe-step-content">
                         <h4 class="pe-step-title">
                             <span data-lang="ar">نقاش خفيف وعرض بسيط</span>
-                            <span data-lang="fr">Discussion rapide</span>
-                            <span data-lang="en">Quick Discussion</span>
-                        </h4>
+                        <span data-lang="fr">Discussion rapide</span>
+                        <span data-lang="en">Quick Discussion</span>
+                    </h4>
                         <p class="pe-step-description">
-                            <span data-lang="ar">سأسأل بعض الأسئلة وأرسل لك عرضاً بسيطاً</span>
-                            <span data-lang="fr">Je poserai quelques questions et vous enverrai une proposition simple</span>
-                            <span data-lang="en">I'll ask a few questions and send you a simple proposal</span>
-                        </p>
+                        <span data-lang="ar">سأسأل بعض الأسئلة وأرسل لك عرضاً بسيطاً</span>
+                        <span data-lang="fr">Je poserai quelques questions et vous enverrai une proposition simple</span>
+                        <span data-lang="en">I'll ask a few questions and send you a simple proposal</span>
+                    </p>
                     </div>
                 </div>
                 
@@ -4541,14 +4618,14 @@
                     <div class="pe-step-content">
                         <h4 class="pe-step-title">
                             <span data-lang="ar">50% باش نبداو خلال 24 ساعة</span>
-                            <span data-lang="fr">50% d'acompte et démarrage</span>
-                            <span data-lang="en">50% Deposit & Start</span>
-                        </h4>
+                        <span data-lang="fr">50% d'acompte et démarrage</span>
+                        <span data-lang="en">50% Deposit & Start</span>
+                    </h4>
                         <p class="pe-step-description">
-                            <span data-lang="ar">ادفع النصف لتأمين مكانك، يبدأ المشروع خلال 24 ساعة</span>
-                            <span data-lang="fr">Payez la moitié pour réserver votre place, le projet commence dans les 24 heures</span>
-                            <span data-lang="en">Pay half to secure your spot, project starts within 24 hours</span>
-                        </p>
+                        <span data-lang="ar">ادفع النصف لتأمين مكانك، يبدأ المشروع خلال 24 ساعة</span>
+                        <span data-lang="fr">Payez la moitié pour réserver votre place, le projet commence dans les 24 heures</span>
+                        <span data-lang="en">Pay half to secure your spot, project starts within 24 hours</span>
+                    </p>
                     </div>
                 </div>
                 
@@ -4560,14 +4637,14 @@
                     <div class="pe-step-content">
                         <h4 class="pe-step-title">
                             <span data-lang="ar">تسليم وخلاص الباقي</span>
-                            <span data-lang="fr">Livraison et paiement final</span>
-                            <span data-lang="en">Delivery & Final Payment</span>
-                        </h4>
+                        <span data-lang="fr">Livraison et paiement final</span>
+                        <span data-lang="en">Delivery & Final Payment</span>
+                    </h4>
                         <p class="pe-step-description">
-                            <span data-lang="ar">احصل على موادك الاحترافية وادفع الـ 50% المتبقية</span>
-                            <span data-lang="fr">Recevez vos matériaux professionnels et payez les 50% restants</span>
-                            <span data-lang="en">Get your professional materials and pay the remaining 50%</span>
-                        </p>
+                        <span data-lang="ar">احصل على موادك الاحترافية وادفع الـ 50% المتبقية</span>
+                        <span data-lang="fr">Recevez vos matériaux professionnels et payez les 50% restants</span>
+                        <span data-lang="en">Get your professional materials and pay the remaining 50%</span>
+                    </p>
                     </div>
                 </div>
             </div>
@@ -4658,7 +4735,7 @@
                             <span data-lang="ar">كل يوم تأخير يعني فرصاً وعملاء مفقودين</span>
                             <span data-lang="fr">Chaque jour de retard vous coûte des clients</span>
                             <span data-lang="en">Every day of waiting costs customers</span>
-                        </h3>
+                </h3>
                         <p class="fcta-urgency-desc">
                             <span data-lang="ar">بينما يستثمر منافسوكم اليوم في هوية احترافية</span>
                             <span data-lang="fr">tandis que vos concurrents investissent déjà dans une marque professionnelle</span>
@@ -4693,7 +4770,7 @@
                                 <span data-lang="ar">أماكن محدودة متاحة</span>
                                 <span data-lang="fr">Places limitées disponibles</span>
                                 <span data-lang="en">Limited spots available</span>
-                            </span>
+                    </span>
                         </div>
                     </div>
                 </div>
@@ -4742,23 +4819,23 @@
                         <span data-lang="ar">هيكل الدفع الآمن</span>
                         <span data-lang="fr">Paiement sécurisé</span>
                         <span data-lang="en">Secure payment</span>
-                    </h4>
+                </h4>
                 </div>
                 <div class="fcta-payment-steps">
                     <div class="fcta-payment-step">
                         <div class="fcta-payment-percentage">50%</div>
                         <div class="fcta-payment-content">
                             <h5 class="fcta-payment-step-title">
-                                <span data-lang="ar">وديعة للبدء</span>
-                                <span data-lang="fr">Acompte pour commencer</span>
-                                <span data-lang="en">Deposit to start</span>
+                            <span data-lang="ar">وديعة للبدء</span>
+                            <span data-lang="fr">Acompte pour commencer</span>
+                            <span data-lang="en">Deposit to start</span>
                             </h5>
                             <p class="fcta-payment-step-desc">
                                 <span data-lang="ar">نبدأ العمل فوراً</span>
                                 <span data-lang="fr">Démarrage immédiat</span>
                                 <span data-lang="en">Immediate start</span>
                             </p>
-                        </div>
+                    </div>
                     </div>
                     <div class="fcta-payment-step">
                         <div class="fcta-payment-percentage">30%</div>
@@ -4766,22 +4843,22 @@
                             <h5 class="fcta-payment-step-title">
                                 <span data-lang="ar">بعد اعتماد المسودة الأولى</span>
                                 <span data-lang="fr">Après validation du premier brouillon</span>
-                                <span data-lang="en">After first draft approval</span>
+                            <span data-lang="en">After first draft approval</span>
                             </h5>
                             <p class="fcta-payment-step-desc">
                                 <span data-lang="ar">عند موافقتك على التصميم</span>
                                 <span data-lang="fr">Quand vous approuvez le design</span>
                                 <span data-lang="en">When you approve the design</span>
                             </p>
-                        </div>
+                    </div>
                     </div>
                     <div class="fcta-payment-step">
                         <div class="fcta-payment-percentage">20%</div>
                         <div class="fcta-payment-content">
                             <h5 class="fcta-payment-step-title">
-                                <span data-lang="ar">عند التسليم النهائي</span>
-                                <span data-lang="fr">À la livraison finale</span>
-                                <span data-lang="en">On final delivery</span>
+                            <span data-lang="ar">عند التسليم النهائي</span>
+                            <span data-lang="fr">À la livraison finale</span>
+                            <span data-lang="en">On final delivery</span>
                             </h5>
                             <p class="fcta-payment-step-desc">
                                 <span data-lang="ar">عند استلام جميع المواد</span>
@@ -4820,7 +4897,7 @@
                         <span data-lang="ar">رسالتنا: نجاحكم «مكتوب»—دعونا نحقّقه معاً</span>
                         <span data-lang="fr">Votre succès est « Maktoub ». Réalisons‑le</span>
                         <span data-lang="en">Your success is "Maktoub." Let's make it happen</span>
-                    </h3>
+                </h3>
                     <div class="fcta-proof-stats">
                         <div class="fcta-stat-item">
                             <div class="fcta-stat-number">20+</div>
