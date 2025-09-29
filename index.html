@@ -293,7 +293,7 @@
             font-weight: bold;
             font-size: 1.2rem;
         }
-        
+
         /* Intro and When text */
         .ps-intro {
             font-weight: 600;
@@ -364,7 +364,7 @@
             color: #2563eb;
             margin-bottom: 40px;
         }
-        
+
         .ps-kpis__grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -404,7 +404,7 @@
         @media (max-width: 768px) {
             .ps-benefits {
                 grid-template-columns: 1fr;
-                gap: 30px;
+            gap: 30px;
             }
         }
         
@@ -463,7 +463,7 @@
 
         /* CTA Section */
         .ps-cta {
-                text-align: center;
+            text-align: center;
             padding: 40px;
             background: rgba(37, 99, 235, 0.1);
             border: 1px solid rgba(37, 99, 235, 0.3);
@@ -660,7 +660,7 @@
             justify-content: center;
             flex-wrap: wrap;
         }
-        
+
         .hero-trust-card {
             background: rgba(37, 99, 235, 0.1);
             border: 1px solid rgba(37, 99, 235, 0.3);
@@ -730,7 +730,7 @@
             gap: 40px;
             margin-bottom: 60px;
         }
-        
+
         @media (max-width: 768px) {
             .le-cities-grid {
                 grid-template-columns: 1fr;
@@ -818,7 +818,7 @@
         }
         
         .fs-header {
-            text-align: center;
+                text-align: center;
             margin-bottom: 40px;
         }
         
@@ -830,7 +830,7 @@
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 20px;
+                margin-bottom: 20px;
             box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
         }
         
@@ -853,10 +853,10 @@
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
-        }
-        
+            }
+
         .fs-founder-info {
-            text-align: center;
+                text-align: center;
         }
         
         .fs-founder-photo {
@@ -864,7 +864,7 @@
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 20px;
+                margin-bottom: 20px;
             border: 4px solid rgba(124, 58, 237, 0.3);
             box-shadow: 0 8px 25px rgba(124, 58, 237, 0.2);
         }
@@ -878,7 +878,7 @@
         
         .fs-founder-role {
             color: #d1d5db;
-            font-size: 0.9rem;
+                font-size: 0.9rem;
             margin: 0;
         }
         
@@ -889,9 +889,9 @@
         
         .fs-story-paragraph {
             margin-bottom: 20px;
-            font-size: 1rem;
-        }
-        
+                font-size: 1rem;
+            }
+
         .fs-story-goal {
             background: rgba(124, 58, 237, 0.1);
             border: 1px solid rgba(124, 58, 237, 0.3);
@@ -899,6 +899,233 @@
             padding: 20px;
             font-weight: 600;
             color: #c4b5fd;
+        }
+
+        /* Enhanced Packages Section Styles */
+        .packages-enhanced {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .packages-enhanced {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        .pkg-card {
+            background: rgba(55, 65, 81, 0.92);
+            border: 1px solid rgba(245, 245, 220, 0.18);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .pkg-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .pkg-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+        }
+        
+        .pkg-card--ecommerce::before {
+            background: linear-gradient(90deg, #10b981, #059669);
+        }
+        
+        .pkg-card--restaurant::before {
+            background: linear-gradient(90deg, #f97316, #ea580c);
+        }
+        
+        .pkg-card--services::before {
+            background: linear-gradient(90deg, #7c3aed, #6d28d9);
+        }
+        
+        .pkg-card--popular {
+            border: 2px solid rgba(249, 115, 22, 0.5);
+            box-shadow: 0 15px 35px rgba(249, 115, 22, 0.2);
+        }
+        
+        .pkg-popular-badge {
+            position: absolute;
+            top: -1px;
+            right: 20px;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 0 0 12px 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        }
+        
+        .pkg-header {
+            margin-bottom: 24px;
+        }
+        
+        .pkg-badge {
+            display: inline-block;
+                padding: 6px 12px;
+            border-radius: 12px;
+                font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .pkg-badge--ecommerce {
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .pkg-badge--restaurant {
+            background: rgba(249, 115, 22, 0.2);
+            color: #fed7aa;
+            border: 1px solid rgba(249, 115, 22, 0.3);
+        }
+        
+        .pkg-badge--services {
+            background: rgba(124, 58, 237, 0.2);
+            color: #c4b5fd;
+            border: 1px solid rgba(124, 58, 237, 0.3);
+        }
+        
+        .pkg-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        
+        .pkg-testimonial {
+            font-style: italic;
+            color: #d1d5db;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            padding: 12px;
+            background: rgba(245, 245, 220, 0.08);
+            border-radius: 8px;
+            border-left: 3px solid rgba(245, 245, 220, 0.3);
+        }
+        
+        .pkg-price-section {
+                text-align: center;
+            margin-bottom: 24px;
+            padding: 20px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+        }
+        
+        .pkg-price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin-bottom: 8px;
+        }
+        
+        .pkg-original-price {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            text-decoration: line-through;
+        }
+        
+        .pkg-problem {
+            margin-bottom: 24px;
+        }
+        
+        .pkg-section-title {
+            color: #ef4444;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .pkg-problem-text {
+            color: #fca5a5;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        .pkg-transformation {
+            margin-bottom: 24px;
+        }
+        
+        .pkg-section-title {
+            color: #10b981;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .pkg-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .pkg-features li {
+            padding: 8px 0;
+            color: #d1d5db;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        .pkg-details {
+            margin-bottom: 24px;
+        }
+        
+        .pkg-timeline {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            color: #6ee7b7;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .pkg-addons {
+            color: #9ca3af;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        .pkg-cta {
+            width: 100%;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            border: none;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .pkg-cta:hover {
+            background: linear-gradient(135deg, #1d4ed8, #1e40af);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
         }
     </style>
 </head>
@@ -1010,17 +1237,17 @@
                     <span data-lang="fr">Darija</span>
                     <span data-lang="en">Darija</span>
                 </div>
-                
-                <!-- Logo Section -->
+            
+            <!-- Logo Section -->
                 <div class="hero-logo-section">
-                    <img src="img/logo.png" alt="Maktoub Media Logo" class="hero-logo">
+                <img src="img/logo.png" alt="Maktoub Media Logo" class="hero-logo">
                     <div class="hero-logo-text">
                         <h1 class="hero-company-name">MAKTOUB MEDIA</h1>
                         <p class="hero-tagline">
-                            <span data-lang="ar">لأن نجاحك مكتوب</span>
-                            <span data-lang="fr">Parce que votre succès est écrit</span>
-                            <span data-lang="en">Because Your Success Is Maktoub</span>
-                        </p>
+                        <span data-lang="ar">لأن نجاحك مكتوب</span>
+                        <span data-lang="fr">Parce que votre succès est écrit</span>
+                        <span data-lang="en">Because Your Success Is Maktoub</span>
+                    </p>
                     </div>
                 </div>
             </div>
@@ -1031,8 +1258,8 @@
                     <span class="arabic" data-lang="ar">البزنس ديالك كيستاهل براندينغ برو وماشي بوستات هاوية</span>
                     <span data-lang="fr">Votre entreprise mérite une présence marketing professionnelle, pas des publications amateurs</span>
                     <span data-lang="en">Your business deserves a professional marketing presence—not amateur posts</span>
-                </h1>
-                
+            </h1>
+            
                 <p class="hero-subheadline">
                     <span data-lang="ar">كاتبوست فأنستغرام وفيسبوك، ولكن واش كاتجيب الكليان اللي كتستاهل؟</span>
                     <span data-lang="fr">Vous publiez sur Instagram et Facebook ; obtenez‑vous les clients que vous attendez ?</span>
@@ -1082,7 +1309,7 @@
                     <span data-lang="ar">التخصص المحلي</span>
                     <span data-lang="fr">Spécialistes à Agadir et Essaouira</span>
                     <span data-lang="en">Specialists in Agadir and Essaouira</span>
-                </h2>
+            </h2>
             </div>
             
             <!-- Cities Grid -->
@@ -1365,7 +1592,7 @@
                     <span data-lang="fr">Envoyer un email</span>
                     <span data-lang="en">Send email</span>
                 </a>
-            </div>
+                </div>
         </div>
     </section>
             
@@ -1381,7 +1608,7 @@
                             <span data-lang="ar">علاش درنا Maktoub Media</span>
                             <span data-lang="fr">Pourquoi j'ai créé Maktoub Media</span>
                             <span data-lang="en">Why Maktoub Media was created</span>
-                        </h3>
+                    </h3>
                     </div>
                     
                     <div class="fs-content">
@@ -1566,7 +1793,7 @@
                 </p>
             </div>
             
-            <div class="packages-grid">
+            <div class="packages-enhanced">
                 
                 <!-- Package 2: Online Store -->
                 <div class="package-card">
