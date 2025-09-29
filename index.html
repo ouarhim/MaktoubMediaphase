@@ -143,6 +143,398 @@
      </style>
     <style>
         @import url('maktoub-dark-mode.css');
+        
+        /* Enhanced Problem/Solution Section Styles */
+        .problem-solution {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .problem-solution::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        /* Header with Gradient */
+        .ps-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .ps-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        }
+        
+        .ps-title {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 0 0 30px rgba(37, 99, 235, 0.3);
+        }
+        
+        /* Two-Column Grid */
+        .ps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .ps-grid {
+                grid-template-columns: 1fr;
+            gap: 30px;
+            }
+        }
+        
+        /* Cards */
+        .ps-card {
+            background: rgba(55, 65, 81, 0.92);
+            border: 1px solid rgba(245, 245, 220, 0.18);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ps-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+        }
+        
+        .ps-card--problem::before {
+            background: linear-gradient(90deg, #ef4444, #dc2626);
+        }
+        
+        .ps-card--solution::before {
+            background: linear-gradient(90deg, #10b981, #059669);
+        }
+        
+        .ps-card__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #f5f5dc;
+        }
+        
+        .ps-card--problem .ps-card__title {
+            color: #fca5a5;
+        }
+        
+        .ps-card--solution .ps-card__title {
+            color: #6ee7b7;
+        }
+        
+        /* Lists */
+        .ps-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px 0;
+        }
+        
+        .ps-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(245, 245, 220, 0.1);
+            position: relative;
+            padding-left: 40px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        .ps-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .ps-list--problem li::before {
+            content: '✕';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            color: #ef4444;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .ps-list--solution li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Intro and When text */
+        .ps-intro {
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #f5f5dc;
+            font-size: 1.1rem;
+        }
+        
+        .ps-when {
+            margin-bottom: 20px;
+            color: #d1d5db;
+            font-style: italic;
+        }
+        
+        /* Results */
+        .ps-result {
+            padding: 20px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-top: 24px;
+        }
+        
+        .ps-result--negative {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #fca5a5;
+        }
+        
+        .ps-result--positive {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #6ee7b7;
+        }
+        
+        /* Moroccan Geometric Divider */
+        .ps-divider {
+            height: 2px;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.3) 0%, transparent 70%);
+            margin: 60px 0;
+            position: relative;
+        }
+        
+        .ps-divider::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #7c3aed, transparent);
+            border-radius: 2px;
+        }
+        
+        /* KPI Strip */
+        .ps-kpis {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(245, 245, 220, 0.18);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .ps-kpis__title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 40px;
+        }
+        
+        .ps-kpis__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .ps-kpi {
+            text-align: center;
+            padding: 20px;
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 12px;
+        }
+        
+        .ps-kpi__number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin-bottom: 8px;
+        }
+
+        .ps-kpi__label {
+            font-size: 0.9rem;
+            color: rgba(245, 245, 220, 0.75);
+            font-weight: 500;
+        }
+
+        /* Benefits */
+        .ps-benefits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .ps-benefits {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        .ps-benefits__title {
+            color: #10b981;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .ps-benefits__longterm .ps-benefits__title {
+            color: #2563eb;
+        }
+        
+        .ps-benefits__list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .ps-benefits__list li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 30px;
+            color: #d1d5db;
+        }
+        
+        .ps-benefits__list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+                top: 8px;
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .ps-benefits__longterm .ps-benefits__list li::before {
+            color: #2563eb;
+        }
+        
+        /* Research */
+        .ps-research {
+                text-align: center;
+            background: rgba(245, 245, 220, 0.18);
+            padding: 24px;
+            border-radius: 12px;
+            border-left: 4px solid #10b981;
+            margin-bottom: 40px;
+        }
+        
+        .ps-research p {
+            font-weight: 600;
+            color: #f5f5dc;
+            margin: 0;
+                font-size: 1.1rem;
+            }
+
+        /* CTA Section */
+        .ps-cta {
+                text-align: center;
+            padding: 40px;
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            border-radius: 16px;
+        }
+        
+        .ps-cta__secondary {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 12px 24px;
+            background: transparent;
+            border: 2px solid #f5f5dc;
+            color: #f5f5dc;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .ps-cta__secondary:hover {
+            background: #f5f5dc;
+            color: #374151;
+        }
+        
+        /* Animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .reveal-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .reveal-up {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+        
+        /* Focus states for accessibility */
+        .ps-cta__secondary:focus {
+            outline: 2px solid #2563eb;
+            outline-offset: 2px;
+        }
+        
+        /* RTL Support */
+        [dir="rtl"] .ps-list li {
+            padding-right: 40px;
+            padding-left: 0;
+        }
+        
+        [dir="rtl"] .ps-list--problem li::before,
+        [dir="rtl"] .ps-list--solution li::before {
+            right: 0;
+            left: auto;
+        }
+        
+        [dir="rtl"] .ps-benefits__list li {
+            padding-right: 30px;
+            padding-left: 0;
+        }
+        
+        [dir="rtl"] .ps-benefits__list li::before {
+            right: 0;
+            left: auto;
+        }
     </style>
 </head>
 <body>
@@ -350,16 +742,32 @@
     </section>
 
     <!-- Problem/Solution Section -->
-    <section class="problem-solution">
+    <section class="problem-solution" dir="rtl" aria-label="المشكل والحل والنتائج">
         <div class="container">
-            <h2>
-                <span data-lang="ar">المشكل الحقيقي</span>
-                <span data-lang="fr">Le vrai problème</span>
-                <span data-lang="en">The real problem</span>
+            <!-- Gradient Header with Badge -->
+            <div class="ps-header">
+                <div class="ps-badge">
+                    <span data-lang="ar">داريجة</span>
+                    <span data-lang="fr">Darija</span>
+                    <span data-lang="en">Darija</span>
+                </div>
+                <h2 class="ps-title">
+                    <span data-lang="ar">المشكل والحل والنتائج</span>
+                    <span data-lang="fr">Problème, Solution et Résultats</span>
+                    <span data-lang="en">Problem, Solution and Results</span>
             </h2>
-            <div class="content">
-                <div class="problem">
-                    <ul class="problem-list">
+            </div>
+            
+            <!-- Two-Column Grid -->
+            <div class="ps-grid">
+                <!-- Problem Card (Right Column) -->
+                <div class="ps-card ps-card--problem reveal-up">
+                    <h3 class="ps-card__title">
+                        <span data-lang="ar">المشكل الحقيقي</span>
+                        <span data-lang="fr">Le vrai problème</span>
+                        <span data-lang="en">The real problem</span>
+                    </h3>
+                    <ul class="ps-list ps-list--problem">
                         <li>
                             <span data-lang="ar">البوستات دايرين بحال صوّروهوم فدار</span>
                             <span data-lang="fr">Vos publications semblent "fait maison"</span>
@@ -386,30 +794,31 @@
                             <span data-lang="en">Your Google Business profile is incomplete</span>
                         </li>
                     </ul>
-                    <p style="margin-top: 20px; font-weight: 600; color: #dc2626;">
+                    <div class="ps-result ps-result--negative">
                         <span data-lang="ar">النتيجة: الناس كيدوزو، الثقة كتضعف، وكيمشيو لمنافس كيبان برو كثر</span>
                         <span data-lang="fr">Résultat : les gens font défiler sans s'arrêter. La confiance baisse. Ils choisissent un concurrent qui paraît plus professionnel</span>
                         <span data-lang="en">Result: people scroll past, trust drops, and they choose a competitor who looks more professional</span>
-                    </p>
+                    </div>
                 </div>
                 
-                <div class="solution">
-                    <h3 style="color: var(--success); margin-bottom: 20px;">
+                <!-- Solution Card (Left Column) -->
+                <div class="ps-card ps-card--solution reveal-up">
+                    <h3 class="ps-card__title">
                         <span data-lang="ar">الحل اللي كيبدّل اللعبة</span>
                         <span data-lang="fr">La solution qui change tout</span>
                         <span data-lang="en">The solution that changes everything</span>
                     </h3>
-                    <p style="margin-bottom: 20px; font-weight: 600;">
+                    <p class="ps-intro">
                         <span data-lang="ar">البراندينغ البرو ماشي فاخر، هو الثقة والهيبة فعيون الزبون</span>
                         <span data-lang="fr">Le branding professionnel, ce n'est pas le "luxe" : c'est la confiance</span>
                         <span data-lang="en">Professional branding isn't about being fancy—it's about being trusted</span>
                     </p>
-                    <p style="margin-bottom: 20px;">
+                    <p class="ps-when">
                         <span data-lang="ar">ملي الزبون كيشوف:</span>
                         <span data-lang="fr">Quand les clients voient :</span>
                         <span data-lang="en">When customers see:</span>
                     </p>
-                    <ul class="solution-list">
+                    <ul class="ps-list ps-list--solution">
                         <li>
                             <span data-lang="ar">لوغو نقي وكيعلق</span>
                             <span data-lang="fr">un logo clair et mémorable</span>
@@ -436,58 +845,143 @@
                             <span data-lang="en">A simple, fast website</span>
                         </li>
                     </ul>
-                    <p style="margin-top: 20px; font-weight: 600; color: var(--success);">
+                    <div class="ps-result ps-result--positive">
                         <span data-lang="ar">كيقول: هاد البزنس معقول ونقدر نخلّص عندو براسي هانية</span>
                         <span data-lang="fr">ils pensent : "Cette entreprise est sérieuse. Je peux lui confier mon argent"</span>
                         <span data-lang="en">they think: "This business is serious. I can trust them with my money"</span>
-                    </p>
+                    </div>
                 </div>
             </div>
             
-            <!-- Benefits Section -->
-            <div style="margin-top: 60px; padding: 40px; background: #374151; border-radius: 12px;">
-                <h3 style="text-align: center; font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-bottom: 30px; color: var(--primary);">
+            <!-- Moroccan Geometric Divider -->
+            <div class="ps-divider"></div>
+            
+            <!-- KPI Strip -->
+            <div class="ps-kpis reveal-up">
+                <h3 class="ps-kpis__title">
                     <span data-lang="ar">نتائج سريعة وطويلة المدى</span>
                     <span data-lang="fr">Ce que le branding professionnel fait pour votre entreprise</span>
                     <span data-lang="en">What professional branding does for your business</span>
                 </h3>
                 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 30px;">
-                    <div>
-                        <h4 style="color: var(--success); margin-bottom: 15px;">
+                <div class="ps-kpis__grid">
+                    <div class="ps-kpi">
+                        <div class="ps-kpi__number">3x</div>
+                        <div class="ps-kpi__label">
+                            <span data-lang="ar">زيادة التفاعل</span>
+                            <span data-lang="fr">Plus d'engagement</span>
+                            <span data-lang="en">More engagement</span>
+                        </div>
+                    </div>
+                    <div class="ps-kpi">
+                        <div class="ps-kpi__number">+73%</div>
+                        <div class="ps-kpi__label">
+                            <span data-lang="ar">احتمال الشراء</span>
+                            <span data-lang="fr">Probabilité d'achat</span>
+                            <span data-lang="en">Purchase likelihood</span>
+                        </div>
+                    </div>
+                    <div class="ps-kpi">
+                        <div class="ps-kpi__number">2x</div>
+                        <div class="ps-kpi__label">
+                            <span data-lang="ar">رسائل واتساب</span>
+                            <span data-lang="fr">Messages WhatsApp</span>
+                            <span data-lang="en">WhatsApp messages</span>
+                        </div>
+                    </div>
+                    <div class="ps-kpi">
+                        <div class="ps-kpi__number">+40%</div>
+                        <div class="ps-kpi__label">
+                            <span data-lang="ar">رفع الأسعار</span>
+                            <span data-lang="fr">Hausse des prix</span>
+                            <span data-lang="en">Price increase</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Benefits Lists -->
+                <div class="ps-benefits">
+                    <div class="ps-benefits__immediate">
+                        <h4 class="ps-benefits__title">
                             <span data-lang="ar">النتائج دابا:</span>
                             <span data-lang="fr">Résultats immédiats :</span>
                             <span data-lang="en">Immediate results:</span>
                         </h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 8px;">✅ <span data-lang="ar">تفاعل كثر، لايك وشير كثر</span><span data-lang="fr">plus d'arrêts sur vos posts, plus de likes/partages</span><span data-lang="en">more people stop on your posts, more likes/shares</span></li>
-                            <li style="margin-bottom: 8px;">✅ <span data-lang="ar">مساجات واتساب وتليفونات كثر</span><span data-lang="fr">plus de messages WhatsApp, plus d'appels</span><span data-lang="en">more WhatsApp messages, more calls</span></li>
-                            <li style="margin-bottom: 8px;">✅ <span data-lang="ar">وحتى الثمن كيطلع حيت البراند كيبان بريميوم</span><span data-lang="fr">des prix plus élevés car vous paraissez premium</span><span data-lang="en">higher prices because you look premium</span></li>
+                        <ul class="ps-benefits__list">
+                            <li>
+                                <span data-lang="ar">تفاعل كثر، لايك وشير كثر</span>
+                                <span data-lang="fr">plus d'arrêts sur vos posts, plus de likes/partages</span>
+                                <span data-lang="en">more people stop on your posts, more likes/shares</span>
+                            </li>
+                            <li>
+                                <span data-lang="ar">مساجات واتساب وتليفونات كثر</span>
+                                <span data-lang="fr">plus de messages WhatsApp, plus d'appels</span>
+                                <span data-lang="en">more WhatsApp messages, more calls</span>
+                            </li>
+                            <li>
+                                <span data-lang="ar">وحتى الثمن كيطلع حيت البراند كيبان بريميوم</span>
+                                <span data-lang="fr">des prix plus élevés car vous paraissez premium</span>
+                                <span data-lang="en">higher prices because you look premium</span>
+                            </li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 style="color: var(--primary); margin-bottom: 15px;">
+                    
+                    <div class="ps-benefits__longterm">
+                        <h4 class="ps-benefits__title">
                             <span data-lang="ar">على المدى البعيد:</span>
                             <span data-lang="fr">Croissance à long terme :</span>
                             <span data-lang="en">Long‑term growth:</span>
                         </h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 8px;">✅ <span data-lang="ar">الناس كيعقلو على السمية ديالك وكينصحوك</span><span data-lang="fr">on se souvient de votre nom et on vous recommande</span><span data-lang="en">customers remember and recommend you</span></li>
-                            <li style="margin-bottom: 8px;">✅ <span data-lang="ar">كتولي "المرجع" فالمنطقة</span><span data-lang="fr">vous devenez la référence locale</span><span data-lang="en">you become the local "go‑to"</span></li>
-                            <li style="margin-bottom: 8px;">✅ <span data-lang="ar">كتشد كليان مزيان وكايخلّصو ف الوقت</span><span data-lang="fr">vous attirez de meilleurs clients qui paient à temps</span><span data-lang="en">you attract better, on‑time clients</span></li>
-                            <li style="margin-bottom: 8px;">✅ <span data-lang="ar">وكينمو المداخيل بلا ما تزيد فالخدمة</span><span data-lang="fr">revenus croissent sans plus d'heures</span><span data-lang="en">revenue grows without longer hours</span></li>
+                        <ul class="ps-benefits__list">
+                            <li>
+                                <span data-lang="ar">الناس كيعقلو على السمية ديالك وكينصحوك</span>
+                                <span data-lang="fr">on se souvient de votre nom et on vous recommande</span>
+                                <span data-lang="en">customers remember and recommend you</span>
+                            </li>
+                            <li>
+                                <span data-lang="ar">كتولي "المرجع" فالمنطقة</span>
+                                <span data-lang="fr">vous devenez la référence locale</span>
+                                <span data-lang="en">you become the local "go‑to"</span>
+                            </li>
+                            <li>
+                                <span data-lang="ar">كتشد كليان مزيان وكايخلّصو ف الوقت</span>
+                                <span data-lang="fr">vous attirez de meilleurs clients qui paient à temps</span>
+                                <span data-lang="en">you attract better, on‑time clients</span>
+                            </li>
+                            <li>
+                                <span data-lang="ar">وكينمو المداخيل بلا ما تزيد فالخدمة</span>
+                                <span data-lang="fr">revenus croissent sans plus d'heures</span>
+                                <span data-lang="en">revenue grows without longer hours</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 
-                <div style="text-align: center; background: rgba(245,245,220,0.18); padding: 20px; border-radius: 8px; border-left: 4px solid var(--success);">
-                    <p style="font-weight: 600; color: var(--text-dark); margin: 0;">
+                <!-- Research Statistic -->
+                <div class="ps-research">
+                    <p>
                         <span data-lang="ar">دراسة كتبيّن: المغاربة عندهم احتمال +73% يشريو من براند باين برو</span>
                         <span data-lang="fr">La recherche montre : les consommateurs marocains sont 73 % plus susceptibles d'acheter auprès d'entreprises au branding professionnel</span>
                         <span data-lang="en">Research shows: Moroccan consumers are 73% more likely to buy from businesses with professional branding</span>
                     </p>
                 </div>
             </div>
+            
+            <!-- CTA Section -->
+            <div class="ps-cta reveal-up">
+                <button class="whatsapp-cta-main" onclick="openWhatsApp('problem-solution')">
+                    <span data-lang="ar">هضر معنا على الواتساب</span>
+                    <span data-lang="fr">Parlez-nous sur WhatsApp</span>
+                    <span data-lang="en">Talk to us on WhatsApp</span>
+                </button>
+                <a href="mailto:contact@maktoubmedia.com" class="ps-cta__secondary">
+                    <span data-lang="ar">أرسل إيميل</span>
+                    <span data-lang="fr">Envoyer un email</span>
+                    <span data-lang="en">Send email</span>
+                </a>
+            </div>
+        </div>
+    </section>
             
             <div class="personal-story">
                 
@@ -1433,6 +1927,30 @@
                 });
             }
         }
+
+        // Scroll Animation for Problem/Solution Section
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all reveal-up elements
+            document.querySelectorAll('.reveal-up').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Initialize scroll animations when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initScrollAnimations);
 
         // Initialize language on page load
         document.addEventListener('DOMContentLoaded', function() {
