@@ -1768,6 +1768,294 @@
             line-height: 1.5;
             margin: 0;
         }
+
+        /* Enhanced Portfolio Section Styles */
+        .portfolio-enhanced {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(31, 41, 55, 0.95), rgba(17, 24, 39, 0.98));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .portfolio-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="portfolio-pattern" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(37,99,235,0.1)"/><circle cx="75" cy="75" r="2" fill="rgba(37,99,235,0.1)"/><circle cx="50" cy="10" r="1" fill="rgba(37,99,235,0.1)"/><circle cx="10" cy="60" r="1" fill="rgba(37,99,235,0.1)"/><circle cx="90" cy="40" r="1" fill="rgba(37,99,235,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23portfolio-pattern)"/></svg>');
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        
+        .pe-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .pe-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(37, 99, 235, 0.2);
+            color: #93c5fd;
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .pe-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 16px 0;
+            line-height: 1.2;
+        }
+        
+        .pe-subtitle {
+            color: #9ca3af;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        
+        .pe-portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .pe-portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        .pe-portfolio-card {
+            background: rgba(55, 65, 81, 0.92);
+            border: 1px solid rgba(245, 245, 220, 0.18);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .pe-portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .pe-portfolio-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+        }
+        
+        .pe-portfolio--comparison::before {
+            background: linear-gradient(90deg, #10b981, #059669);
+        }
+        
+        .pe-portfolio--website::before {
+            background: linear-gradient(90deg, #2563eb, #1d4ed8);
+        }
+        
+        .pe-portfolio--reel::before {
+            background: linear-gradient(90deg, #7c3aed, #6d28d9);
+        }
+        
+        .pe-card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .pe-card-icon {
+            font-size: 2.5rem;
+        }
+        
+        .pe-card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0;
+            line-height: 1.3;
+        }
+        
+        .pe-before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .pe-before, .pe-after {
+            text-align: center;
+        }
+        
+        .pe-before-label, .pe-after-label {
+            font-weight: 600;
+            margin-bottom: 12px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+        }
+        
+        .pe-before-label {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        
+        .pe-after-label {
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .pe-image-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .pe-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .pe-video-container {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .pe-video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .pe-play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .pe-video-container:hover .pe-play-overlay {
+            opacity: 1;
+        }
+        
+        .pe-play-button {
+            color: white;
+            font-size: 1.5rem;
+            margin-left: 4px;
+        }
+        
+        .pe-card-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .pe-project-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 12px 0;
+        }
+        
+        .pe-project-description {
+            color: #d1d5db;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0 0 20px 0;
+        }
+        
+        .pe-project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .pe-tag {
+            background: rgba(37, 99, 235, 0.2);
+            color: #93c5fd;
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .pe-cta {
+            background: rgba(37, 99, 235, 0.1);
+            border: 2px solid rgba(37, 99, 235, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
+        }
+        
+        .pe-cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .pe-cta-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 16px 0;
+        }
+        
+        .pe-cta-desc {
+            color: #d1d5db;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0 0 24px 0;
+        }
+        
+        .pe-cta-button {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .pe-cta-button:hover {
+            background: linear-gradient(135deg, #1d4ed8, #1e40af);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -2682,84 +2970,183 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
+    <!-- Enhanced Portfolio Section -->
+    <section class="portfolio-enhanced" id="portfolio" dir="rtl" aria-label="أمثلة من الأعمال">
         <div class="container">
-            <h2>
-                <span data-lang="ar">أمثلة من الخدمة</span>
-                <span data-lang="fr">Exemples de Travaux Récents</span>
-                <span data-lang="en">Recent Work Examples</span>
-            </h2>
-            <p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">
-                <span data-lang="ar">(تم إنشاؤها لأعمال مثل عملك)</span>
-                <span data-lang="fr">(Créés pour des entreprises comme la vôtre)</span>
-                <span data-lang="en">(Created for businesses like yours)</span>
-            </p>
+            <!-- Enhanced Header -->
+            <div class="pe-header reveal-up">
+                <div class="pe-badge">
+                    <span data-lang="ar">أعمال</span>
+                    <span data-lang="fr">Portfolio</span>
+                    <span data-lang="en">Portfolio</span>
+                </div>
+                <h2 class="pe-title">
+                    <span data-lang="ar">أمثلة من الخدمة</span>
+                    <span data-lang="fr">Exemples de Travaux Récents</span>
+                    <span data-lang="en">Recent Work Examples</span>
+                </h2>
+                <p class="pe-subtitle">
+                    <span data-lang="ar">(تم إنشاؤها لأعمال مثل عملك)</span>
+                    <span data-lang="fr">(Créés pour des entreprises comme la vôtre)</span>
+                    <span data-lang="en">(Created for businesses like yours)</span>
+                </p>
+            </div>
             
-            <div class="portfolio-grid">
-                <!-- Before/After Comparison -->
-                <div class="portfolio-item">
-                    <div class="before-after">
-                        <div class="before">
-                            <h4>
+            <!-- Portfolio Grid -->
+            <div class="pe-portfolio-grid">
+                <!-- Before/After Comparison Card -->
+                <div class="pe-portfolio-card pe-portfolio--comparison reveal-up">
+                    <div class="pe-card-header">
+                        <div class="pe-card-icon">🔄</div>
+                        <h3 class="pe-card-title">
+                            <span data-lang="ar">قبل/من بعد</span>
+                            <span data-lang="fr">Avant/Après</span>
+                            <span data-lang="en">Before/After</span>
+                        </h3>
+                    </div>
+                    
+                    <div class="pe-before-after">
+                        <div class="pe-before">
+                            <div class="pe-before-label">
                                 <span data-lang="ar">قبل</span>
                                 <span data-lang="fr">Avant</span>
                                 <span data-lang="en">Before</span>
-                            </h4>
-                            <img src="img/befor.jpg" alt="Amateur business logo before redesign" loading="lazy">
+                            </div>
+                            <div class="pe-image-container">
+                                <img src="img/befor.jpg" alt="Amateur business logo before redesign" loading="lazy">
+                            </div>
                         </div>
-                        <div class="after">
-                            <h4>
+                        
+                        <div class="pe-after">
+                            <div class="pe-after-label">
                                 <span data-lang="ar">بعد</span>
                                 <span data-lang="fr">Après</span>
                                 <span data-lang="en">After</span>
-                            </h4>
-                            <img src="img/after.jpeg" alt="Professional logo design after redesign" loading="lazy">
+                            </div>
+                            <div class="pe-image-container">
+                                <img src="img/after.jpeg" alt="Professional logo design after redesign" loading="lazy">
+                            </div>
                         </div>
                     </div>
-                    <p><strong>
-                        <span data-lang="ar">قبل/من بعد:</span>
-                        <span data-lang="fr">Entreprise d'eau locale :</span>
-                        <span data-lang="en">Local Water Company:</span>
-                    </strong> 
-                        <span data-lang="ar">لوغو شركة ماء كيروي قصة ديال تجدد وتوازن، واضح فأي حجم ومؤثر فكل تاتش‑بوينت</span>
-                        <span data-lang="fr">logo d'une société d'eau qui raconte renouveau et équilibre, clair à toute taille et impactant sur chaque point de contact</span>
-                        <span data-lang="en">logo of a water company telling a story of renewal and balance, clear at any size and impactful at every touchpoint</span>
-                    </p>
+                    
+                    <div class="pe-card-content">
+                        <h4 class="pe-project-title">
+                            <span data-lang="ar">شركة مياه محلية</span>
+                            <span data-lang="fr">Entreprise d'eau locale</span>
+                            <span data-lang="en">Local Water Company</span>
+                        </h4>
+                        <p class="pe-project-description">
+                            <span data-lang="ar">لوغو شركة ماء كيروي قصة ديال تجدد وتوازن، واضح فأي حجم ومؤثر فكل تاتش‑بوينت</span>
+                            <span data-lang="fr">logo d'une société d'eau qui raconte renouveau et équilibre, clair à toute taille et impactant sur chaque point de contact</span>
+                            <span data-lang="en">logo of a water company telling a story of renewal and balance, clear at any size and impactful at every touchpoint</span>
+                        </p>
+                        <div class="pe-project-tags">
+                            <span class="pe-tag">Logo Design</span>
+                            <span class="pe-tag">Brand Identity</span>
+                            <span class="pe-tag">Visual Storytelling</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Video Showcase -->
-                <div class="portfolio-item">
-                    <video poster="img/web-thumbnail.jpg" controls preload="metadata">
-                        <source src="img/web.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p><strong>
-                        <span data-lang="ar">سايت برو موديرن ومتجاوب</span>
-                        <span data-lang="fr">Site web professionnel :</span>
-                        <span data-lang="en">Professional Website:</span>
-                    </strong> 
-                        <span data-lang="ar">عرض تفاعلي لموقع ويب حديث ومتجاوب</span>
-                        <span data-lang="fr">Présentation interactive d'un site web moderne et responsive</span>
-                        <span data-lang="en">Interactive showcase of modern, responsive website</span>
-                    </p>
+                <!-- Website Showcase Card -->
+                <div class="pe-portfolio-card pe-portfolio--website reveal-up">
+                    <div class="pe-card-header">
+                        <div class="pe-card-icon">💻</div>
+                        <h3 class="pe-card-title">
+                            <span data-lang="ar">موقع ويب احترافي</span>
+                            <span data-lang="fr">Site web professionnel</span>
+                            <span data-lang="en">Professional Website</span>
+                        </h3>
+                    </div>
+                    
+                    <div class="pe-video-container">
+                        <video poster="img/web-thumbnail.jpg" controls preload="metadata">
+                            <source src="img/web.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="pe-play-overlay">
+                            <div class="pe-play-button">▶</div>
+                        </div>
+                    </div>
+                    
+                    <div class="pe-card-content">
+                        <h4 class="pe-project-title">
+                            <span data-lang="ar">موقع ويب حديث ومتجاوب</span>
+                            <span data-lang="fr">Site web moderne et responsive</span>
+                            <span data-lang="en">Modern and Responsive Website</span>
+                        </h4>
+                        <p class="pe-project-description">
+                            <span data-lang="ar">عرض تفاعلي لموقع ويب حديث ومتجاوب</span>
+                            <span data-lang="fr">Présentation interactive d'un site web moderne et responsive</span>
+                            <span data-lang="en">Interactive showcase of modern, responsive website</span>
+                        </p>
+                        <div class="pe-project-tags">
+                            <span class="pe-tag">Web Development</span>
+                            <span class="pe-tag">Responsive Design</span>
+                            <span class="pe-tag">User Experience</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Instagram Reel Showcase -->
-                <div class="portfolio-item">
-                    <video poster="img/instagram-reel-thumbnail.jpg" controls preload="metadata">
-                        <source src="img/instagram%20%20reel%20%20for%20artist%20.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p><strong>
-                        <span data-lang="ar">ورييل 9:16 كيبان آرتيستيك وجذّاب</span>
-                        <span data-lang="fr">Reel Instagram artistique :</span>
-                        <span data-lang="en">Artist Instagram Reel:</span>
-                    </strong>
-                        <span data-lang="ar">فيديو عمودي 9:16 يبرز الأعمال بطريقة سريعة وجذابة</span>
-                        <span data-lang="fr">Vidéo verticale 9:16 mettant en valeur le travail de façon rapide et engageante</span>
-                        <span data-lang="en">9:16 vertical reel showcasing work quickly and engagingly</span>
+                <!-- Instagram Reel Showcase Card -->
+                <div class="pe-portfolio-card pe-portfolio--reel reveal-up">
+                    <div class="pe-card-header">
+                        <div class="pe-card-icon">📱</div>
+                        <h3 class="pe-card-title">
+                            <span data-lang="ar">ريل إنستغرام</span>
+                            <span data-lang="fr">Reel Instagram</span>
+                            <span data-lang="en">Instagram Reel</span>
+                        </h3>
+                    </div>
+                    
+                    <div class="pe-video-container">
+                        <video poster="img/instagram-reel-thumbnail.jpg" controls preload="metadata">
+                            <source src="img/instagram%20%20reel%20%20for%20artist%20.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="pe-play-overlay">
+                            <div class="pe-play-button">▶</div>
+                        </div>
+                    </div>
+                    
+                    <div class="pe-card-content">
+                        <h4 class="pe-project-title">
+                            <span data-lang="ar">فيديو فني 9:16</span>
+                            <span data-lang="fr">Vidéo artistique 9:16</span>
+                            <span data-lang="en">9:16 Artistic Video</span>
+                        </h4>
+                        <p class="pe-project-description">
+                            <span data-lang="ar">فيديو عمودي 9:16 يبرز الأعمال بطريقة سريعة وجذابة</span>
+                            <span data-lang="fr">Vidéo verticale 9:16 mettant en valeur le travail de façon rapide et engageante</span>
+                            <span data-lang="en">9:16 vertical reel showcasing work quickly and engagingly</span>
+                        </p>
+                        <div class="pe-project-tags">
+                            <span class="pe-tag">Video Production</span>
+                            <span class="pe-tag">Social Media</span>
+                            <span class="pe-tag">Content Creation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio CTA -->
+            <div class="pe-cta reveal-up">
+                <div class="pe-cta-content">
+                    <h3 class="pe-cta-title">
+                        <span data-lang="ar">مستعد لرؤية عملك يتحول؟</span>
+                        <span data-lang="fr">Prêt à voir votre entreprise se transformer ?</span>
+                        <span data-lang="en">Ready to see your business transform?</span>
+                    </h3>
+                    <p class="pe-cta-desc">
+                        <span data-lang="ar">احجز استشارة مجانية واكتشف كيف يمكننا مساعدتك</span>
+                        <span data-lang="fr">Réservez une consultation gratuite et découvrez comment nous pouvons vous aider</span>
+                        <span data-lang="en">Book a free consultation and discover how we can help you</span>
                     </p>
+                    <button class="pe-cta-button" onclick="openWhatsApp('portfolio')">
+                        <span data-lang="ar">احجز استشارة مجانية</span>
+                        <span data-lang="fr">Réserver une consultation gratuite</span>
+                        <span data-lang="en">Book Free Consultation</span>
+                    </button>
                 </div>
             </div>
         </div>
