@@ -2892,24 +2892,63 @@
             font-weight: 600;
         }
 
-        /* Language Direction Fixes */
+        /* Comprehensive Language Direction Fixes */
         [data-lang="fr"], [data-lang="en"] {
-            direction: ltr;
-            text-align: left;
+            direction: ltr !important;
+            text-align: left !important;
+            display: inline !important;
         }
         
         [data-lang="ar"] {
-            direction: rtl;
-            text-align: right;
+            direction: rtl !important;
+            text-align: right !important;
+            display: inline !important;
         }
         
-        /* Ensure proper text alignment for mixed content */
-        .container[dir="rtl"] [data-lang="fr"],
-        .container[dir="rtl"] [data-lang="en"],
-        section[dir="rtl"] [data-lang="fr"],
-        section[dir="rtl"] [data-lang="en"] {
-            direction: ltr;
-            text-align: left;
+        /* Force LTR for French and English in all contexts */
+        * [data-lang="fr"], 
+        * [data-lang="en"],
+        section [data-lang="fr"],
+        section [data-lang="en"],
+        div [data-lang="fr"],
+        div [data-lang="en"],
+        p [data-lang="fr"],
+        p [data-lang="en"],
+        h1 [data-lang="fr"],
+        h1 [data-lang="en"],
+        h2 [data-lang="fr"],
+        h2 [data-lang="en"],
+        h3 [data-lang="fr"],
+        h3 [data-lang="en"],
+        span [data-lang="fr"],
+        span [data-lang="en"] {
+            direction: ltr !important;
+            text-align: left !important;
+        }
+        
+        /* Force RTL for Arabic in all contexts */
+        * [data-lang="ar"],
+        section [data-lang="ar"],
+        div [data-lang="ar"],
+        p [data-lang="ar"],
+        h1 [data-lang="ar"],
+        h2 [data-lang="ar"],
+        h3 [data-lang="ar"],
+        span [data-lang="ar"] {
+            direction: rtl !important;
+            text-align: right !important;
+        }
+        
+        /* Override any inherited direction from parent elements */
+        [dir="rtl"] [data-lang="fr"],
+        [dir="rtl"] [data-lang="en"] {
+            direction: ltr !important;
+            text-align: left !important;
+        }
+        
+        [dir="ltr"] [data-lang="ar"] {
+            direction: rtl !important;
+            text-align: right !important;
         }
     </style>
 </head>
@@ -5126,18 +5165,32 @@
             document.querySelectorAll('[data-lang]').forEach(element => {
                 if (element.getAttribute('data-lang') === lang) {
                     element.style.display = 'inline';
-                    // Set proper direction for each language
+                    element.style.visibility = 'visible';
+                    // Force proper direction for each language with !important
                     if (lang === 'ar') {
-                        element.style.direction = 'rtl';
-                        element.style.textAlign = 'right';
+                        element.style.setProperty('direction', 'rtl', 'important');
+                        element.style.setProperty('text-align', 'right', 'important');
                     } else {
-                        element.style.direction = 'ltr';
-                        element.style.textAlign = 'left';
+                        element.style.setProperty('direction', 'ltr', 'important');
+                        element.style.setProperty('text-align', 'left', 'important');
                     }
                 } else {
                     element.style.display = 'none';
+                    element.style.visibility = 'hidden';
                 }
             });
+            
+            // Additional force direction for all elements
+            setTimeout(() => {
+                document.querySelectorAll('[data-lang="fr"], [data-lang="en"]').forEach(element => {
+                    element.style.setProperty('direction', 'ltr', 'important');
+                    element.style.setProperty('text-align', 'left', 'important');
+                });
+                document.querySelectorAll('[data-lang="ar"]').forEach(element => {
+                    element.style.setProperty('direction', 'rtl', 'important');
+                    element.style.setProperty('text-align', 'right', 'important');
+                });
+            }, 100);
             
             // Update document direction for Arabic
             if (lang === 'ar') {
@@ -5189,9 +5242,27 @@
             const savedLang = localStorage.getItem('selectedLanguage') || 'en';
             switchLanguage(savedLang);
             
+            // Force language direction on all elements
+            forceLanguageDirection();
+            
             // Mobile-specific enhancements
             initializeMobileFeatures();
         });
+        
+        // Force language direction for all elements
+        function forceLanguageDirection() {
+            // Force LTR for French and English
+            document.querySelectorAll('[data-lang="fr"], [data-lang="en"]').forEach(element => {
+                element.style.setProperty('direction', 'ltr', 'important');
+                element.style.setProperty('text-align', 'left', 'important');
+            });
+            
+            // Force RTL for Arabic
+            document.querySelectorAll('[data-lang="ar"]').forEach(element => {
+                element.style.setProperty('direction', 'rtl', 'important');
+                element.style.setProperty('text-align', 'right', 'important');
+            });
+        }
 
         // Mobile-specific features
         function initializeMobileFeatures() {
@@ -5518,6 +5589,9 @@ Best regards,`);
                 });
             });
         });
+        
+        // Periodic language direction enforcement
+        setInterval(forceLanguageDirection, 1000);
     </script>
 
     <!-- Google Analytics (replace with your tracking ID) -->
