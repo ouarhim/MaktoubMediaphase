@@ -2056,6 +2056,244 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
         }
+
+        /* Enhanced Future Comparison Section Styles */
+        .future-comparison-enhanced {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.98));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .future-comparison-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="future-pattern" width="100" height="100" patternUnits="userSpaceOnUse"><rect x="10" y="10" width="20" height="20" fill="rgba(37,99,235,0.1)" rx="4"/><rect x="70" y="70" width="20" height="20" fill="rgba(37,99,235,0.1)" rx="4"/><rect x="40" y="40" width="20" height="20" fill="rgba(37,99,235,0.1)" rx="4"/></pattern></defs><rect width="100" height="100" fill="url(%23future-pattern)"/></svg>');
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        .fce-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .fce-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(37, 99, 235, 0.2);
+            color: #93c5fd;
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .fce-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        .fce-comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .fce-comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        .fce-comparison-card {
+            background: rgba(55, 65, 81, 0.92);
+            border: 1px solid rgba(245, 245, 220, 0.18);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .fce-comparison-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .fce-comparison--success::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #10b981, #059669);
+        }
+        
+        .fce-comparison--danger::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #dc2626, #b91c1c);
+        }
+        
+        .fce-card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .fce-card-icon {
+            font-size: 2.5rem;
+        }
+        
+        .fce-card-badge {
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .fce-badge--success {
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .fce-badge--danger {
+            background: rgba(220, 38, 38, 0.2);
+            color: #fca5a5;
+            border: 1px solid rgba(220, 38, 38, 0.3);
+        }
+        
+        .fce-card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 24px 0;
+            line-height: 1.3;
+        }
+        
+        .fce-benefits-list, .fce-problems-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .fce-benefit-item, .fce-problem-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        
+        .fce-benefit-icon, .fce-problem-icon {
+            font-size: 1.2rem;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+        
+        .fce-benefit-content, .fce-problem-content {
+            flex: 1;
+        }
+        
+        .fce-benefit-title, .fce-problem-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 8px 0;
+        }
+        
+        .fce-benefit-desc, .fce-problem-desc {
+            color: #d1d5db;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        .fce-cta {
+            background: rgba(37, 99, 235, 0.1);
+            border: 2px solid rgba(37, 99, 235, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fce-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(124, 58, 237, 0.05));
+            pointer-events: none;
+        }
+        
+        .fce-cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .fce-cta-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .fce-cta-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 20px 0;
+            line-height: 1.3;
+        }
+        
+        .fce-cta-desc {
+            color: #d1d5db;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0 0 24px 0;
+        }
+        
+        .fce-cta-button {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .fce-cta-button:hover {
+            background: linear-gradient(135deg, #1d4ed8, #1e40af);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -2576,57 +2814,234 @@
         </div>
     </section>
 
-    <!-- Future Comparison Section -->
-    <section style="padding: 80px 0; background: #374151;">
+    <!-- Enhanced Future Comparison Section -->
+    <section class="future-comparison-enhanced" dir="rtl" aria-label="مقارنة المستقبل">
         <div class="container">
-            <h2 style="text-align: center; font-family: 'Poppins', sans-serif; font-size: 2.2rem; margin-bottom: 50px;">
-                <span data-lang="ar">مستقبلك: مع البراندينغ vs بلا بيه</span>
-                <span data-lang="fr">📊 Votre avenir : Avec branding professionnel vs Sans</span>
-                <span data-lang="en">📊 Your Future: With Professional Branding vs Without</span>
-            </h2>
+            <!-- Enhanced Header -->
+            <div class="fce-header reveal-up">
+                <div class="fce-badge">
+                    <span data-lang="ar">مستقبل</span>
+                    <span data-lang="fr">Avenir</span>
+                    <span data-lang="en">Future</span>
+                </div>
+                <h2 class="fce-title">
+                    <span data-lang="ar">مستقبلك: مع البراندينغ vs بلا بيه</span>
+                    <span data-lang="fr">📊 Votre avenir : Avec branding professionnel vs Sans</span>
+                    <span data-lang="en">📊 Your Future: With Professional Branding vs Without</span>
+                </h2>
+            </div>
             
-            <div class="future-comparison-grid">
-                <div style="background: rgba(245,245,220,0.18); padding: 30px; border-radius: 12px; border-left: 5px solid var(--success);">
-                    <h3 style="color: var(--success); margin-bottom: 20px;">
-                        <span data-lang="ar">من هنا 6 شهور — مع براند برو:</span>
-                        <span data-lang="fr">Dans 6 mois - AVEC branding professionnel :</span>
-                        <span data-lang="en">6 Months From Now - WITH Professional Branding:</span>
-                    </h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 10px;">✅ <span data-lang="ar">3x تفاعل فأنستغرام، زبناء كيديرو منشن وكيصيفطوك لصحابهم</span><span data-lang="fr">Votre Instagram a 3x plus de followers engagés</span><span data-lang="en">Your Instagram has 3x more engaged followers</span></li>
-                        <li style="margin-bottom: 10px;">✅ <span data-lang="ar">رانديفو معمّرين</span><span data-lang="fr">Les clients vous taguent dans leurs stories et vous recommandent</span><span data-lang="en">Customers tag you in their stories and recommend you to friends</span></li>
-                        <li style="margin-bottom: 10px;">✅ <span data-lang="ar">كتطلع الثمن وباقي كيتختارو عليك</span><span data-lang="fr">Vous réservez des rendez-vous des semaines à l'avance</span><span data-lang="en">You book appointments weeks in advance</span></li>
-                        <li style="margin-bottom: 10px;">✅ <span data-lang="ar">وكترتاح حيث البزنس كينمو</span><span data-lang="fr">Vous augmentez vos prix et les clients vous choisissent encore</span><span data-lang="en">You raise your prices and customers still choose you</span></li>
-                    </ul>
+            <!-- Comparison Cards -->
+            <div class="fce-comparison-grid">
+                <!-- With Branding Card -->
+                <div class="fce-comparison-card fce-comparison--success reveal-up">
+                    <div class="fce-card-header">
+                        <div class="fce-card-icon">🚀</div>
+                        <div class="fce-card-badge fce-badge--success">
+                            <span data-lang="ar">مع البراندينغ</span>
+                            <span data-lang="fr">Avec Branding</span>
+                            <span data-lang="en">With Branding</span>
+                        </div>
+                    </div>
+                    
+                    <div class="fce-card-content">
+                        <h3 class="fce-card-title">
+                            <span data-lang="ar">من هنا 6 شهور — مع براند برو:</span>
+                            <span data-lang="fr">Dans 6 mois - AVEC branding professionnel :</span>
+                            <span data-lang="en">6 Months From Now - WITH Professional Branding:</span>
+                        </h3>
+                        
+                        <div class="fce-benefits-list">
+                            <div class="fce-benefit-item">
+                                <div class="fce-benefit-icon">✅</div>
+                                <div class="fce-benefit-content">
+                                    <h4 class="fce-benefit-title">
+                                        <span data-lang="ar">3x تفاعل فأنستغرام</span>
+                                        <span data-lang="fr">3x plus d'engagement Instagram</span>
+                                        <span data-lang="en">3x Instagram engagement</span>
+                                    </h4>
+                                    <p class="fce-benefit-desc">
+                                        <span data-lang="ar">زبناء كيديرو منشن وكيصيفطوك لصحابهم</span>
+                                        <span data-lang="fr">Les clients vous taguent et vous recommandent</span>
+                                        <span data-lang="en">Customers tag and recommend you</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="fce-benefit-item">
+                                <div class="fce-benefit-icon">✅</div>
+                                <div class="fce-benefit-content">
+                                    <h4 class="fce-benefit-title">
+                                        <span data-lang="ar">رانديفو معمّرين</span>
+                                        <span data-lang="fr">Réservations pleines</span>
+                                        <span data-lang="en">Bookings filled</span>
+                                    </h4>
+                                    <p class="fce-benefit-desc">
+                                        <span data-lang="ar">تحجز المواعيد قبل أسابيع</span>
+                                        <span data-lang="fr">Vous réservez des semaines à l'avance</span>
+                                        <span data-lang="en">Book appointments weeks ahead</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="fce-benefit-item">
+                                <div class="fce-benefit-icon">✅</div>
+                                <div class="fce-benefit-content">
+                                    <h4 class="fce-benefit-title">
+                                        <span data-lang="ar">أسعار أعلى</span>
+                                        <span data-lang="fr">Prix plus élevés</span>
+                                        <span data-lang="en">Higher prices</span>
+                                    </h4>
+                                    <p class="fce-benefit-desc">
+                                        <span data-lang="ar">كتطلع الثمن وباقي كيتختارو عليك</span>
+                                        <span data-lang="fr">Vous augmentez vos prix et les clients vous choisissent encore</span>
+                                        <span data-lang="en">You raise prices and customers still choose you</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="fce-benefit-item">
+                                <div class="fce-benefit-icon">✅</div>
+                                <div class="fce-benefit-content">
+                                    <h4 class="fce-benefit-title">
+                                        <span data-lang="ar">نمو مستمر</span>
+                                        <span data-lang="fr">Croissance continue</span>
+                                        <span data-lang="en">Continuous growth</span>
+                                    </h4>
+                                    <p class="fce-benefit-desc">
+                                        <span data-lang="ar">وكترتاح حيث البزنس كينمو</span>
+                                        <span data-lang="fr">Vous dormez bien car l'activité progresse</span>
+                                        <span data-lang="en">You sleep well knowing business is growing</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div style="background: rgba(245,245,220,0.18); padding: 30px; border-radius: 12px; border-left: 5px solid #dc2626;">
-                    <h3 style="color: #e76c6c; margin-bottom: 20px;">
-                        <span data-lang="ar">من هنا 6 شهور — بلا براند برو:</span>
-                        <span data-lang="fr">Dans 6 mois - SANS branding professionnel :</span>
-                        <span data-lang="en">6 Months From Now - WITHOUT Professional Branding:</span>
-                    </h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 10px;">❌ <span data-lang="ar">باق كتقلب على الانتباه</span><span data-lang="fr">Vous luttez encore pour être remarqué en ligne</span><span data-lang="en">Still struggling to get noticed online</span></li>
-                        <li style="margin-bottom: 10px;">❌ <span data-lang="ar">كتخدم غير بالسّوم القليل</span><span data-lang="fr">Vous ne concurrencez que sur le prix, moins de profit</span><span data-lang="en">Competing only on price, making less profit</span></li>
-                        <li style="margin-bottom: 10px;">❌ <span data-lang="ar">المنافسين كياخدو الكليان</span><span data-lang="fr">Vous voyez les concurrents avec un meilleur branding voler vos clients</span><span data-lang="en">Watching competitors with better branding steal your customers</span></li>
-                        <li style="margin-bottom: 10px;">❌ <span data-lang="ar">كتخدم بزاف على والو</span><span data-lang="fr">Vous travaillez plus dur pour les mêmes (ou moins) clients</span><span data-lang="en">Working harder for the same (or fewer) customers</span></li>
-                        <li style="margin-bottom: 10px;">❌ <span data-lang="ar">وكتحس بالإحباط</span><span data-lang="fr">Frustré que votre excellent produit n'obtient pas la reconnaissance qu'il mérite</span><span data-lang="en">Frustrated that your great product isn't getting the recognition it deserves</span></li>
-                    </ul>
+                <!-- Without Branding Card -->
+                <div class="fce-comparison-card fce-comparison--danger reveal-up">
+                    <div class="fce-card-header">
+                        <div class="fce-card-icon">⚠️</div>
+                        <div class="fce-card-badge fce-badge--danger">
+                            <span data-lang="ar">بلا براندينغ</span>
+                            <span data-lang="fr">Sans Branding</span>
+                            <span data-lang="en">Without Branding</span>
+                        </div>
+                    </div>
+                    
+                    <div class="fce-card-content">
+                        <h3 class="fce-card-title">
+                            <span data-lang="ar">من هنا 6 شهور — بلا براند برو:</span>
+                            <span data-lang="fr">Dans 6 mois - SANS branding professionnel :</span>
+                            <span data-lang="en">6 Months From Now - WITHOUT Professional Branding:</span>
+                        </h3>
+                        
+                        <div class="fce-problems-list">
+                            <div class="fce-problem-item">
+                                <div class="fce-problem-icon">❌</div>
+                                <div class="fce-problem-content">
+                                    <h4 class="fce-problem-title">
+                                        <span data-lang="ar">صعوبة في الانتباه</span>
+                                        <span data-lang="fr">Difficile d'être remarqué</span>
+                                        <span data-lang="en">Hard to get noticed</span>
+                                    </h4>
+                                    <p class="fce-problem-desc">
+                                        <span data-lang="ar">باق كتقلب على الانتباه</span>
+                                        <span data-lang="fr">Vous luttez encore pour être remarqué en ligne</span>
+                                        <span data-lang="en">Still struggling to get noticed online</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="fce-problem-item">
+                                <div class="fce-problem-icon">❌</div>
+                                <div class="fce-problem-content">
+                                    <h4 class="fce-problem-title">
+                                        <span data-lang="ar">منافسة بالسعر</span>
+                                        <span data-lang="fr">Concurrence par prix</span>
+                                        <span data-lang="en">Price competition</span>
+                                    </h4>
+                                    <p class="fce-problem-desc">
+                                        <span data-lang="ar">كتخدم غير بالسّوم القليل</span>
+                                        <span data-lang="fr">Vous ne concurrencez que sur le prix, moins de profit</span>
+                                        <span data-lang="en">Competing only on price, making less profit</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="fce-problem-item">
+                                <div class="fce-problem-icon">❌</div>
+                                <div class="fce-problem-content">
+                                    <h4 class="fce-problem-title">
+                                        <span data-lang="ar">فقدان العملاء</span>
+                                        <span data-lang="fr">Perte de clients</span>
+                                        <span data-lang="en">Losing customers</span>
+                                    </h4>
+                                    <p class="fce-problem-desc">
+                                        <span data-lang="ar">المنافسين كياخدو الكليان</span>
+                                        <span data-lang="fr">Les concurrents avec un meilleur branding volent vos clients</span>
+                                        <span data-lang="en">Competitors with better branding steal your customers</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="fce-problem-item">
+                                <div class="fce-problem-icon">❌</div>
+                                <div class="fce-problem-content">
+                                    <h4 class="fce-problem-title">
+                                        <span data-lang="ar">عمل أكثر، نتائج أقل</span>
+                                        <span data-lang="fr">Plus de travail, moins de résultats</span>
+                                        <span data-lang="en">More work, fewer results</span>
+                                    </h4>
+                                    <p class="fce-problem-desc">
+                                        <span data-lang="ar">كتخدم بزاف على والو</span>
+                                        <span data-lang="fr">Vous travaillez plus dur pour les mêmes (ou moins) clients</span>
+                                        <span data-lang="en">Working harder for the same (or fewer) customers</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="fce-problem-item">
+                                <div class="fce-problem-icon">❌</div>
+                                <div class="fce-problem-content">
+                                    <h4 class="fce-problem-title">
+                                        <span data-lang="ar">الإحباط</span>
+                                        <span data-lang="fr">Frustration</span>
+                                        <span data-lang="en">Frustration</span>
+                                    </h4>
+                                    <p class="fce-problem-desc">
+                                        <span data-lang="ar">وكتحس بالإحباط</span>
+                                        <span data-lang="fr">Frustré que votre excellent produit n'obtient pas la reconnaissance qu'il mérite</span>
+                                        <span data-lang="en">Frustrated that your great product isn't getting the recognition it deserves</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <div style="text-align: center; margin-top: 40px;">
-                <h3 style="color: var(--primary); margin-bottom: 20px;">
-                    <span data-lang="ar">🎯 توقف عن فقدان العملاء لصالح المنافسين الأفضل مظهراً</span>
-                    <span data-lang="fr">🎯 Arrêtez de perdre des clients au profit de concurrents mieux présentés</span>
-                    <span data-lang="en">🎯 Stop Losing Customers to Better-Looking Competitors</span>
-                </h3>
-                <p style="font-size: 1.1rem; color: var(--text-dark); max-width: 800px; margin: 0 auto;">
-                    <span data-lang="ar">الحقيقة قاسية لكنها بسيطة: منتجاتك قد تكون مذهلة. خدمتك قد تكون ممتازة. لكن إذا بدت علامتك التجارية هاوية، لن يعطيك العملاء الفرصة لإثبات ذلك. كل أسبوع تنتظره، منافسوك يحصلون على العملاء الذين يجب أن يكونوا لك.</span>
-                    <span data-lang="fr">La vérité est dure mais simple : Vos produits peuvent être incroyables. Votre service peut être excellent. Mais si votre branding a l'air amateur, les clients ne vous donneront jamais la chance de le prouver. Chaque semaine que vous attendez, vos concurrents obtiennent les clients qui devraient être vôtres.</span>
-                    <span data-lang="en">The truth is harsh but simple: Your products might be amazing. Your service might be excellent. But if your branding looks amateur, customers will never give you the chance to prove it. Every week you wait, your competitors are getting the customers that should be yours.</span>
-                </p>
+            <!-- Call to Action -->
+            <div class="fce-cta reveal-up">
+                <div class="fce-cta-content">
+                    <div class="fce-cta-icon">🎯</div>
+                    <h3 class="fce-cta-title">
+                        <span data-lang="ar">توقف عن فقدان العملاء لصالح المنافسين الأفضل مظهراً</span>
+                        <span data-lang="fr">Arrêtez de perdre des clients au profit de concurrents mieux présentés</span>
+                        <span data-lang="en">Stop Losing Customers to Better-Looking Competitors</span>
+                    </h3>
+                    <p class="fce-cta-desc">
+                        <span data-lang="ar">الحقيقة قاسية لكنها بسيطة: منتجاتك قد تكون مذهلة. خدمتك قد تكون ممتازة. لكن إذا بدت علامتك التجارية هاوية، لن يعطيك العملاء الفرصة لإثبات ذلك. كل أسبوع تنتظره، منافسوك يحصلون على العملاء الذين يجب أن يكونوا لك.</span>
+                        <span data-lang="fr">La vérité est dure mais simple : Vos produits peuvent être incroyables. Votre service peut être excellent. Mais si votre branding a l'air amateur, les clients ne vous donneront jamais la chance de le prouver. Chaque semaine que vous attendez, vos concurrents obtiennent les clients qui devraient être vôtres.</span>
+                        <span data-lang="en">The truth is harsh but simple: Your products might be amazing. Your service might be excellent. But if your branding looks amateur, customers will never give you the chance to prove it. Every week you wait, your competitors are getting the customers that should be yours.</span>
+                    </p>
+                    <button class="fce-cta-button" onclick="openWhatsApp('future')">
+                        <span data-lang="ar">احجز استشارة مجانية الآن</span>
+                        <span data-lang="fr">Réservez une consultation gratuite maintenant</span>
+                        <span data-lang="en">Book Free Consultation Now</span>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
