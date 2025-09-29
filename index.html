@@ -2891,6 +2891,26 @@
             font-size: 0.9rem;
             font-weight: 600;
         }
+
+        /* Language Direction Fixes */
+        [data-lang="fr"], [data-lang="en"] {
+            direction: ltr;
+            text-align: left;
+        }
+        
+        [data-lang="ar"] {
+            direction: rtl;
+            text-align: right;
+        }
+        
+        /* Ensure proper text alignment for mixed content */
+        .container[dir="rtl"] [data-lang="fr"],
+        .container[dir="rtl"] [data-lang="en"],
+        section[dir="rtl"] [data-lang="fr"],
+        section[dir="rtl"] [data-lang="en"] {
+            direction: ltr;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -5102,10 +5122,18 @@
             document.getElementById('lang-' + lang).classList.add('active');
             document.getElementById('mobile-lang-' + lang).classList.add('active');
             
-            // Show/hide language content
+            // Show/hide language content and set proper direction
             document.querySelectorAll('[data-lang]').forEach(element => {
                 if (element.getAttribute('data-lang') === lang) {
                     element.style.display = 'inline';
+                    // Set proper direction for each language
+                    if (lang === 'ar') {
+                        element.style.direction = 'rtl';
+                        element.style.textAlign = 'right';
+                    } else {
+                        element.style.direction = 'ltr';
+                        element.style.textAlign = 'left';
+                    }
                 } else {
                     element.style.display = 'none';
                 }
