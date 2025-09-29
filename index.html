@@ -535,6 +535,371 @@
             right: 0;
             left: auto;
         }
+
+        /* Enhanced Hero Section Styles */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 60%),
+                        radial-gradient(circle at 70% 80%, rgba(124, 58, 237, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        
+        .hero-header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        }
+        
+        .hero-logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+        
+        .hero-company-name {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0;
+        }
+        
+        .hero-tagline {
+            font-size: 1.1rem;
+            color: #d1d5db;
+            margin: 5px 0 0 0;
+            font-style: italic;
+        }
+        
+        .hero-content-card {
+            background: rgba(55, 65, 81, 0.92);
+            border: 1px solid rgba(245, 245, 220, 0.18);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .hero-content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+        }
+        
+        .hero-main-headline {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .hero-subheadline {
+            font-size: 1.2rem;
+            color: #d1d5db;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        
+        .hero-price-highlight {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .hero-price-highlight span {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #6ee7b7;
+        }
+        
+        .hero-cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero-trust-card {
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .hero-trust-strip {
+            margin: 0;
+            font-size: 1rem;
+            color: #93c5fd;
+        }
+
+        /* Enhanced Local Expertise Section Styles */
+        .local-expertise {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .local-expertise::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(249, 115, 22, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .le-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .le-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+        
+        .le-title {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 0 0 30px rgba(37, 99, 235, 0.3);
+        }
+        
+        .le-cities-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .le-cities-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        .le-city-card {
+            background: rgba(55, 65, 81, 0.92);
+            border: 1px solid rgba(245, 245, 220, 0.18);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .le-city-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+        }
+        
+        .le-city-card--agadir::before {
+            background: linear-gradient(90deg, #f97316, #ea580c);
+        }
+        
+        .le-city-card--essaouira::before {
+            background: linear-gradient(90deg, #7c3aed, #6d28d9);
+        }
+        
+        .le-city-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .le-city-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin-bottom: 16px;
+        }
+        
+        .le-city-description {
+            color: #d1d5db;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        .le-cta {
+            text-align: center;
+        }
+
+        /* Enhanced Founder Story Section Styles */
+        .founder-story-section {
+            margin: 60px 0;
+        }
+        
+        .fs-card {
+            background: rgba(55, 65, 81, 0.92);
+            border: 1px solid rgba(245, 245, 220, 0.18);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fs-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #7c3aed, #6d28d9);
+        }
+        
+        .fs-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .fs-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+        }
+        
+        .fs-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0;
+        }
+        
+        .fs-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        
+        @media (max-width: 768px) {
+            .fs-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        .fs-founder-info {
+            text-align: center;
+        }
+        
+        .fs-founder-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid rgba(124, 58, 237, 0.3);
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.2);
+        }
+        
+        .fs-founder-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 8px 0;
+        }
+        
+        .fs-founder-role {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .fs-story-content {
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+        
+        .fs-story-paragraph {
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+        
+        .fs-story-goal {
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            font-weight: 600;
+            color: #c4b5fd;
+        }
     </style>
 </head>
 <body>
@@ -636,45 +1001,51 @@
 
     <!-- Hero Section -->
     <!-- HERO SECTION -->
-    <section class="hero" id="hero">
+    <section class="hero" id="hero" dir="rtl" aria-label="الصفحة الرئيسية">
         <div class="container">
-            <div class="hero-ribbon"></div>
-            <div class="hero-ribbon--accent"></div>
-            <div class="hero-skyline"></div>
-            
-            <!-- Logo Section -->
-            <div class="logo-section">
-                <img src="img/logo.png" alt="Maktoub Media Logo" class="hero-logo">
-                <div class="logo-text">
-                    <h1 class="company-name">MAKTOUB MEDIA</h1>
-                    <p class="company-tagline">
-                        <span data-lang="ar">لأن نجاحك مكتوب</span>
-                        <span data-lang="fr">Parce que votre succès est écrit</span>
-                        <span data-lang="en">Because Your Success Is Maktoub</span>
-                    </p>
+            <!-- Enhanced Hero Header -->
+            <div class="hero-header reveal-up">
+                <div class="hero-badge">
+                    <span data-lang="ar">داريجة</span>
+                    <span data-lang="fr">Darija</span>
+                    <span data-lang="en">Darija</span>
+                </div>
+                
+                <!-- Logo Section -->
+                <div class="hero-logo-section">
+                    <img src="img/logo.png" alt="Maktoub Media Logo" class="hero-logo">
+                    <div class="hero-logo-text">
+                        <h1 class="hero-company-name">MAKTOUB MEDIA</h1>
+                        <p class="hero-tagline">
+                            <span data-lang="ar">لأن نجاحك مكتوب</span>
+                            <span data-lang="fr">Parce que votre succès est écrit</span>
+                            <span data-lang="en">Because Your Success Is Maktoub</span>
+                        </p>
+                    </div>
                 </div>
             </div>
             
-            <h1 class="main-headline">
-                <span class="arabic" data-lang="ar">البزنس ديالك كيستاهل براندينغ برو وماشي بوستات هاوية</span>
-                <span data-lang="fr">Votre entreprise mérite une présence marketing professionnelle, pas des publications amateurs</span>
-                <span data-lang="en">Your business deserves a professional marketing presence—not amateur posts</span>
-            </h1>
-            
-            <p class="subheadline">
-                <span data-lang="ar">كاتبوست فأنستغرام وفيسبوك، ولكن واش كاتجيب الكليان اللي كتستاهل؟</span>
-                <span data-lang="fr">Vous publiez sur Instagram et Facebook ; obtenez‑vous les clients que vous attendez ?</span>
-                <span data-lang="en">You post on Instagram and Facebook—are you getting the customers you expect?</span>
-            </p>
-            
-            <p class="price-highlight">
-                <span data-lang="ar">ثمن بدا من 1,900 درهم | لخدمة كتسالي فـ 7–12 يوم | ضمان رضا 90%</span>
-                <span data-lang="fr">À partir de 1 900 MAD | Livraison en 7–12 jours | Garantie de satisfaction 90 %</span>
-                <span data-lang="en">Starting from 1,900 MAD | Delivered in 7–12 days | 90% satisfaction guarantee</span>
-            </p>
-            
-            <div class="cta-platform">
-                <div class="cta-buttons">
+            <!-- Main Content Card -->
+            <div class="hero-content-card reveal-up">
+                <h1 class="hero-main-headline">
+                    <span class="arabic" data-lang="ar">البزنس ديالك كيستاهل براندينغ برو وماشي بوستات هاوية</span>
+                    <span data-lang="fr">Votre entreprise mérite une présence marketing professionnelle, pas des publications amateurs</span>
+                    <span data-lang="en">Your business deserves a professional marketing presence—not amateur posts</span>
+                </h1>
+                
+                <p class="hero-subheadline">
+                    <span data-lang="ar">كاتبوست فأنستغرام وفيسبوك، ولكن واش كاتجيب الكليان اللي كتستاهل؟</span>
+                    <span data-lang="fr">Vous publiez sur Instagram et Facebook ; obtenez‑vous les clients que vous attendez ?</span>
+                    <span data-lang="en">You post on Instagram and Facebook—are you getting the customers you expect?</span>
+                </p>
+                
+                <div class="hero-price-highlight">
+                    <span data-lang="ar">ثمن بدا من 1,900 درهم | لخدمة كتسالي فـ 7–12 يوم | ضمان رضا 90%</span>
+                    <span data-lang="fr">À partir de 1 900 MAD | Livraison en 7–12 jours | Garantie de satisfaction 90 %</span>
+                    <span data-lang="en">Starting from 1,900 MAD | Delivered in 7–12 days | 90% satisfaction guarantee</span>
+                </div>
+                
+                <div class="hero-cta-buttons">
                     <button class="cta-primary" onclick="openWhatsApp('general')">
                         <span data-lang="ar">طلب ديفي مجانا دابا</span>
                         <span data-lang="fr">Demandez un devis gratuit maintenant</span>
@@ -688,42 +1059,56 @@
                 </div>
             </div>
 
-            <p class="trust-strip">
-                <strong><span data-lang="ar">موثوقين من عند أكثر من 20 شركة فـ أكادير والصويرة</span><span data-lang="fr">Fiable pour plus de 20 entreprises à Agadir et Essaouira</span><span data-lang="en">Trusted by 20+ businesses in Agadir and Essaouira</span></strong>
-            </p>
+            <!-- Trust Strip Card -->
+            <div class="hero-trust-card reveal-up">
+                <p class="hero-trust-strip">
+                    <strong><span data-lang="ar">موثوقين من عند أكثر من 20 شركة فـ أكادير والصويرة</span><span data-lang="fr">Fiable pour plus de 20 entreprises à Agadir et Essaouira</span><span data-lang="en">Trusted by 20+ businesses in Agadir and Essaouira</span></strong>
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- LOCAL EXPERTISE SECTION -->
-    <section style="padding: 40px 0; background: #374151">
+    <section class="local-expertise" dir="rtl" aria-label="التخصص المحلي">
         <div class="container">
-            <h2 style="text-align: center; font-family: 'Poppins', sans-serif; font-size: 2rem; margin-bottom: 30px; color: var(--primary);">
-                <span data-lang="ar">التخصص المحلي</span>
-                <span data-lang="fr">Spécialistes à Agadir et Essaouira</span>
-                <span data-lang="en">Specialists in Agadir and Essaouira</span>
-            </h2>
+            <!-- Enhanced Header -->
+            <div class="le-header reveal-up">
+                <div class="le-badge">
+                    <span data-lang="ar">محلي</span>
+                    <span data-lang="fr">Local</span>
+                    <span data-lang="en">Local</span>
+                </div>
+                <h2 class="le-title">
+                    <span data-lang="ar">التخصص المحلي</span>
+                    <span data-lang="fr">Spécialistes à Agadir et Essaouira</span>
+                    <span data-lang="en">Specialists in Agadir and Essaouira</span>
+                </h2>
+            </div>
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
-                <div style="text-align: center; padding: 20px; background: rgba(245,245,220,0.18); border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                    <h3 style="color: var(--primary); margin-bottom: 15px; font-family: 'Poppins', sans-serif;">
+            <!-- Cities Grid -->
+            <div class="le-cities-grid">
+                <div class="le-city-card le-city-card--agadir reveal-up">
+                    <div class="le-city-icon">🏖️</div>
+                    <h3 class="le-city-name">
                         <span data-lang="ar">أكادير</span>
                         <span data-lang="fr">Agadir</span>
                         <span data-lang="en">Agadir</span>
                     </h3>
-                    <p style="color: var(--text-dark);">
+                    <p class="le-city-description">
                         <span data-lang="ar">Hotels، مطاعم، وكالات سياحة</span>
                         <span data-lang="fr">hôtels, restaurants, agences de voyage</span>
                         <span data-lang="en">hotels, restaurants, travel agencies</span>
                     </p>
                 </div>
                 
-                <div style="text-align: center; padding: 20px; background: rgba(245,245,220,0.18); border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                    <h3 style="color: var(--primary); margin-bottom: 15px; font-family: 'Poppins', sans-serif;">
+                <div class="le-city-card le-city-card--essaouira reveal-up">
+                    <div class="le-city-icon">🏛️</div>
+                    <h3 class="le-city-name">
                         <span data-lang="ar">الصويرة</span>
                         <span data-lang="fr">Essaouira</span>
                         <span data-lang="en">Essaouira</span>
                     </h3>
-                    <p style="color: var(--text-dark);">
+                    <p class="le-city-description">
                         <span data-lang="ar">مشاريع ثقافية وفنية وهوية بصرية</span>
                         <span data-lang="fr">projets culturels et artistiques</span>
                         <span data-lang="en">cultural and artistic projects</span>
@@ -731,8 +1116,9 @@
                 </div>
             </div>
             
-            <div style="text-align: center;">
-                <button class="cta-primary" onclick="openWhatsApp('local')" style="margin: 0 auto;">
+            <!-- CTA Section -->
+            <div class="le-cta reveal-up">
+                <button class="cta-primary" onclick="openWhatsApp('local')">
                     <span data-lang="ar">هضر معنا على البروجي ديالك</span>
                     <span data-lang="fr">Parlez‑nous de votre projet</span>
                     <span data-lang="en">Tell us about your project</span>
@@ -983,33 +1369,52 @@
         </div>
     </section>
             
-            <div class="personal-story">
-                
-                <div class="founder-info">
-                    <img src="img/photo ilyas owner .png" alt="Ilyas - Maktoub Media founder" class="founder-photo">
-                </div>
-                
-                <div class="story-content">
-                    <h3>
-                        <span data-lang="ar">علاش درنا Maktoub Media</span>
-                        <span data-lang="fr">Pourquoi j'ai créé Maktoub Media</span>
-                        <span data-lang="en">Why Maktoub Media was created</span>
-                    </h3>
-                    <p>
-                        <span data-lang="ar">شافينا بزاف ديال PME فالمغرب عندهم برودويات وخدمات زوينين ولكن الواجهة التسويقية كتخسرهم الثقة والتحويل</span>
-                        <span data-lang="fr">Nous avons vu de nombreuses PME marocaines avec de bonnes offres mais une image marketing plus faible, nuisant à la confiance et aux conversions</span>
-                        <span data-lang="en">We saw many Moroccan SMEs with strong offerings but a weaker marketing image, hurting trust and conversions</span>
-                    </p>
-                    <p>
-                        <span data-lang="ar">جبنا "كواليتي ديال وكالة" فباقات معقولة فثمن باش تعاونو تكبّرو</span>
-                        <span data-lang="fr">Nous apportons une qualité "niveau agence" via des forfaits abordables, avec les mêmes standards de design, contenu et web adaptés à la croissance des PME</span>
-                        <span data-lang="en">We bring "agency‑level" quality through affordable packages, with the same design, content, and web standards adapted to SME growth</span>
-                    </p>
-                    <p>
-                        <span data-lang="ar">الهدف: نطلعوكم من حضور عادي لبراند ما كيتنسايش، بحلول سريعة، مضبوطة، ومن ثقافتنا وسوقنا</span>
-                        <span data-lang="fr">Objectif : vous faire passer d'une présence ordinaire à une marque mémorable, avec des solutions rapides, soignées et ancrées dans la culture et le marché marocains</span>
-                        <span data-lang="en">The goal: elevate you from ordinary presence to unforgettable brand with fast, precise, culturally grounded solutions</span>
-                    </p>
+            <div class="founder-story-section reveal-up">
+                <div class="fs-card">
+                    <div class="fs-header">
+                        <div class="fs-badge">
+                            <span data-lang="ar">المؤسس</span>
+                            <span data-lang="fr">Fondateur</span>
+                            <span data-lang="en">Founder</span>
+                        </div>
+                        <h3 class="fs-title">
+                            <span data-lang="ar">علاش درنا Maktoub Media</span>
+                            <span data-lang="fr">Pourquoi j'ai créé Maktoub Media</span>
+                            <span data-lang="en">Why Maktoub Media was created</span>
+                        </h3>
+                    </div>
+                    
+                    <div class="fs-content">
+                        <div class="fs-founder-info">
+                            <img src="img/photo ilyas owner .png" alt="Ilyas - Maktoub Media founder" class="fs-founder-photo">
+                            <div class="fs-founder-details">
+                                <h4 class="fs-founder-name">Ilyas</h4>
+                                <p class="fs-founder-role">
+                                    <span data-lang="ar">مؤسس Maktoub Media</span>
+                                    <span data-lang="fr">Fondateur de Maktoub Media</span>
+                                    <span data-lang="en">Founder of Maktoub Media</span>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="fs-story-content">
+                            <p class="fs-story-paragraph">
+                                <span data-lang="ar">شافينا بزاف ديال PME فالمغرب عندهم برودويات وخدمات زوينين ولكن الواجهة التسويقية كتخسرهم الثقة والتحويل</span>
+                                <span data-lang="fr">Nous avons vu de nombreuses PME marocaines avec de bonnes offres mais une image marketing plus faible, nuisant à la confiance et aux conversions</span>
+                                <span data-lang="en">We saw many Moroccan SMEs with strong offerings but a weaker marketing image, hurting trust and conversions</span>
+                            </p>
+                            <p class="fs-story-paragraph">
+                                <span data-lang="ar">جبنا "كواليتي ديال وكالة" فباقات معقولة فثمن باش تعاونو تكبّرو</span>
+                                <span data-lang="fr">Nous apportons une qualité "niveau agence" via des forfaits abordables, avec les mêmes standards de design, contenu et web adaptés à la croissance des PME</span>
+                                <span data-lang="en">We bring "agency‑level" quality through affordable packages, with the same design, content, and web standards adapted to SME growth</span>
+                            </p>
+                            <p class="fs-story-paragraph fs-story-goal">
+                                <span data-lang="ar">الهدف: نطلعوكم من حضور عادي لبراند ما كيتنسايش، بحلول سريعة، مضبوطة، ومن ثقافتنا وسوقنا</span>
+                                <span data-lang="fr">Objectif : vous faire passer d'une présence ordinaire à une marque mémorable, avec des solutions rapides, soignées et ancrées dans la culture et le marché marocains</span>
+                                <span data-lang="en">The goal: elevate you from ordinary presence to unforgettable brand with fast, precise, culturally grounded solutions</span>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
