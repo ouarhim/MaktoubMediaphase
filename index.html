@@ -2294,6 +2294,603 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
         }
+
+        /* Enhanced Packages Section Styles */
+        .packages-enhanced {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(31, 41, 55, 0.95), rgba(17, 24, 39, 0.98));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .packages-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="packages-pattern" width="100" height="100" patternUnits="userSpaceOnUse"><rect x="20" y="20" width="15" height="15" fill="rgba(37,99,235,0.1)" rx="3"/><rect x="65" y="65" width="15" height="15" fill="rgba(37,99,235,0.1)" rx="3"/><rect x="42" y="42" width="15" height="15" fill="rgba(37,99,235,0.1)" rx="3"/></pattern></defs><rect width="100" height="100" fill="url(%23packages-pattern)"/></svg>');
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        .pkg-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .pkg-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(37, 99, 235, 0.2);
+            color: #93c5fd;
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .pkg-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 16px 0;
+            line-height: 1.2;
+        }
+        
+        .pkg-subtitle {
+            color: #9ca3af;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        
+        .pkg-process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .pkg-process-steps {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        .pkg-step-card {
+            background: rgba(55, 65, 81, 0.92);
+            border: 1px solid rgba(245, 245, 220, 0.18);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .pkg-step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+        
+        .pkg-step--contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #2563eb, #1d4ed8);
+        }
+        
+        .pkg-step--audit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #10b981, #059669);
+        }
+        
+        .pkg-step--demo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #f59e0b, #d97706);
+        }
+        
+        .pkg-step--choose::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #7c3aed, #6d28d9);
+        }
+        
+        .pkg-step-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .pkg-step-number {
+            width: 40px;
+            height: 40px;
+            background: rgba(37, 99, 235, 0.2);
+            color: #93c5fd;
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .pkg-step-icon {
+            font-size: 2rem;
+        }
+        
+        .pkg-step-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 8px 0;
+        }
+        
+        .pkg-step-desc {
+            color: #d1d5db;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        .pkg-special-offer {
+            background: rgba(37, 99, 235, 0.1);
+            border: 2px solid rgba(37, 99, 235, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 60px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pkg-special-offer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(124, 58, 237, 0.05));
+            pointer-events: none;
+        }
+        
+        .pkg-offer-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .pkg-offer-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .pkg-offer-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 30px 0;
+        }
+        
+        .pkg-offer-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .pkg-benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(55, 65, 81, 0.6);
+            border: 1px solid rgba(245, 245, 220, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .pkg-benefit-icon {
+            font-size: 2rem;
+        }
+        
+        .pkg-benefit-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 4px 0;
+        }
+        
+        .pkg-benefit-value {
+            color: #10b981;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .pkg-offer-price {
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .pkg-price-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0;
+        }
+
+        /* Enhanced Final CTA Section Styles */
+        .final-cta-enhanced {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.98));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .final-cta-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="final-cta-pattern" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="3" fill="rgba(37,99,235,0.1)"/><circle cx="80" cy="80" r="3" fill="rgba(37,99,235,0.1)"/><circle cx="50" cy="50" r="2" fill="rgba(37,99,235,0.1)"/><circle cx="10" cy="70" r="2" fill="rgba(37,99,235,0.1)"/><circle cx="90" cy="30" r="2" fill="rgba(37,99,235,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23final-cta-pattern)"/></svg>');
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        .fcta-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .fcta-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(37, 99, 235, 0.2);
+            color: #93c5fd;
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .fcta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        .fcta-urgency-box {
+            background: rgba(55, 65, 81, 0.92);
+            border: 1px solid rgba(245, 245, 220, 0.18);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+        }
+        
+        .fcta-urgency-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .fcta-urgency-icon {
+            font-size: 3rem;
+        }
+        
+        .fcta-urgency-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 8px 0;
+        }
+        
+        .fcta-urgency-desc {
+            color: #d1d5db;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        
+        .fcta-question-box {
+            background: rgba(220, 38, 38, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .fcta-question {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fca5a5;
+            margin: 0 0 8px 0;
+        }
+        
+        .fcta-question-text {
+            color: #d1d5db;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        
+        .fcta-countdown-box {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .fcta-countdown-icon {
+            font-size: 2.5rem;
+        }
+        
+        .fcta-countdown-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #6ee7b7;
+            margin: 0 0 4px 0;
+        }
+        
+        .fcta-spots-indicator {
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 8px;
+            padding: 8px 12px;
+            display: inline-block;
+        }
+        
+        .fcta-spots-text {
+            color: #6ee7b7;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .fcta-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .fcta-primary-button, .fcta-secondary-button {
+            background: rgba(55, 65, 81, 0.92);
+            border: 1px solid rgba(245, 245, 220, 0.18);
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .fcta-primary-button:hover, .fcta-secondary-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+        
+        .fcta-primary-button {
+            border-left: 4px solid #2563eb;
+        }
+        
+        .fcta-secondary-button {
+            border-left: 4px solid #7c3aed;
+        }
+        
+        .fcta-button-icon {
+            font-size: 2.5rem;
+        }
+        
+        .fcta-button-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 4px 0;
+            display: block;
+        }
+        
+        .fcta-button-desc {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .fcta-payment-structure {
+            background: rgba(55, 65, 81, 0.92);
+            border: 1px solid rgba(245, 245, 220, 0.18);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+        }
+        
+        .fcta-payment-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .fcta-payment-icon {
+            font-size: 2.5rem;
+        }
+        
+        .fcta-payment-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0;
+        }
+        
+        .fcta-payment-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .fcta-payment-step {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .fcta-payment-percentage {
+            width: 60px;
+            height: 60px;
+            background: rgba(37, 99, 235, 0.2);
+            color: #93c5fd;
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .fcta-payment-step-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 4px 0;
+        }
+        
+        .fcta-payment-step-desc {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .fcta-guarantee {
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+        }
+        
+        .fcta-guarantee-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .fcta-guarantee-icon {
+            font-size: 3rem;
+        }
+        
+        .fcta-guarantee-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #6ee7b7;
+            margin: 0 0 8px 0;
+        }
+        
+        .fcta-guarantee-desc {
+            color: #d1d5db;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        
+        .fcta-final-message {
+            background: rgba(37, 99, 235, 0.1);
+            border: 2px solid rgba(37, 99, 235, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
+        }
+        
+        .fcta-final-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .fcta-final-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .fcta-final-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0 0 30px 0;
+        }
+        
+        .fcta-proof-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+        }
+        
+        .fcta-stat-item {
+            text-align: center;
+        }
+        
+        .fcta-stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+        
+        .fcta-stat-label {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -3047,94 +3644,160 @@
     </section>
 
 
-    <!-- Packages Section -->
-    <section class="packages" id="packages">
+    <!-- Enhanced Packages Section -->
+    <section class="packages-enhanced" id="packages" dir="rtl" aria-label="باقات الخدمات">
         <div class="container">
-            <h2>
-                <span data-lang="ar">📱 جاهز لتحويل عملك؟</span>
-                <span data-lang="fr">📱 Prêt à transformer votre entreprise ?</span>
-                <span data-lang="en">📱 Ready to Transform Your Business?</span>
-            </h2>
-            <p style="text-align: center; font-size: 1.2rem; color: var(--text-light); margin-bottom: 40px;">
-                <span data-lang="ar">إليك ما يحدث بعد ذلك:</span>
-                <span data-lang="fr">Voici ce qui se passe ensuite :</span>
-                <span data-lang="en">Here's what happens next:</span>
-            </p>
+            <!-- Enhanced Header -->
+            <div class="pkg-header reveal-up">
+                <div class="pkg-badge">
+                    <span data-lang="ar">باقات</span>
+                    <span data-lang="fr">Forfaits</span>
+                    <span data-lang="en">Packages</span>
+                </div>
+                <h2 class="pkg-title">
+                    <span data-lang="ar">📱 جاهز لتحويل عملك؟</span>
+                    <span data-lang="fr">📱 Prêt à transformer votre entreprise ?</span>
+                    <span data-lang="en">📱 Ready to Transform Your Business?</span>
+                </h2>
+                <p class="pkg-subtitle">
+                    <span data-lang="ar">إليك ما يحدث بعد ذلك:</span>
+                    <span data-lang="fr">Voici ce qui se passe ensuite :</span>
+                    <span data-lang="en">Here's what happens next:</span>
+                </p>
+            </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px;">
-                <div style="text-align: center; padding: 20px; background: rgba(224, 220, 245, 0.18); border-radius: 8px; border: 2px solid var(--primary);">
-                    <div style="width: 50px; height: 50px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold; font-size: 1.2rem;">1</div>
-                    <h4 style="margin-bottom: 10px; color: #5980ff;">
-                        <span data-lang="ar">تواصل معنا على الواتساب</span>
-                        <span data-lang="fr">Contactez-nous sur WhatsApp</span>
-                        <span data-lang="en">Contact us on WhatsApp</span>
-                    </h4>
-                    <p style="font-size: 0.9rem; color: var(--text-light);">
-                        <span data-lang="ar">(يستغرق دقيقتين)</span>
-                        <span data-lang="fr">(prend 2 minutes)</span>
-                        <span data-lang="en">(takes 2 minutes)</span>
-                    </p>
+            <!-- Process Steps -->
+            <div class="pkg-process-steps">
+                <div class="pkg-step-card pkg-step--contact reveal-up">
+                    <div class="pkg-step-header">
+                        <div class="pkg-step-number">1</div>
+                        <div class="pkg-step-icon">📱</div>
+                    </div>
+                    <div class="pkg-step-content">
+                        <h4 class="pkg-step-title">
+                            <span data-lang="ar">تواصل معنا على الواتساب</span>
+                            <span data-lang="fr">Contactez-nous sur WhatsApp</span>
+                            <span data-lang="en">Contact us on WhatsApp</span>
+                        </h4>
+                        <p class="pkg-step-desc">
+                            <span data-lang="ar">(يستغرق دقيقتين)</span>
+                            <span data-lang="fr">(prend 2 minutes)</span>
+                            <span data-lang="en">(takes 2 minutes)</span>
+                        </p>
+                    </div>
                 </div>
                 
-                <div style="text-align: center; padding: 20px; background: rgba(245,245,220,0.18); border-radius: 8px; border: 2px solid var(--success);">
-                    <div style="width: 50px; height: 50px; background: var(--success); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold; font-size: 1.2rem;">2</div>
-                    <h4 style="margin-bottom: 10px; color: var(--success);">
-                        <span data-lang="ar">احصل على تدقيق مصغر مجاني</span>
-                        <span data-lang="fr">Obtenez un mini-audit gratuit</span>
-                        <span data-lang="en">Get a free mini-audit</span>
-                    </h4>
-                    <p style="font-size: 0.9rem; color: var(--text-light);">
-                        <span data-lang="ar">لعلامتك التجارية الحالية</span>
-                        <span data-lang="fr">de votre branding actuel</span>
-                        <span data-lang="en">of your current branding</span>
-                    </p>
+                <div class="pkg-step-card pkg-step--audit reveal-up">
+                    <div class="pkg-step-header">
+                        <div class="pkg-step-number">2</div>
+                        <div class="pkg-step-icon">🔍</div>
+                    </div>
+                    <div class="pkg-step-content">
+                        <h4 class="pkg-step-title">
+                            <span data-lang="ar">احصل على تدقيق مصغر مجاني</span>
+                            <span data-lang="fr">Obtenez un mini-audit gratuit</span>
+                            <span data-lang="en">Get a free mini-audit</span>
+                        </h4>
+                        <p class="pkg-step-desc">
+                            <span data-lang="ar">لعلامتك التجارية الحالية</span>
+                            <span data-lang="fr">de votre branding actuel</span>
+                            <span data-lang="en">of your current branding</span>
+                        </p>
+                    </div>
                 </div>
                 
-                <div style="text-align: center; padding: 20px; background: rgba(245,245,220,0.18); border-radius: 8px; border: 2px solid var(--warning);">
-                    <div style="width: 50px; height: 50px; background: var(--warning); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold; font-size: 1.2rem;">3</div>
-                    <h4 style="margin-bottom: 10px; color: var(--warning);">
-                        <span data-lang="ar">شاهد كيف سيساعدك التصميم الاحترافي</span>
-                        <span data-lang="fr">Voyez comment le design professionnel vous aidera</span>
-                        <span data-lang="en">See exactly how professional design will help</span>
-                    </h4>
-                    <p style="font-size: 0.9rem; color: var(--text-light);">
-                        <span data-lang="ar">عملك بالضبط</span>
-                        <span data-lang="fr">votre entreprise exactement</span>
-                        <span data-lang="en">your business exactly</span>
-                    </p>
+                <div class="pkg-step-card pkg-step--demo reveal-up">
+                    <div class="pkg-step-header">
+                        <div class="pkg-step-number">3</div>
+                        <div class="pkg-step-icon">👀</div>
+                    </div>
+                    <div class="pkg-step-content">
+                        <h4 class="pkg-step-title">
+                            <span data-lang="ar">شاهد كيف سيساعدك التصميم الاحترافي</span>
+                            <span data-lang="fr">Voyez comment le design professionnel vous aidera</span>
+                            <span data-lang="en">See exactly how professional design will help</span>
+                        </h4>
+                        <p class="pkg-step-desc">
+                            <span data-lang="ar">عملك بالضبط</span>
+                            <span data-lang="fr">votre entreprise exactement</span>
+                            <span data-lang="en">your business exactly</span>
+                        </p>
+                    </div>
                 </div>
                 
-                <div style="text-align: center; padding: 20px; background: rgba(245,245,220,0.18); border-radius: 8px; border: 2px solid var(--secondary);">
-                    <div style="width: 50px; height: 50px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold; font-size: 1.2rem;">4</div>
-                    <h4 style="margin-bottom: 10px; color: var(--secondary);">
-                        <span data-lang="ar">اختر الباقة التي تناسب ميزانيتك</span>
-                        <span data-lang="fr">Choisissez le forfait qui correspond à votre budget</span>
-                        <span data-lang="en">Choose a package that fits your budget</span>
-                    </h4>
-                    <p style="font-size: 0.9rem; color: var(--text-light);">
-                        <span data-lang="ar">واحصل على علامتك التجارية في 7-12 أيام</span>
-                        <span data-lang="fr">et obtenez votre branding en 7-12 jours</span>
-                        <span data-lang="en">and get your professional brand delivered in 7-12 days</span>
-                    </p>
+                <div class="pkg-step-card pkg-step--choose reveal-up">
+                    <div class="pkg-step-header">
+                        <div class="pkg-step-number">4</div>
+                        <div class="pkg-step-icon">✅</div>
+                    </div>
+                    <div class="pkg-step-content">
+                        <h4 class="pkg-step-title">
+                            <span data-lang="ar">اختر الباقة التي تناسب ميزانيتك</span>
+                            <span data-lang="fr">Choisissez le forfait qui correspond à votre budget</span>
+                            <span data-lang="en">Choose a package that fits your budget</span>
+                        </h4>
+                        <p class="pkg-step-desc">
+                            <span data-lang="ar">واحصل على علامتك التجارية في 7-12 أيام</span>
+                            <span data-lang="fr">et obtenez votre branding en 7-12 jours</span>
+                            <span data-lang="en">and get your professional brand delivered in 7-12 days</span>
+                        </p>
+                    </div>
                 </div>
             </div>
             
-            <div style="text-align: center; background: linear-gradient(135deg, var(--primary), #6366f1); color: white; padding: 30px; border-radius: 12px; margin-bottom: 40px;">
-                <h3 style="margin-bottom: 15px;">
-                    <span data-lang="ar">عرض خاص لأصحاب الأعمال الجديين:</span>
-                    <span data-lang="fr">Offre spéciale pour les propriétaires d'entreprises sérieux :</span>
-                    <span data-lang="en">Special offer for serious business owners:</span>
-                </h3>
-                <p style="font-size: 1.1rem; margin-bottom: 10px;">
-                    <span data-lang="ar">أول 10 عملاء هذا الشهر يحصلون على تحسين Google Business مجاني (قيمة 500 درهم) + تدقيق مصغر مجاني (قيمة 700 درهم).</span>
-                    <span data-lang="fr">Les 10 premiers clients ce mois-ci reçoivent une optimisation Google Business gratuite (valeur 500 MAD) + mini-audit gratuit (valeur 700 MAD).</span>
-                    <span data-lang="en">First 10 clients this month get a free Google Business optimization (worth 500 MAD) + free mini-audit (worth 700 MAD).</span>
-                </p>
-                <p style="font-size: 1.2rem; font-weight: bold;">
-                    <span data-lang="ar">بدءاً من 1,900 درهم فقط. أقل مما تنفقه معظم الشركات على المخزون في أسبوع.</span>
-                    <span data-lang="fr">À partir de seulement 1,900 MAD. Moins que ce que la plupart des entreprises dépensent en stock en une semaine.</span>
-                    <span data-lang="en">Starting from only 1,900 MAD. Less than most businesses spend on inventory in a week.</span>
-                </p>
+            <!-- Special Offer -->
+            <div class="pkg-special-offer reveal-up">
+                <div class="pkg-offer-content">
+                    <div class="pkg-offer-badge">
+                        <span data-lang="ar">عرض خاص</span>
+                        <span data-lang="fr">Offre spéciale</span>
+                        <span data-lang="en">Special Offer</span>
+                    </div>
+                    <h3 class="pkg-offer-title">
+                        <span data-lang="ar">عرض خاص لأصحاب الأعمال الجديين:</span>
+                        <span data-lang="fr">Offre spéciale pour les propriétaires d'entreprises sérieux :</span>
+                        <span data-lang="en">Special offer for serious business owners:</span>
+                    </h3>
+                    <div class="pkg-offer-benefits">
+                        <div class="pkg-benefit-item">
+                            <div class="pkg-benefit-icon">🎁</div>
+                            <div class="pkg-benefit-content">
+                                <h4 class="pkg-benefit-title">
+                                    <span data-lang="ar">تحسين Google Business مجاني</span>
+                                    <span data-lang="fr">Optimisation Google Business gratuite</span>
+                                    <span data-lang="en">Free Google Business optimization</span>
+                                </h4>
+                                <p class="pkg-benefit-value">
+                                    <span data-lang="ar">قيمة 500 درهم</span>
+                                    <span data-lang="fr">Valeur 500 MAD</span>
+                                    <span data-lang="en">Worth 500 MAD</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pkg-benefit-item">
+                            <div class="pkg-benefit-icon">🔍</div>
+                            <div class="pkg-benefit-content">
+                                <h4 class="pkg-benefit-title">
+                                    <span data-lang="ar">تدقيق مصغر مجاني</span>
+                                    <span data-lang="fr">Mini-audit gratuit</span>
+                                    <span data-lang="en">Free mini-audit</span>
+                                </h4>
+                                <p class="pkg-benefit-value">
+                                    <span data-lang="ar">قيمة 700 درهم</span>
+                                    <span data-lang="fr">Valeur 700 MAD</span>
+                                    <span data-lang="en">Worth 700 MAD</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pkg-offer-price">
+                        <p class="pkg-price-text">
+                            <span data-lang="ar">بدءاً من 1,900 درهم فقط. أقل مما تنفقه معظم الشركات على المخزون في أسبوع.</span>
+                            <span data-lang="fr">À partir de seulement 1,900 MAD. Moins que ce que la plupart des entreprises dépensent en stock en une semaine.</span>
+                            <span data-lang="en">Starting from only 1,900 MAD. Less than most businesses spend on inventory in a week.</span>
+                        </p>
+                    </div>
+                </div>
             </div>
             
             <div class="packages-enhanced">
@@ -4083,102 +4746,230 @@
         </div>
     </section>
 
-    <!-- Final CTA Section -->
-    <section class="final-cta-section" id="contact">
+    <!-- Enhanced Final CTA Section -->
+    <section class="final-cta-enhanced" id="contact" dir="rtl" aria-label="الاستشارة النهائية">
         <div class="container">
-            <div class="urgency-box">
-                <h3>
+            <!-- Enhanced Header -->
+            <div class="fcta-header reveal-up">
+                <div class="fcta-badge">
+                    <span data-lang="ar">استشارة</span>
+                    <span data-lang="fr">Consultation</span>
+                    <span data-lang="en">Consultation</span>
+                </div>
+                <h2 class="fcta-title">
                     <span data-lang="ar">لا تؤجّلوا تحسين علامتكم التجارية</span>
                     <span data-lang="fr">N'attendez pas davantage</span>
                     <span data-lang="en">Do not delay</span>
-                </h3>
-                <p>
-                    <span data-lang="ar">كل يوم تأخير يعني فرصاً وعملاء مفقودين، بينما يستثمر منافسوكم اليوم في هوية احترافية.</span>
-                    <span data-lang="fr">chaque jour de retard vous coûte des clients, tandis que vos concurrents investissent déjà dans une marque professionnelle.</span>
-                    <span data-lang="en">every day of waiting costs customers, while competitors are already investing in professional branding.</span>
-                </p>
-                <p>
-                    <span data-lang="ar">السؤال العملي: هل يمكن تحمّل استمرار فقدان العملاء بسبب حضورٍ غير احترافي؟ احجزوا موعدكم قبل اكتمال الحجوزات.</span>
-                    <span data-lang="fr">La vraie question : pouvez‑vous continuer à perdre des clients sans identité professionnelle ? Réservez votre créneau avant saturation.</span>
-                    <span data-lang="en">The real question: can you afford to keep losing customers without a professional identity? Book your slot before capacity is reached.</span>
-                </p>
-                
-                <div class="countdown-element">
-                    <span class="spots-left">
-                        <span data-lang="ar">احجزوا موعدكم قبل اكتمال الحجوزات</span>
-                        <span data-lang="fr">Réservez votre créneau avant saturation</span>
-                        <span data-lang="en">Book your slot before we reach capacity</span>
-                    </span>
+                </h2>
+            </div>
+            
+            <!-- Urgency Message -->
+            <div class="fcta-urgency-box reveal-up">
+                <div class="fcta-urgency-content">
+                    <div class="fcta-urgency-icon">⏰</div>
+                    <div class="fcta-urgency-text">
+                        <h3 class="fcta-urgency-title">
+                            <span data-lang="ar">كل يوم تأخير يعني فرصاً وعملاء مفقودين</span>
+                            <span data-lang="fr">Chaque jour de retard vous coûte des clients</span>
+                            <span data-lang="en">Every day of waiting costs customers</span>
+                        </h3>
+                        <p class="fcta-urgency-desc">
+                            <span data-lang="ar">بينما يستثمر منافسوكم اليوم في هوية احترافية</span>
+                            <span data-lang="fr">tandis que vos concurrents investissent déjà dans une marque professionnelle</span>
+                            <span data-lang="en">while competitors are already investing in professional branding</span>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="cta-buttons">
-                <button class="whatsapp-cta-main" onclick="openWhatsApp('general')">
-                    <span data-lang="ar">تواصل عبر واتساب</span>
-                    <span data-lang="fr">Contact : WhatsApp</span>
-                    <span data-lang="en">Contact: WhatsApp</span>
-                </button>
                 
-                <button class="secondary-cta" onclick="openEmail()">
-                    <span data-lang="ar">أرسل بريداً إلكترونياً</span>
-                    <span data-lang="fr">ou e‑mail</span>
-                    <span data-lang="en">or email</span>
-                </button>
-            </div>
-            
-            <div class="payment-structure">
-                <h4>
-                    <span data-lang="ar">هيكل الدفع الآمن</span>
-                    <span data-lang="fr">Paiement sécurisé</span>
-                    <span data-lang="en">Secure payment</span>
-                </h4>
-                <div class="payment-steps">
-                    <div class="payment-step">
-                        <span class="payment-percentage">50%</span>
-                        <span class="payment-desc">
-                            <span data-lang="ar">وديعة للبدء</span>
-                            <span data-lang="fr">d'acompte</span>
-                            <span data-lang="en">deposit to start</span>
-                        </span>
-                    </div>
-                    <div class="payment-step">
-                        <span class="payment-percentage">30%</span>
-                        <span class="payment-desc">
-                            <span data-lang="ar">بعد اعتماد المسودة الأولى</span>
-                            <span data-lang="fr">après validation du premier brouillon</span>
-                            <span data-lang="en">after first draft approval</span>
-                        </span>
-                    </div>
-                    <div class="payment-step">
-                        <span class="payment-percentage">20%</span>
-                        <span class="payment-desc">
-                            <span data-lang="ar">عند التسليم النهائي</span>
-                            <span data-lang="fr">à la livraison finale</span>
-                            <span data-lang="en">on final delivery</span>
-                        </span>
+                <div class="fcta-question-box">
+                    <h4 class="fcta-question">
+                        <span data-lang="ar">السؤال العملي:</span>
+                        <span data-lang="fr">La vraie question :</span>
+                        <span data-lang="en">The real question:</span>
+                    </h4>
+                    <p class="fcta-question-text">
+                        <span data-lang="ar">هل يمكن تحمّل استمرار فقدان العملاء بسبب حضورٍ غير احترافي؟</span>
+                        <span data-lang="fr">pouvez‑vous continuer à perdre des clients sans identité professionnelle ?</span>
+                        <span data-lang="en">can you afford to keep losing customers without a professional identity?</span>
+                    </p>
+                </div>
+                
+                <div class="fcta-countdown-box">
+                    <div class="fcta-countdown-icon">🚨</div>
+                    <div class="fcta-countdown-content">
+                        <h4 class="fcta-countdown-title">
+                            <span data-lang="ar">احجزوا موعدكم قبل اكتمال الحجوزات</span>
+                            <span data-lang="fr">Réservez votre créneau avant saturation</span>
+                            <span data-lang="en">Book your slot before we reach capacity</span>
+                        </h4>
+                        <div class="fcta-spots-indicator">
+                            <span class="fcta-spots-text">
+                                <span data-lang="ar">أماكن محدودة متاحة</span>
+                                <span data-lang="fr">Places limitées disponibles</span>
+                                <span data-lang="en">Limited spots available</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="guarantee">
-                <p><strong>
-                    <span data-lang="ar">الضمان: رضا 100%—استرجاع الوديعة بالكامل إذا لم يلبِّ المفهوم الأول التوقّعات.</span>
-                    <span data-lang="fr">Garantie 100 % satisfaction : remboursement intégral de l'acompte si le premier concept ne convient pas.</span>
-                    <span data-lang="en">100% satisfaction guarantee: full deposit refund if the first concept doesn't meet expectations.</span>
-                </p>
+            <!-- Enhanced CTA Buttons -->
+            <div class="fcta-buttons reveal-up">
+                <button class="fcta-primary-button" onclick="openWhatsApp('general')">
+                    <div class="fcta-button-icon">📱</div>
+                    <div class="fcta-button-content">
+                        <span class="fcta-button-title">
+                            <span data-lang="ar">تواصل عبر واتساب</span>
+                            <span data-lang="fr">Contact : WhatsApp</span>
+                            <span data-lang="en">Contact: WhatsApp</span>
+                        </span>
+                        <span class="fcta-button-desc">
+                            <span data-lang="ar">استشارة مجانية فورية</span>
+                            <span data-lang="fr">Consultation gratuite immédiate</span>
+                            <span data-lang="en">Instant free consultation</span>
+                        </span>
+                    </div>
+                </button>
+                
+                <button class="fcta-secondary-button" onclick="openEmail()">
+                    <div class="fcta-button-icon">📧</div>
+                    <div class="fcta-button-content">
+                        <span class="fcta-button-title">
+                            <span data-lang="ar">أرسل بريداً إلكترونياً</span>
+                            <span data-lang="fr">ou e‑mail</span>
+                            <span data-lang="en">or email</span>
+                        </span>
+                        <span class="fcta-button-desc">
+                            <span data-lang="ar">رد خلال 24 ساعة</span>
+                            <span data-lang="fr">Réponse sous 24h</span>
+                            <span data-lang="en">Response within 24h</span>
+                        </span>
+                    </div>
+                </button>
             </div>
             
-            <div style="text-align: center; margin-top: 40px; padding: 30px; background: rgba(255,255,255,0.1); border-radius: 12px; backdrop-filter: blur(10px);">
-                <h3 style="margin-bottom: 15px; font-family: 'Poppins', sans-serif;">
-                    <span data-lang="ar">رسالتنا: نجاحكم «مكتوب»—دعونا نحقّقه معاً.</span>
-                    <span data-lang="fr">Votre succès est « Maktoub ». Réalisons‑le.</span>
-                    <span data-lang="en">Your success is "Maktoub." Let's make it happen.</span>
-                </h3>
-                <p style="font-size: 1.1rem; margin: 0;">
-                    <span data-lang="ar">الاعتمادية والسرعة: موثوق بنا من أكثر من 20 شركة مغربية، بمعدل رضا 95%، وتسليم خلال 7–12 يوماً، مع ضمان استرداد كامل.</span>
-                    <span data-lang="fr">Preuve : 20+ entreprises marocaines nous font confiance ; 95 % de satisfaction ; livraison en 7–12 jours ; garantie de remboursement.</span>
-                    <span data-lang="en">Proof: trusted by 20+ Moroccan businesses; 95% satisfaction; 7–12‑day delivery; money‑back guarantee.</span>
-                </p>
+            <!-- Enhanced Payment Structure -->
+            <div class="fcta-payment-structure reveal-up">
+                <div class="fcta-payment-header">
+                    <div class="fcta-payment-icon">💳</div>
+                    <h4 class="fcta-payment-title">
+                        <span data-lang="ar">هيكل الدفع الآمن</span>
+                        <span data-lang="fr">Paiement sécurisé</span>
+                        <span data-lang="en">Secure payment</span>
+                    </h4>
+                </div>
+                <div class="fcta-payment-steps">
+                    <div class="fcta-payment-step">
+                        <div class="fcta-payment-percentage">50%</div>
+                        <div class="fcta-payment-content">
+                            <h5 class="fcta-payment-step-title">
+                                <span data-lang="ar">وديعة للبدء</span>
+                                <span data-lang="fr">Acompte pour commencer</span>
+                                <span data-lang="en">Deposit to start</span>
+                            </h5>
+                            <p class="fcta-payment-step-desc">
+                                <span data-lang="ar">نبدأ العمل فوراً</span>
+                                <span data-lang="fr">Démarrage immédiat</span>
+                                <span data-lang="en">Immediate start</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fcta-payment-step">
+                        <div class="fcta-payment-percentage">30%</div>
+                        <div class="fcta-payment-content">
+                            <h5 class="fcta-payment-step-title">
+                                <span data-lang="ar">بعد اعتماد المسودة الأولى</span>
+                                <span data-lang="fr">Après validation du premier brouillon</span>
+                                <span data-lang="en">After first draft approval</span>
+                            </h5>
+                            <p class="fcta-payment-step-desc">
+                                <span data-lang="ar">عند موافقتك على التصميم</span>
+                                <span data-lang="fr">Quand vous approuvez le design</span>
+                                <span data-lang="en">When you approve the design</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fcta-payment-step">
+                        <div class="fcta-payment-percentage">20%</div>
+                        <div class="fcta-payment-content">
+                            <h5 class="fcta-payment-step-title">
+                                <span data-lang="ar">عند التسليم النهائي</span>
+                                <span data-lang="fr">À la livraison finale</span>
+                                <span data-lang="en">On final delivery</span>
+                            </h5>
+                            <p class="fcta-payment-step-desc">
+                                <span data-lang="ar">عند استلام جميع المواد</span>
+                                <span data-lang="fr">Quand vous recevez tous les matériaux</span>
+                                <span data-lang="en">When you receive all materials</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced Guarantee -->
+            <div class="fcta-guarantee reveal-up">
+                <div class="fcta-guarantee-content">
+                    <div class="fcta-guarantee-icon">🛡️</div>
+                    <div class="fcta-guarantee-text">
+                        <h4 class="fcta-guarantee-title">
+                            <span data-lang="ar">ضمان رضا 100%</span>
+                            <span data-lang="fr">Garantie satisfaction 100%</span>
+                            <span data-lang="en">100% Satisfaction Guarantee</span>
+                        </h4>
+                        <p class="fcta-guarantee-desc">
+                            <span data-lang="ar">استرجاع الوديعة بالكامل إذا لم يلبِّ المفهوم الأول التوقّعات</span>
+                            <span data-lang="fr">Remboursement intégral de l'acompte si le premier concept ne convient pas</span>
+                            <span data-lang="en">Full deposit refund if the first concept doesn't meet expectations</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced Final Message -->
+            <div class="fcta-final-message reveal-up">
+                <div class="fcta-final-content">
+                    <div class="fcta-final-icon">🎯</div>
+                    <h3 class="fcta-final-title">
+                        <span data-lang="ar">رسالتنا: نجاحكم «مكتوب»—دعونا نحقّقه معاً</span>
+                        <span data-lang="fr">Votre succès est « Maktoub ». Réalisons‑le</span>
+                        <span data-lang="en">Your success is "Maktoub." Let's make it happen</span>
+                    </h3>
+                    <div class="fcta-proof-stats">
+                        <div class="fcta-stat-item">
+                            <div class="fcta-stat-number">20+</div>
+                            <div class="fcta-stat-label">
+                                <span data-lang="ar">شركة مغربية</span>
+                                <span data-lang="fr">Entreprises marocaines</span>
+                                <span data-lang="en">Moroccan businesses</span>
+                            </div>
+                        </div>
+                        <div class="fcta-stat-item">
+                            <div class="fcta-stat-number">95%</div>
+                            <div class="fcta-stat-label">
+                                <span data-lang="ar">معدل رضا</span>
+                                <span data-lang="fr">Taux de satisfaction</span>
+                                <span data-lang="en">Satisfaction rate</span>
+                            </div>
+                        </div>
+                        <div class="fcta-stat-item">
+                            <div class="fcta-stat-number">7-12</div>
+                            <div class="fcta-stat-label">
+                                <span data-lang="ar">أيام تسليم</span>
+                                <span data-lang="fr">Jours de livraison</span>
+                                <span data-lang="en">Days delivery</span>
+                            </div>
+                        </div>
+                        <div class="fcta-stat-item">
+                            <div class="fcta-stat-number">100%</div>
+                            <div class="fcta-stat-label">
+                                <span data-lang="ar">ضمان استرداد</span>
+                                <span data-lang="fr">Garantie remboursement</span>
+                                <span data-lang="en">Money-back guarantee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
