@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;600;700;800;900&display=swap');
+
 :root {
     --primary: #2563EB;          /* Maktoub Blue */
     --secondary: #F97316;        /* Atlas Orange */
@@ -24,11 +26,21 @@
     }
 
     body {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Inter', 'Tajawal', sans-serif;
         line-height: 1.6;
         color: var(--text-dark);
-        background-color: var(--background);
+        background-color: rgba(17, 24, 39, 0.95);
         font-size: 1rem;
+    }
+    
+    /* Arabic text uses Tajawal */
+    [lang="ar"] {
+        font-family: 'Tajawal', sans-serif;
+    }
+    
+    /* Latin text uses Inter */
+    [lang="fr"], [lang="en"] {
+        font-family: 'Inter', sans-serif;
     }
 
     /* Mobile-first responsive typography */
@@ -38,6 +50,19 @@
     h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.4; }
     h4 { font-size: 1.125rem; font-weight: 500; line-height: 1.4; }
     p { font-size: 1rem; line-height: 1.6; }
+    
+    /* Arabic headings use Tajawal */
+    [lang="ar"] h1, [lang="ar"] h2, [lang="ar"] h3, [lang="ar"] h4, [lang="ar"] h5, [lang="ar"] h6 {
+        font-family: 'Tajawal', sans-serif;
+        font-weight: 700;
+    }
+    
+    /* Latin headings use Inter */
+    [lang="fr"] h1, [lang="fr"] h2, [lang="fr"] h3, [lang="fr"] h4, [lang="fr"] h5, [lang="fr"] h6,
+    [lang="en"] h1, [lang="en"] h2, [lang="en"] h3, [lang="en"] h4, [lang="en"] h5, [lang="en"] h6 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+    }
 
     /* Mobile-first responsive design */
     .container {
@@ -230,7 +255,7 @@
     }
 
     .hero .arabic {
-        font-family: 'Amiri', serif;
+        font-family: 'Tajawal', serif;
         direction: rtl;
         font-size: 1.8rem;
         margin-bottom: 15px;
@@ -490,7 +515,7 @@
 
     .features li {
         padding: 8px 0;
-        text-align: left;
+        
     }
 
     .timeline {
@@ -900,85 +925,7 @@
         background-color: #f3f4f6;
     }
 
-    /* RTL Support */
-    [dir="rtl"] {
-        text-align: right;
-    }
-
-    [dir="rtl"] .hero h1 {
-        text-align: center;
-    }
-
-    /* Ensure founder-info is on the right for Arabic */
-    [dir="rtl"] .founder-info {
-        order: 1;
-    }
-
-    [dir="rtl"] .story-content {
-        order: 2;
-    }
-
-    /* Remove white space on the right for Arabic personal story */
-    [dir="rtl"] .personal-story {
-        margin-right: 0;
-        padding-right: 0;
-    }
-
-    [dir="rtl"] .story-content {
-        margin-right: 0;
-        padding-right: 0;
-    }
-
-    [dir="rtl"] .before-after {
-        direction: rtl;
-    }
-
-    [dir="rtl"] .process-steps {
-        direction: rtl;
-    }
-
-    [dir="rtl"] .cta-buttons {
-        direction: rtl;
-    }
-
-    /* LTR Support - Ensure French and English don't have RTL spacing issues */
-    [dir="ltr"] {
-        text-align: left;
-    }
-
-    [dir="ltr"] .hero h1 {
-        text-align: center;
-    }
-
-    [dir="ltr"] .founder-info {
-        order: 0;
-    }
-
-    [dir="ltr"] .story-content {
-        order: 0;
-    }
-
-    [dir="ltr"] .personal-story {
-        margin-left: 0;
-        padding-left: 0;
-    }
-
-    [dir="ltr"] .story-content {
-        margin-left: 0;
-        padding-left: 0;
-    }
-
-    [dir="ltr"] .before-after {
-        direction: ltr;
-    }
-
-    [dir="ltr"] .process-steps {
-        direction: ltr;
-    }
-
-    [dir="ltr"] .cta-buttons {
-        direction: ltr;
-    }
+    
 
     /* Fix any potential white space issues */
     body {
