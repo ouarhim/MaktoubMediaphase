@@ -1127,6 +1127,215 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
         }
+
+        /* Enhanced Social Proof Section Styles */
+        .social-proof-enhanced {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(55, 65, 81, 0.95), rgba(31, 41, 55, 0.98));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-proof-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(245,245,220,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(245,245,220,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(245,245,220,0.1)"/><circle cx="10" cy="60" r="0.5" fill="rgba(245,245,220,0.1)"/><circle cx="90" cy="40" r="0.5" fill="rgba(245,245,220,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        .spe-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .spe-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .spe-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        .spe-testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .spe-testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        .spe-testimonial-card {
+            background: rgba(55, 65, 81, 0.92);
+            border: 1px solid rgba(245, 245, 220, 0.18);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .spe-testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .spe-testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+        }
+        
+        .spe-testimonial--salon::before {
+            background: linear-gradient(90deg, #f97316, #ea580c);
+        }
+        
+        .spe-testimonial--restaurant::before {
+            background: linear-gradient(90deg, #10b981, #059669);
+        }
+        
+        .spe-testimonial--ecommerce::before {
+            background: linear-gradient(90deg, #7c3aed, #6d28d9);
+        }
+        
+        .spe-testimonial-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .spe-quote-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .spe-testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #f5f5dc;
+            margin-bottom: 24px;
+            font-style: italic;
+            position: relative;
+        }
+        
+        .spe-testimonial-text::before {
+            content: '"';
+            font-size: 3rem;
+            color: rgba(37, 99, 235, 0.3);
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            font-family: serif;
+        }
+        
+        .spe-testimonial-author {
+            border-top: 1px solid rgba(245, 245, 220, 0.2);
+            padding-top: 20px;
+        }
+        
+        .spe-author-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #f5f5dc;
+            margin: 0 0 8px 0;
+        }
+        
+        .spe-author-location {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .spe-promise-card {
+            background: rgba(37, 99, 235, 0.1);
+            border: 2px solid rgba(37, 99, 235, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
+        }
+        
+        .spe-promise-header {
+            margin-bottom: 30px;
+        }
+        
+        .spe-promise-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+        
+        .spe-promise-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f5f5dc;
+            margin: 0;
+        }
+        
+        .spe-promise-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .spe-promise-items {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .spe-promise-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 12px;
+            color: #6ee7b7;
+            font-weight: 600;
+        }
+        
+        .spe-promise-check {
+            background: #10b981;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body>
@@ -2170,65 +2379,139 @@
         </div>
     </section>
 
-    <!-- Social Proof Section -->
-    <section class="social-proof">
+    <!-- Enhanced Social Proof Section -->
+    <section class="social-proof-enhanced" dir="rtl" aria-label="شهادات العملاء">
         <div class="container">
-            <h3>
-                <span data-lang="ar">شهادات:</span>
-                <span data-lang="fr">Ce que disent les propriétaires d'entreprises :</span>
-                <span data-lang="en">What Business Owners Are Saying:</span>
-            </h3>
-            
-            <div class="testimonial">
-                <p>
-                    <span data-lang="ar">"لم أدرك كم كان شعاري الهاوي يؤذي عملي. بعد إعادة العلامة التجارية، بدأ العملاء يأخذونني على محمل الجد. زادت حجوزاتي إلى الضعف في شهرين."</span>
-                    <span data-lang="fr">"Je ne réalisais pas à quel point mon logo amateur nuisait à mon entreprise. Après le rebranding, les clients ont commencé à me prendre au sérieux. Mes réservations ont doublé en 2 mois."</span>
-                    <span data-lang="en">"I didn't realize how much my amateur logo was hurting my business. After the rebrand, customers started taking me seriously. My bookings doubled in 2 months."</span>
-                </p>
-                <cite>
-                    <span data-lang="ar">- صاحب صالون شعر، الرباط</span>
-                    <span data-lang="fr">- Propriétaire de salon de coiffure, Rabat</span>
-                    <span data-lang="en">- Salon owner, Rabat</span>
-                </cite>
+            <!-- Enhanced Header -->
+            <div class="spe-header reveal-up">
+                <div class="spe-badge">
+                    <span data-lang="ar">شهادات</span>
+                    <span data-lang="fr">Témoignages</span>
+                    <span data-lang="en">Testimonials</span>
+                </div>
+                <h3 class="spe-title">
+                    <span data-lang="ar">شهادات:</span>
+                    <span data-lang="fr">Ce que disent les propriétaires d'entreprises :</span>
+                    <span data-lang="en">What Business Owners Are Saying:</span>
+                </h3>
             </div>
             
-            <div class="testimonial">
-                <p>
-                    <span data-lang="ar">"قبل ذلك، كان الناس يرون منشوراتي ويستمرون في التمرير. الآن يتوقفون ويقرؤون ويرسلون لي رسائل. واتسابي مشغول دائماً بعملاء جدد."</span>
-                    <span data-lang="fr">"Avant, les gens voyaient mes posts et continuaient à faire défiler. Maintenant ils s'arrêtent, lisent et m'envoient des messages. Mon WhatsApp est toujours occupé avec de nouveaux clients."</span>
-                    <span data-lang="en">"Before, people would see my posts and keep scrolling. Now they stop, read, and message me. My WhatsApp is always busy with new customers."</span>
-                </p>
-                <cite>
-                    <span data-lang="ar">- صاحب مطعم، أكادير</span>
-                    <span data-lang="fr">- Propriétaire de restaurant, Agadir</span>
-                    <span data-lang="en">- Restaurant owner, Agadir</span>
-                </cite>
+            <!-- Testimonials Grid -->
+            <div class="spe-testimonials-grid">
+                <div class="spe-testimonial-card spe-testimonial--salon reveal-up">
+                    <div class="spe-testimonial-content">
+                        <div class="spe-quote-icon">💇‍♀️</div>
+                        <p class="spe-testimonial-text">
+                            <span data-lang="ar">"لم أدرك كم كان شعاري الهاوي يؤذي عملي. بعد إعادة العلامة التجارية، بدأ العملاء يأخذونني على محمل الجد. زادت حجوزاتي إلى الضعف في شهرين."</span>
+                            <span data-lang="fr">"Je ne réalisais pas à quel point mon logo amateur nuisait à mon entreprise. Après le rebranding, les clients ont commencé à me prendre au sérieux. Mes réservations ont doublé en 2 mois."</span>
+                            <span data-lang="en">"I didn't realize how much my amateur logo was hurting my business. After the rebrand, customers started taking me seriously. My bookings doubled in 2 months."</span>
+                        </p>
+                        <div class="spe-testimonial-author">
+                            <div class="spe-author-info">
+                                <h4 class="spe-author-name">
+                                    <span data-lang="ar">صاحب صالون شعر</span>
+                                    <span data-lang="fr">Propriétaire de salon de coiffure</span>
+                                    <span data-lang="en">Salon owner</span>
+                                </h4>
+                                <p class="spe-author-location">
+                                    <span data-lang="ar">الرباط</span>
+                                    <span data-lang="fr">Rabat</span>
+                                    <span data-lang="en">Rabat</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="spe-testimonial-card spe-testimonial--restaurant reveal-up">
+                    <div class="spe-testimonial-content">
+                        <div class="spe-quote-icon">🍽️</div>
+                        <p class="spe-testimonial-text">
+                            <span data-lang="ar">"قبل ذلك، كان الناس يرون منشوراتي ويستمرون في التمرير. الآن يتوقفون ويقرؤون ويرسلون لي رسائل. واتسابي مشغول دائماً بعملاء جدد."</span>
+                            <span data-lang="fr">"Avant, les gens voyaient mes posts et continuaient à faire défiler. Maintenant ils s'arrêtent, lisent et m'envoient des messages. Mon WhatsApp est toujours occupé avec de nouveaux clients."</span>
+                            <span data-lang="en">"Before, people would see my posts and keep scrolling. Now they stop, read, and message me. My WhatsApp is always busy with new customers."</span>
+                        </p>
+                        <div class="spe-testimonial-author">
+                            <div class="spe-author-info">
+                                <h4 class="spe-author-name">
+                                    <span data-lang="ar">صاحب مطعم</span>
+                                    <span data-lang="fr">Propriétaire de restaurant</span>
+                                    <span data-lang="en">Restaurant owner</span>
+                                </h4>
+                                <p class="spe-author-location">
+                                    <span data-lang="ar">أكادير</span>
+                                    <span data-lang="fr">Agadir</span>
+                                    <span data-lang="en">Agadir</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="spe-testimonial-card spe-testimonial--ecommerce reveal-up">
+                    <div class="spe-testimonial-content">
+                        <div class="spe-quote-icon">🛒</div>
+                        <p class="spe-testimonial-text">
+                            <span data-lang="ar">"ظننت أن التصميم الاحترافي مكلف جداً. لكنه دفع تكلفته في الشهر الأول. أتمنى لو كنت فعلت هذا منذ سنوات."</span>
+                            <span data-lang="fr">"Je pensais que le design professionnel était trop cher. Mais il s'est payé lui-même le premier mois. J'aurais aimé faire ça il y a des années."</span>
+                            <span data-lang="en">"I thought professional design was too expensive. But it paid for itself in the first month. I wish I had done this years ago."</span>
+                        </p>
+                        <div class="spe-testimonial-author">
+                            <div class="spe-author-info">
+                                <h4 class="spe-author-name">
+                                    <span data-lang="ar">صاحب متجر إلكتروني</span>
+                                    <span data-lang="fr">Propriétaire de boutique en ligne</span>
+                                    <span data-lang="en">Online shop owner</span>
+                                </h4>
+                                <p class="spe-author-location">
+                                    <span data-lang="ar">مراكش</span>
+                                    <span data-lang="fr">Marrakech</span>
+                                    <span data-lang="en">Marrakech</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="testimonial">
-                <p>
-                    <span data-lang="ar">"ظننت أن التصميم الاحترافي مكلف جداً. لكنه دفع تكلفته في الشهر الأول. أتمنى لو كنت فعلت هذا منذ سنوات."</span>
-                    <span data-lang="fr">"Je pensais que le design professionnel était trop cher. Mais il s'est payé lui-même le premier mois. J'aurais aimé faire ça il y a des années."</span>
-                    <span data-lang="en">"I thought professional design was too expensive. But it paid for itself in the first month. I wish I had done this years ago."</span>
-                </p>
-                <cite>
-                    <span data-lang="ar">- صاحب متجر إلكتروني، مراكش</span>
-                    <span data-lang="fr">- Propriétaire de boutique en ligne, Marrakech</span>
-                    <span data-lang="en">- Online shop owner, Marrakech</span>
-                </cite>
-            </div>
-            
-            <div class="promise-box">
-                <h4>
-                    <span data-lang="ar">الوعد ديالنا</span>
-                    <span data-lang="fr">Notre promesse</span>
-                    <span data-lang="en">Our promise</span>
-                </h4>
-                <p>
-                    <span data-lang="ar">كواليتي برو كاتبني الثقة | تسليم سريع | تعديلات بلا حدود حتى ترضى | أثمنة معقولة لـ PME</span>
-                    <span data-lang="fr">Qualité pro qui inspire confiance | livraison rapide | retouches illimitées jusqu'à satisfaction | tarifs adaptés aux entreprises marocaines</span>
-                    <span data-lang="en">Professional quality that builds trust | fast delivery | unlimited revisions until satisfaction | fair prices for Moroccan SMEs</span>
-                </p>
+            <!-- Promise Section -->
+            <div class="spe-promise-card reveal-up">
+                <div class="spe-promise-header">
+                    <div class="spe-promise-icon">🤝</div>
+                    <h4 class="spe-promise-title">
+                        <span data-lang="ar">الوعد ديالنا</span>
+                        <span data-lang="fr">Notre promesse</span>
+                        <span data-lang="en">Our promise</span>
+                    </h4>
+                </div>
+                <div class="spe-promise-content">
+                    <div class="spe-promise-items">
+                        <div class="spe-promise-item">
+                            <span class="spe-promise-check">✓</span>
+                            <span data-lang="ar">كواليتي برو كاتبني الثقة</span>
+                            <span data-lang="fr">Qualité pro qui inspire confiance</span>
+                            <span data-lang="en">Professional quality that builds trust</span>
+                        </div>
+                        <div class="spe-promise-item">
+                            <span class="spe-promise-check">✓</span>
+                            <span data-lang="ar">تسليم سريع</span>
+                            <span data-lang="fr">Livraison rapide</span>
+                            <span data-lang="en">Fast delivery</span>
+                        </div>
+                        <div class="spe-promise-item">
+                            <span class="spe-promise-check">✓</span>
+                            <span data-lang="ar">تعديلات بلا حدود حتى ترضى</span>
+                            <span data-lang="fr">Retouches illimitées jusqu'à satisfaction</span>
+                            <span data-lang="en">Unlimited revisions until satisfaction</span>
+                        </div>
+                        <div class="spe-promise-item">
+                            <span class="spe-promise-check">✓</span>
+                            <span data-lang="ar">أثمنة معقولة لـ PME</span>
+                            <span data-lang="fr">Tarifs adaptés aux entreprises marocaines</span>
+                            <span data-lang="en">Fair prices for Moroccan SMEs</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
